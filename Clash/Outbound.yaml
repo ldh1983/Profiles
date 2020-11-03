@@ -244,12 +244,12 @@ proxy-groups:
   # 但如果订阅节点很多选起来就很麻烦，不如先嵌套一个策略组进行手动或自动的选择。
 
   # 手动选择订阅节点
-  - name: "M"
+  - name: "Mengdi"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
 
-  - name: "Y"
+  - name: "Yaoyue"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - YList # 这是上面「proxy-providers」的名称
