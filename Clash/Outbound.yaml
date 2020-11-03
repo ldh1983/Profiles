@@ -267,6 +267,18 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
+  - name: "url-test"
+    type: url-test 
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+    proxies:
+      - 1
+      - 2
+      - 3
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    
   # 代理节点选择
   - name: "PROXY"
     type: select
