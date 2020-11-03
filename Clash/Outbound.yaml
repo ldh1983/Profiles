@@ -79,7 +79,7 @@ dns:
   # Specify IP addresses only
   default-nameserver:
     - 119.29.29.29
-    - 1.0.0.1
+    - 1.0.0.1 
   enhanced-mode: redir-host # or fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   
