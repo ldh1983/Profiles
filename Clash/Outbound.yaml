@@ -267,7 +267,7 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: "url-test"
+  - name: "Url-test"
     type: url-test 
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
@@ -286,6 +286,7 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
     proxies:
+      - Url-test
       - Fallback
       - 1
       - 2
@@ -299,7 +300,8 @@ proxy-groups:
       - YList
     proxies:
       - Fallback
-
+      - Url-test
+      
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
@@ -307,6 +309,8 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
     proxies:
+      - Url-test
+      - Fallback
       - PROXY
       - DIRECT
 
@@ -317,6 +321,8 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
     proxies:
+      - Url-test
+      - Fallback
       - PROXY
       - 1
       - 2
@@ -331,6 +337,8 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
     proxies:
+      - Url-test
+      - Fallback
       - DIRECT
       - 2
 
