@@ -214,6 +214,16 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
+  NList: #「冲鸭机场」订阅
+    type: http
+    url: "https://sub.nanoport.xyz/link/A535d3iStb8HqMRr?clash=1" # 放机场订阅链接
+    interval: 3600
+    path: ./Proxy/NList.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
@@ -253,6 +263,11 @@ proxy-groups:
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - YList # 这是上面「proxy-providers」的名称
+      
+  - name: "Nanpoy"
+    type: select # 亦可使用 fallback 或 load-balance
+    use: # 注意此处是「use」
+      - NList # 这是上面「proxy-providers」的名称
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
