@@ -71,7 +71,7 @@ hosts:
 # DNS server settings
 # This section is optional. When not present, DNS server will be disabled.
 dns:
-  enable: false
+  enable: true
   listen: 0.0.0.0:53
   # ipv6: false # when false, response to AAAA questions will be empty
 
@@ -98,8 +98,8 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - 119.29.29.29
-    # - tls://dns.rubyfish.cn:853 # DNS over TLS
-    # - https://1.1.1.1/dns-query # DNS over HTTPS
+    - tls://dns.rubyfish.cn:853 # DNS over TLS
+    - https://1.1.1.1/dns-query # DNS over HTTPS
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.
@@ -195,25 +195,25 @@ proxy-providers:
 
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
-  DuckDuckGoList: #「冲鸭机场」订阅
+  MList: #「冲鸭机场」订阅
     type: http
-    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/ProxyList/List.yaml" # 放机场订阅链接
+    url: "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2F4qiCbfOrOwmS0fcc.html&config=https%3A%2F%2Fgist.githubusercontent.com%2Ftindy2013%2F1fa08640a9088ac8652dbd40c5d2715b%2Fraw%2Fdefault_with_clash_adg.yml&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true" # 放机场订阅链接
     interval: 3600
-    path: ./Proxy/List.yaml # 注意此处文件名不可相同
+    path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
 
-  # DuckDuckGoUS: #「冲鸭机场」订阅美国地区节点
-  #   type: http
-  #   url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/ProxyList/US.yaml" # 放机场订阅链接
-  #   interval: 3600
-  #   path: ./Proxy/US.yaml # 注意此处文件名不可相同
-  #   health-check:
-  #     enable: true
-  #     interval: 600
-  #     url: http://www.gstatic.com/generate_204
+  YList: #「冲鸭机场」订阅
+    type: http
+    url: "https://subcon.dlj.tf/sub?target=clash&url=http%3A%2F%2Fdl.xyhy.xyz%2Flink%2FHz9QDy8SuHdT0qY5%3Fclash%3D1&config=https%3A%2F%2Fgist.githubusercontent.com%2Ftindy2013%2F1fa08640a9088ac8652dbd40c5d2715b%2Fraw%2Fdefault_with_clash_adg.yml&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true" # 放机场订阅链接
+    interval: 3600
+    path: ./Proxy/YList.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
@@ -244,19 +244,22 @@ proxy-groups:
   # 但如果订阅节点很多选起来就很麻烦，不如先嵌套一个策略组进行手动或自动的选择。
 
   # 手动选择订阅节点
-  - name: "DuckDuckGo"
+  - name: "M"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - DuckDuckGoList # 这是上面「proxy-providers」的名称
+      - MList # 这是上面「proxy-providers」的名称
 
-  # - name: "US"
-  #   type: select # 亦可使用 fallback 或 load-balance
-  #   use: # 注意此处是「use」
-  #     - DuckDuckGoUS # 这是上面「proxy-providers」的名称
+  - name: "Y"
+    type: select # 亦可使用 fallback 或 load-balance
+    use: # 注意此处是「use」
+      - YList # 这是上面「proxy-providers」的名称
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
-    type: fallback
+    type: fallback 
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
     proxies:
       - 1
       - 2
@@ -267,16 +270,30 @@ proxy-groups:
   # 代理节点选择
   - name: "PROXY"
     type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
     proxies:
       - Fallback
       - 1
       - 2
       - 3
       - DuckDuckGo # 嵌套使用订阅节点策略组
+      
+  - name: "Apple"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+    proxies:
+      - Fallback
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
     proxies:
       - PROXY
       - DIRECT
@@ -284,6 +301,9 @@ proxy-groups:
   # 国际流媒体服务
   - name: "Streaming"
     type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
     proxies:
       - PROXY
       - 1
@@ -295,6 +315,9 @@ proxy-groups:
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
   - name: "StreamingSE"
     type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
     proxies:
       - DIRECT
       - 2
@@ -315,7 +338,14 @@ rule-providers:
     path: ./RuleSet/Unbreak.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
-
+    
+  Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Apple.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Apple/Apple.yaml
+    interval: 86400
+    
   Streaming:
     type: http
     behavior: classical
@@ -355,7 +385,7 @@ rule-providers:
 rules:
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
-
+  
   # Global Area Network
 
   # (Streaming Media)
@@ -366,6 +396,8 @@ rules:
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
+
+  - RULE-SET,Apple,Apple
 
   # China Area Network
   - RULE-SET,China,DIRECT
@@ -379,11 +411,11 @@ rules:
   - IP-CIDR,224.0.0.0/4,DIRECT
 
   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
-  # - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,ChinaIP,DIRECT
   # Tencent
-  - IP-CIDR,119.28.28.28/32,DIRECT
-  - IP-CIDR,182.254.116.0/24,DIRECT
+  # - IP-CIDR,119.28.28.28/32,DIRECT
+  # - IP-CIDR,182.254.116.0/24,DIRECT
   # GeoIP China
-  - GEOIP,CN,DIRECT
+  # - GEOIP,CN,DIRECT
 
   - MATCH,MATCH
