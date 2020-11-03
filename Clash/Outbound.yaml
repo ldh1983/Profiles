@@ -278,7 +278,7 @@ proxy-groups:
       - 1
       - 2
       - 3
-      - DuckDuckGo # 嵌套使用订阅节点策略组
+       # 嵌套使用订阅节点策略组
       
   - name: "Apple"
     type: select
