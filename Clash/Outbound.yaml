@@ -214,7 +214,16 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
-
+  
+  MyList: #「冲鸭机场」订阅
+    type: http
+    url: "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md" # 放机场订阅链接
+    interval: 3600
+    path: ./Proxy/MyList.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 
@@ -253,7 +262,11 @@ proxy-groups:
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - YList # 这是上面「proxy-providers」的名称
-
+      
+  - name: "Mytxt"
+    type: select # 亦可使用 fallback 或 load-balance
+    use: # 注意此处是「use」
+      - MyList # 这是上面「proxy-providers」的名称
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
     type: fallback 
