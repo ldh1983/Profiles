@@ -197,7 +197,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2F4qiCbfOrOwmS0fcc.html&config=https%3A%2F%2Fgist.githubusercontent.com%2Ftindy2013%2F1fa08640a9088ac8652dbd40c5d2715b%2Fraw%2Fdefault_with_clash_adg.yml&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true" # 放机场订阅链接
+    url: "https://cloud.sdl.best/cloud/newclash.php?sid=6940&token=ptdvlwcf" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
