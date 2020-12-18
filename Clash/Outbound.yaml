@@ -217,7 +217,7 @@ proxy-providers:
       
   BList: #「冲鸭机场」订阅
     type: http
-    url: "https://api.wcc.best/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub%2Fmaster%2FREADME.md%7Chttps%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7C&insert=false" # 放机场订阅链接
+    url: "https://api.wcc.best/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7C&insert=false" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/BList.yaml # 注意此处文件名不可相同
     health-check:
