@@ -267,7 +267,7 @@ proxy-groups:
   - name: "Nanpoy"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      -BList # 这是上面「proxy-providers」的名称
+      - BList # 这是上面「proxy-providers」的名称
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
