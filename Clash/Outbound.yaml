@@ -195,11 +195,11 @@ proxy-providers:
 
   # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删除
 
-  MList: #「冲鸭机场」订阅
+  AList: #「冲鸭机场」订阅
     type: http
     url: "https://cloud.sdl.best/cloud/newclash.php?sid=6940&token=ptdvlwcf" # 放机场订阅链接
     interval: 3600
-    path: ./Proxy/MList.yaml # 注意此处文件名不可相同
+    path: ./Proxy/AList.yaml # 注意此处文件名不可相同
     health-check:
       enable: true
       interval: 600
@@ -215,11 +215,11 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
       
-  NList: #「冲鸭机场」订阅
+  BList: #「冲鸭机场」订阅
     type: http
     url: "https://api.wcc.best/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub%2Fmaster%2FREADME.md%7Chttps%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7C&insert=false" # 放机场订阅链接
     interval: 3600
-    path: ./Proxy/NList.yaml # 注意此处文件名不可相同
+    path: ./Proxy/BList.yaml # 注意此处文件名不可相同
     health-check:
       enable: true
       interval: 600
@@ -257,7 +257,7 @@ proxy-groups:
   - name: "Mengdi"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
 
   - name: "Yaoyue"
     type: select # 亦可使用 fallback 或 load-balance
@@ -267,30 +267,26 @@ proxy-groups:
   - name: "Nanpoy"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - NList # 这是上面「proxy-providers」的名称
+      -BList # 这是上面「proxy-providers」的名称
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
     type: fallback 
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - 1
-      - 2
-      - 3
+      - BList
+
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
   - name: "url-test"
     type: url-test 
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - 1
-      - 2
-      - 3
+      - BList
+
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     
@@ -298,20 +294,17 @@ proxy-groups:
   - name: "PROXY"
     type: select
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - Fallback
-      - 1
-      - 2
-      - 3
+      - BList
        # 嵌套使用订阅节点策略组
       
   - name: "Apple"
     type: select
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
+      - BList
     proxies:
       - Fallback
 
@@ -319,8 +312,9 @@ proxy-groups:
   - name: "MATCH"
     type: select
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
+      - BList
     proxies:
       - PROXY
       - DIRECT
@@ -329,13 +323,9 @@ proxy-groups:
   - name: "Streaming"
     type: select
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - PROXY
-      - 1
-      - 2
-      - 3
+      - BList
       # - US
 
   # 中国流媒体服务（面向海外版本）
@@ -343,8 +333,9 @@ proxy-groups:
   - name: "StreamingSE"
     type: select
     use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
+      - AList # 这是上面「proxy-providers」的名称
       - YList
+      - BList
     proxies:
       - DIRECT
       - 2
