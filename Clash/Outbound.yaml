@@ -273,7 +273,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -283,7 +283,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     
@@ -293,7 +293,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     proxies:
       - Url-test
       - Fallback
@@ -305,7 +305,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     proxies:
       - Fallback
       - Url-test
@@ -316,7 +316,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     proxies:
       - Url-test
       - Fallback
@@ -329,7 +329,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     proxies:
       - Url-test
       - Fallback
@@ -344,7 +344,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-      - NList
+      - MyList
     proxies:
       - Url-test
       - Fallback
