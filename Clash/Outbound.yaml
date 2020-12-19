@@ -253,7 +253,7 @@ proxy-groups:
   # 但如果订阅节点很多选起来就很麻烦，不如先嵌套一个策略组进行手动或自动的选择。
 
   # 手动选择订阅节点
-  - name: "Mengdi"
+  - name: "Mo"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
@@ -273,10 +273,8 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - 1
-      - 2
-      - 3
+      - NList
+
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -285,10 +283,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
-    proxies:
-      - 1
-      - 2
-      - 3
+      - NList
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     
@@ -298,12 +293,11 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
+      - NList
     proxies:
       - Url-test
       - Fallback
-      - 1
-      - 2
-      - 3
+
        # 嵌套使用订阅节点策略组
       
   - name: "Apple"
@@ -311,6 +305,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
+      - NList
     proxies:
       - Fallback
       - Url-test
@@ -321,6 +316,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
+      - NList
     proxies:
       - Url-test
       - Fallback
@@ -333,13 +329,12 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
+      - NList
     proxies:
       - Url-test
       - Fallback
       - PROXY
-      - 1
-      - 2
-      - 3
+
       # - US
 
   # 中国流媒体服务（面向海外版本）
@@ -349,6 +344,7 @@ proxy-groups:
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
+      - NList
     proxies:
       - Url-test
       - Fallback
