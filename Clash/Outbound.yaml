@@ -254,20 +254,7 @@ proxy-groups:
   # 但如果订阅节点很多选起来就很麻烦，不如先嵌套一个策略组进行手动或自动的选择。
 
   # 手动选择订阅节点
-  - name: "Mengdi"
-    type: select # 亦可使用 fallback 或 load-balance
-    use: # 注意此处是「use」
-      - AList # 这是上面「proxy-providers」的名称
 
-  - name: "Yaoyue"
-    type: select # 亦可使用 fallback 或 load-balance
-    use: # 注意此处是「use」
-      - YList # 这是上面「proxy-providers」的名称
-      
-  - name: "Nanpoy"
-    type: select # 亦可使用 fallback 或 load-balance
-    use: # 注意此处是「use」
-      - BList # 这是上面「proxy-providers」的名称
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
   - name: "Fallback"
@@ -306,7 +293,10 @@ proxy-groups:
       - YList
       - BList
     proxies:
+      - PROXY
+      - DIRECT
       - Fallback
+      - url-test
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
@@ -318,7 +308,8 @@ proxy-groups:
     proxies:
       - PROXY
       - DIRECT
-
+      - Fallback
+      - url-test
   # 国际流媒体服务
   - name: "Streaming"
     type: select
@@ -327,7 +318,11 @@ proxy-groups:
       - YList
       - BList
       # - US
-
+    proxies:
+      - PROXY
+      - DIRECT
+      - Fallback
+      - url-test
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
   - name: "StreamingSE"
@@ -337,8 +332,10 @@ proxy-groups:
       - YList
       - BList
     proxies:
+      - PROXY
       - DIRECT
-      - 2
+      - Fallback
+      - url-test
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
