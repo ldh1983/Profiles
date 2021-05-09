@@ -197,7 +197,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://subconverter-web.now.sh/sub?target=clash&new_name=true&url=https%3A%2F%2Fcloud.sdl.best%2Fcloud%2Fnewclash.php%3Fsid%3D6940%26token%3Dptdvlwcf&insert=false&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false" # 放机场订阅链接
+    url: "https://pptp.cloud/sub/nbxiyzP0q7TCgfmJ.html?type=newclash" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
@@ -207,7 +207,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://subcon.dlj.tf/sub?target=clash&url=http%3A%2F%2Fdl.xyhy.xyz%2Flink%2FHz9QDy8SuHdT0qY5%3Fclash%3D1&config=https%3A%2F%2Fgist.githubusercontent.com%2Ftindy2013%2F1fa08640a9088ac8652dbd40c5d2715b%2Fraw%2Fdefault_with_clash_adg.yml&emoji=true&list=true&sort=false&udp=true&tfo=false&scv=false&append_type=false&fdn=true&new_name=true" # 放机场订阅链接
+    url: "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
