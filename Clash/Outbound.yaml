@@ -218,7 +218,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://www.nameless13.com/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
+    url: "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
@@ -226,25 +226,16 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
       
-  MzList: #「冲鸭机场」订阅
-    type: http
-    url: "https://1808.netlify.app" # 放机场订阅链接
-    interval: 3600
-    path: ./Proxy/MzList.yaml # 注意此处文件名不可相同
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-  
   MyList: #「冲鸭机场」订阅
     type: http
-    url: "https://www.nameless13.com/sub?target=clash&url=https%3A%2F%2Fjiang.netlify.app%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
+    url: "https://1808.netlify.app" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MyList.yaml # 注意此处文件名不可相同
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+  
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 
@@ -448,7 +439,7 @@ rule-providers:
 rules:
   - DOMAIN-KEYWORD,agora,MATCH
   # Unbreak
-  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,Unbreak,PROXY
   
   # Global Area Network
 
