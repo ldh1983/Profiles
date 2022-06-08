@@ -128,52 +128,63 @@ proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 
   # Shadowsocks(Websocket + TLS)
-  - name: "1"
-    type: ss
-    server: server
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: "password"
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket # no QUIC now
-      tls: true # wss
-      # skip-cert-verify: true
-      # host: bing.com
-      path: "/s"
-      # mux: true
-      # headers:
-      #   custom: value
+  - name: "ca"
+    type: hysteria
+    server: test1.ratzsuck.tk
+    port: 12345
+    auth_str: free123
+    #obfs: yourpassword
+    alpn: h3
+    protocol: udp
+    up_mbps: 100
+    down_mbps: 100
+    udp: true
+    #sni: server.com
+    #skip-cert-verify: false
 
   # VMess(Websocket + TLS)
-  - name: "2"
-    type: vmess
-    server: v2ray.cool
-    port: 443
-    uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
-    alterId: 32
-    cipher: auto
-    # udp: true
-    tls: true
-    # skip-cert-verify: true
-    network: ws
-    ws-path: /v
-    # ws-headers:
-    #   Host: v2ray.com
+  - name: "mg"
+    type: hysteria
+    server: 173.82.206.65
+    port: 39721
+    auth_str: f6113035
+    #obfs: yourpassword
+    alpn: h3
+    protocol: udp
+    up_mbps: 62
+    down_mbps: 1250
+    udp: true
+    #sni: server.com
+    #skip-cert-verify: false
 
   # Trojan
-  - name: "3"
-    type: trojan
-    server: server
-    port: 443
-    password: yourpsk
-    # udp: true
-    # sni: example.com # aka server name
-    # alpn:
-    #   - h2
-    #   - http/1.1
-    # skip-cert-verify: true
+  - name: "hk"
+    type: hysteria
+    server: 35.220.137.55
+    port: 10307
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: h3
+    protocol: wechat-video
+    up_mbps: 125
+    down_mbps: 125
+    udp: true
+    #sni: server.com
+    #skip-cert-verify: false
 
+  - name: "uk"
+    type: hysteria
+    server: uk.yicanny.com
+    port: 20789
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: h3
+    protocol: faketcp
+    up_mbps: 125
+    down_mbps: 125
+    udp: true
+    #sni: server.com
+    #skip-cert-verify: false
 # 服务器节点订阅
 proxy-providers:
   # name: # Provider 名称
@@ -197,7 +208,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://pptp.cloud/sub/nbxiyzP0q7TCgfmJ.html?type=newclash" # 放机场订阅链接
+    url: "https://pptp.cloud/api/v1/client/subscribe?token=nbxiyzP0q7TCgfmJ" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
@@ -214,10 +225,20 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
+  MzList: #「冲鸭机场」订阅
+    type: http
+    url: "https://1808.netlify.app" # 放机场订阅链接
+    interval: 3600
+    path: ./Proxy/MzList.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
   
   MyList: #「冲鸭机场」订阅
     type: http
-    url: "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fjiang.netlify.com%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
+    url: "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fjiang.netlify.app%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MyList.yaml # 注意此处文件名不可相同
     health-check:
@@ -261,6 +282,11 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
       - MyList
+    proxies:
+      - ca
+      - mg
+      - hk
+      - uk
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -271,6 +297,11 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
       - MyList
+    proxies:
+      - ca
+      - mg
+      - hk
+      - uk
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     
@@ -284,7 +315,10 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
-
+      - ca
+      - mg
+      - hk
+      - uk
        # 嵌套使用订阅节点策略组
       
   - name: "Apple"
@@ -296,7 +330,10 @@ proxy-groups:
     proxies:
       - Fallback
       - Url-test
-      
+      - ca
+      - mg
+      - hk
+      - uk
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
@@ -307,6 +344,10 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - ca
+      - mg
+      - hk
+      - uk
       - PROXY
       - DIRECT
 
@@ -321,7 +362,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - PROXY
-
+      - ca
+      - mg
+      - hk
+      - uk
       # - US
 
   # 中国流媒体服务（面向海外版本）
@@ -335,6 +379,10 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - ca
+      - mg
+      - hk
+      - uk
       - DIRECT
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
