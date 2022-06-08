@@ -217,7 +217,7 @@ proxy-providers:
       
   BList: #「冲鸭机场」订阅
     type: http
-    url: "https://www.nameless13.com/sub?target=clash&url=https%3A%2F%2Fjiang.netlify.app%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
+    url: "https://www.nameless13.com/sub?target=clash&url=https%3A%2F%2F1808.netlify.app%7C&insert=false&emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=false&sort=false&clash.doh=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/BList.yaml # 注意此处文件名不可相同
     health-check:
