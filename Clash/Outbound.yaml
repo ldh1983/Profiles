@@ -197,7 +197,7 @@ proxy-providers:
 
   AList: #「冲鸭机场」订阅
     type: http
-    url: "https://pptp.cloud/sub/nbxiyzP0q7TCgfmJ.html?type=newclash" # 放机场订阅链接
+    url: "https://pptp.cloud/api/v1/client/subscribe?token=nbxiyzP0q7TCgfmJ" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/AList.yaml # 注意此处文件名不可相同
     health-check:
