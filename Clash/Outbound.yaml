@@ -154,8 +154,8 @@ proxies:
     up_mbps: 62
     down_mbps: 1250
     udp: true
-    #sni: server.com
-    #skip-cert-verify: false
+    sni: cloud.q-sj.cn
+    skip-cert-verify: true
 
   # Trojan
   - name: "hk"
@@ -169,14 +169,14 @@ proxies:
     up_mbps: 125
     down_mbps: 125
     udp: true
-    #sni: server.com
-    #skip-cert-verify: false
+    sni: wechat.com
+    skip-cert-verify: true
 
   - name: "uk"
     type: hysteria
     server: uk.yicanny.com
     port: 20789
-    auth_str: freekkk
+    auth_str: frekkk
     #obfs: yourpassword
     alpn: h3
     protocol: faketcp
