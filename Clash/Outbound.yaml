@@ -277,7 +277,7 @@ proxy-groups:
       - ca
       - mg
       - hk
-      - uk
+      - us
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
