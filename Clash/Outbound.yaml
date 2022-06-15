@@ -136,8 +136,8 @@ proxies:
     #obfs: yourpassword
     alpn: h3
     protocol: udp
-    up_mbps: 100
-    down_mbps: 100
+    up: 100
+    down: 100
     udp: true
     #sni: server.com
     #skip-cert-verify: false
@@ -151,8 +151,8 @@ proxies:
     #obfs: yourpassword
     alpn: h3
     protocol: udp
-    up_mbps: 62
-    down_mbps: 1250
+    up: 62
+    down: 1250
     udp: true
     sni: cloud.q-sj.cn
     skip-cert-verify: true
@@ -174,7 +174,7 @@ proxies:
 
   - name: "us"
     type: hysteria
-    server: us.yicanny.com
+    server: 34.94.121.122
     port: 20789
     auth_str: frekkk
     #obfs: yourpassword
@@ -183,8 +183,50 @@ proxies:
     up_mbps: 125
     down_mbps: 125
     udp: true
-    #sni: server.com
-    #skip-cert-verify: false
+    sni: us.yicanny.com
+    skip-cert-verify: false
+    
+  - name: "DE"
+    type: hysteria
+    server: 34.89.178.199
+    port: 20888
+    auth_str: frekkk
+    #obfs: yourpassword
+    alpn: h3
+    protocol: udp
+    up: 125
+    down: 125
+    udp: true
+    sni: yicanny.ml
+    skip-cert-verify: false
+
+  - name: "hk1"
+    type: hysteria
+    server: 34.92.168.10
+    port: 17879
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: h3
+    protocol: udp
+    up: 125
+    down: 125
+    udp: true
+    sni: wechat.com
+    skip-cert-verify: true
+
+  - name: "bhk"
+    type: hysteria
+    server: 194.29.187.244
+    port: 1220
+    auth_str: un
+    #obfs: yourpassword
+    alpn: h3
+    protocol: udp
+    up: 12
+    down: 62
+    udp: true
+    sni: hknat.ifoundit.xyz
+    skip-cert-verify: false
 # 服务器节点订阅
 proxy-providers:
   # name: # Provider 名称
@@ -278,6 +320,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -293,6 +338,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     
@@ -310,6 +358,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
        # 嵌套使用订阅节点策略组
       
   - name: "Apple"
@@ -325,6 +376,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
@@ -339,6 +393,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
       - PROXY
       - DIRECT
 
@@ -357,6 +414,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
       # - US
 
   # 中国流媒体服务（面向海外版本）
@@ -374,6 +434,9 @@ proxy-groups:
       - mg
       - hk
       - us
+      - DE
+      - hk1
+      - bhk
       - DIRECT
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
@@ -470,6 +533,16 @@ rules:
   # Tencent
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
+  
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,icloud@cn,DIRECT
+  - GEOSITE,apple@cn,DIRECT
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,facebook,PROXY
+  - GEOSITE,youtube,PROXY
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,geolocation-!cn,PROXY
   # GeoIP China
   - GEOIP,CN,DIRECT
 
