@@ -361,6 +361,24 @@ proxy-groups:
       - DE
       - hk1
       - bhk
+      
+      
+  - name: "UDP"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
        # 嵌套使用订阅节点策略组
       
   - name: "Apple"
@@ -456,6 +474,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
     
+  UDP:
+    type: http
+    behavior: classical
+    path: ./RuleSet/UDP.yaml
+    url: https://raw.githubusercontent.com/ldh1983/rules-bak/main/w.list
+    interval: 86400
+    
   Apple:
     type: http
     behavior: classical
@@ -504,6 +529,8 @@ rules:
   # Unbreak
   - RULE-SET,Unbreak,PROXY
   
+  - RULE-SET,UDP,UDP
+  
   # Global Area Network
 
   # (Streaming Media)
@@ -542,7 +569,7 @@ rules:
   - GEOSITE,facebook,PROXY
   - GEOSITE,youtube,PROXY
   - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,geolocation-!cn,PROXY
+  - GEOSITE,geolocation-!cn,MATCH
   # GeoIP China
   - GEOIP,CN,DIRECT
 
