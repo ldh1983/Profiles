@@ -227,6 +227,23 @@ proxies:
     udp: true
     sni: hknat.ifoundit.xyz
     skip-cert-verify: false
+    
+  - name: "ssv"
+    type: ss
+    server: 207.148.67.196
+    port: 8888
+    cipher: aes-256-gcm
+    password: "passwd123"
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket # no QUIC now
+      # tls: true # wss
+      # skip-cert-verify: true
+      host: cloudfront.com
+      path: "/"
+      mux: true
+      #headers: cloudfront.com
+      #custom: 8
 # 服务器节点订阅
 proxy-providers:
   # name: # Provider 名称
