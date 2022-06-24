@@ -548,6 +548,10 @@ rules:
   
   - RULE-SET,UDP,UDP
   
+  - RULE-SET,Apple,Apple
+  
+  - GEOIP,telegram,PROXY,no-resolve
+  
   # Global Area Network
 
   # (Streaming Media)
@@ -559,7 +563,6 @@ rules:
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
 
-  - RULE-SET,Apple,Apple
 
   # China Area Network
   - RULE-SET,China,DIRECT
