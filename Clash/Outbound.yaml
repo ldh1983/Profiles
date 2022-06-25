@@ -521,7 +521,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/YouTubeMusic.yaml
-    url: https://github.com/DivineEngine/Profiles/blob/master/Clash/RuleSet/StreamingMedia/Music/YouTubeMusic.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Music/YouTubeMusic.yaml
     interval: 86400
     
   UDP:
