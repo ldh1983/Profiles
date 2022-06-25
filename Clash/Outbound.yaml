@@ -520,7 +520,7 @@ rule-providers:
   ymusic:
     type: http
     behavior: classical
-    path: ./RuleSet/ymusic.yaml
+    path: ./RuleSet/YouTubeMusic.yaml
     url: https://github.com/DivineEngine/Profiles/blob/master/Clash/RuleSet/StreamingMedia/Music/YouTubeMusic.yaml
     interval: 86400
     
