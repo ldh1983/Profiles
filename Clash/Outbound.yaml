@@ -578,7 +578,8 @@ rule-providers:
 # 规则
 rules:
   - DOMAIN-KEYWORD,agora,MATCH
-  - DOMAIN-KEYWORD,google,PROXY
+  #- DOMAIN-KEYWORD,google,PROXY
+  - DOMAIN,youtubei.googleapis.com,PROXY
   # Unbreak
   - RULE-SET,Unbreak,PROXY
   
