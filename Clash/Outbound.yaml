@@ -580,6 +580,7 @@ rules:
   - DOMAIN-KEYWORD,agora,MATCH
   #- DOMAIN-KEYWORD,google,PROXY
   - DOMAIN,youtubei.googleapis.com,PROXY
+  - DOMAIN,music.youtube.com,PROXY
   # Unbreak
   - RULE-SET,Unbreak,PROXY
   
