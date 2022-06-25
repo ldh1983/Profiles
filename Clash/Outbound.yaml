@@ -401,6 +401,24 @@ proxy-groups:
       - bhk
       - ssv
        # 嵌套使用订阅节点策略组
+       
+  - name: "telegram"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
       
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
@@ -570,7 +588,7 @@ rules:
   
   - RULE-SET,Apple,Apple
   
-  - GEOIP,telegram,PROXY,no-resolve
+  - GEOIP,telegram,telegram,no-resolve
   
   # Global Area Network
 
