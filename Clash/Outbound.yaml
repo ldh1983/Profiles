@@ -402,7 +402,7 @@ proxy-groups:
       - ssv
        # 嵌套使用订阅节点策略组
       
-  - name: "Apple"
+  - name: "ymusic"
     type: select
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
@@ -460,6 +460,24 @@ proxy-groups:
       - bhk
       - ssv
       # - US
+      
+  - name: "Apple"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Fallback
+      - Url-test
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
 
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
@@ -497,6 +515,13 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/Unbreak.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
+    
+  ymusic:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ymusic.yaml
+    url: https://github.com/DivineEngine/Profiles/blob/master/Clash/RuleSet/StreamingMedia/Music/YouTubeMusic.yaml
     interval: 86400
     
   UDP:
@@ -555,6 +580,8 @@ rules:
   - RULE-SET,Unbreak,PROXY
   
   - RULE-SET,UDP,UDP
+  
+  - RULE-SET,ymusic,ymusic
   
   - RULE-SET,Apple,Apple
   
