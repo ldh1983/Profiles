@@ -528,7 +528,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/UDP.yaml
-    url: https://raw.githubusercontent.com/ldh1983/rules-bak/main/w.list
+    url: https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/RuleSet/UDP.yaml
     interval: 86400
     
   Apple:
