@@ -130,7 +130,7 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: 150.230.47.2
+    server: 45.62.232.96
     port: 12345
     auth_str: free123
     #obfs: yourpassword
