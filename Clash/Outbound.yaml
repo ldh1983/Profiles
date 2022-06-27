@@ -130,7 +130,7 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: 45.62.232.96
+    server: test1.ratzsuck.tk
     port: 12345
     auth_str: free123
     #obfs: yourpassword
@@ -139,7 +139,7 @@ proxies:
     up: 100
     down: 100
     udp: true
-    sni: test1.ratzsuck.tk
+    #sni: test1.ratzsuck.tk
     #skip-cert-verify: false
 
   # VMess(Websocket + TLS)
