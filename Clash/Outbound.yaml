@@ -590,7 +590,7 @@ rules:
   
   - RULE-SET,Apple,Apple
   
-  - GEOIP,telegram,telegram,no-resolve
+  - GEOIP,telegram,telegram
   
   # Global Area Network
 
