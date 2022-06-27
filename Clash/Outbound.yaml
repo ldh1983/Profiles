@@ -175,7 +175,7 @@ proxies:
   - name: "us"
     type: hysteria
     server: 34.94.121.122
-    port: 20789
+    port: 20777
     auth_str: frekkk
     #obfs: yourpassword
     alpn: h3
