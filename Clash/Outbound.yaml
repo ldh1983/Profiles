@@ -533,6 +533,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/RuleSet/UDP.yaml
     interval: 86400
     
+  telegram:
+    type: http
+    behavior: classical
+    path: ./RuleSet/telegram.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Telegram/Telegram.yaml
+    interval: 86400
+    
   Apple:
     type: http
     behavior: classical
@@ -590,7 +597,7 @@ rules:
   
   - RULE-SET,Apple,Apple
   
-  - GEOIP,telegram,telegram
+  - RULE-SET,telegram,telegram
   
   # Global Area Network
 
