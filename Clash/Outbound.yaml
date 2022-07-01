@@ -519,7 +519,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
     
-  ymusic:
+  YouTubeMusic:
     type: http
     behavior: classical
     path: ./RuleSet/YouTubeMusic.yaml
