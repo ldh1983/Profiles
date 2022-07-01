@@ -354,6 +354,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
     
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    path: ./RuleSet/YouTubeMusic.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Music/YouTubeMusic.yaml
+    interval: 86400
+    
   Apple:
     type: http
     behavior: classical
@@ -400,7 +407,9 @@ rule-providers:
 rules:
   - DOMAIN-KEYWORD,agora,MATCH
   # Unbreak
-  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,Unbreak,PROXY
+  
+  - RULE-SET,YouTubeMusic,PROXY
   
   # Global Area Network
 
