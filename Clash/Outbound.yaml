@@ -596,7 +596,7 @@ rules:
   - PROCESS-NAME,com.google.android.apps.youtube.music,PROXY
   - PROCESS-NAME,com.google.android.youtube.tvmusic,PROXY
   
-  #- RULE-SET,ymusic,ymusic
+  #- RULE-SET,YouTubeMusic,ymusic
   
   - RULE-SET,Apple,Apple
   
