@@ -106,6 +106,8 @@ dns:
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
   fallback:
+    - tls://223.5.5.5:853
+    - https://223.5.5.5/dns-query
     - https://cloudflare-dns.com/dns-query
 
   # If IP addresses resolved with servers in `nameservers` are in the specified
