@@ -12,3 +12,4 @@ payload:
   - DOMAIN-KEYWORD,maxcdn
   - DOMAIN-SUFFIX,mylivechat.com
   - DOMAIN-KEYWORD,gnews
+  - DOMAIN,chat.stream-io-api.com
