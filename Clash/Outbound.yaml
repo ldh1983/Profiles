@@ -132,14 +132,14 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: test1.ratzsuck.tk
-    port: 12345
-    auth_str: free123
+    server: sharehy1.giize.com
+    port: 2022
+    auth_str: sharehy1
     #obfs: yourpassword
     alpn: h3
     protocol: udp
-    up: 100
-    down: 100
+    up: 10
+    down: 50
     udp: true
     #sni: test1.ratzsuck.tk
     #skip-cert-verify: false
