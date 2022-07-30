@@ -146,18 +146,14 @@ proxies:
 
   # VMess(Websocket + TLS)
   - name: "mg"
-    type: hysteria
-    server: 173.82.206.65
-    port: 39721
-    auth_str: f6113035
-    #obfs: yourpassword
-    alpn: h3
-    protocol: udp
-    up: 62
-    down: 1250
+    server: 45.62.231.243
+    port: 80
+    uuid: 463e5a88-1674-4105-a46c-33133a1d3874
+    alterId: 0
+    cipher: auto
     udp: true
-    sni: cloud.q-sj.cn
-    skip-cert-verify: true
+    network: ws
+    # tls: true
 
   # Trojan
   - name: "hk"
