@@ -163,7 +163,7 @@ proxies:
     auth_str: freekkk
     #obfs: yourpassword
     alpn: h3
-    protocol: wechat-video
+    protocol: udp
     up: 125
     down: 125
     udp: true
