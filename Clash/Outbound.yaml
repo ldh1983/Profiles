@@ -212,19 +212,19 @@ proxies:
     sni: wechat.com
     skip-cert-verify: true
 
-  - name: "bhk"
+  - name: "tw1"
     type: hysteria
-    server: 194.29.187.244
-    port: 1220
-    auth_str: un
+    server: 34.80.63.170
+    port: 10307
+    auth_str: freekkk
     #obfs: yourpassword
     alpn: h3
     protocol: udp
-    up: 12
-    down: 62
+    up: 125
+    down: 125
     udp: true
-    sni: hknat.ifoundit.xyz
-    skip-cert-verify: false
+    sni: wechat.com
+    skip-cert-verify: true
     
   - name: "ssv"
     type: ss
