@@ -212,7 +212,7 @@ proxies:
     sni: wechat.com
     skip-cert-verify: true
 
-  - name: "tw1"
+  - name: "bhk"
     type: hysteria
     server: 34.80.63.170
     port: 10307
