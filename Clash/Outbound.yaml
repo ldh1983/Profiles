@@ -146,14 +146,17 @@ proxies:
 
   # VMess(Websocket + TLS)
   - name: "mg"
-    server: 45.62.231.243
-    port: 80
-    uuid: 463e5a88-1674-4105-a46c-33133a1d3874
+    type: vmess
+    server: yicanny.ga
+    port: 2053
+    uuid: 3ff1a03a-5966-11ec-a844-42010a8c0022
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    # tls: true
+    network: h2
+    tls: true
+    h2-opts:
+        path: /ck5aeJIX/
 
   # Trojan
   - name: "hk"
