@@ -594,8 +594,8 @@ rules:
   
   - RULE-SET,UDP,UDP
   
-  - PROCESS-NAME,com.google.android.apps.youtube.music,PROXY
-  - PROCESS-NAME,com.google.android.youtube.tvmusic,PROXY
+  - PROCESS-NAME,com.google.android.apps.youtube.music,StreamingSE
+  - PROCESS-NAME,com.google.android.youtube.tvmusic,StreamingSE
   
   #- RULE-SET,YouTubeMusic,ymusic
   
