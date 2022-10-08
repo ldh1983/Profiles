@@ -335,13 +335,13 @@ proxy-groups:
       - MyList
     proxies:
       - ca
-      - mg
       - hk
       - us
       - DE
       - hk1
       - bhk
       - ssv
+      - mg
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
