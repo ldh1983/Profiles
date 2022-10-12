@@ -13,3 +13,4 @@ payload:
   - DOMAIN-SUFFIX,mylivechat.com
   - DOMAIN-KEYWORD,gnews
   - DOMAIN,chat.stream-io-api.com
+  - DOMAIN-SUFFIX,wowza.com
