@@ -596,7 +596,8 @@ rules:
   
   - PROCESS-NAME,com.google.android.apps.youtube.music,StreamingSE
   - PROCESS-NAME,com.google.android.youtube.tvmusic,StreamingSE
-  
+  - PROCESS-NAME, Telegram.exe, telegram
+  - PROCESS-NAME, YouTube Music.exe, StreamingSE
   #- RULE-SET,YouTubeMusic,ymusic
   
   - RULE-SET,Apple,Apple
