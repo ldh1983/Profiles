@@ -136,7 +136,8 @@ proxies:
     port: 2022
     auth_str: sharehy1
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: udp
     up: 10
     down: 50
@@ -165,7 +166,8 @@ proxies:
     port: 10307
     auth_str: freekkk
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: udp
     up: 125
     down: 125
@@ -179,7 +181,8 @@ proxies:
     port: 20777
     auth_str: frekkk
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: wechat-video
     up: 125
     down: 125
@@ -193,7 +196,8 @@ proxies:
     port: 20888
     auth_str: frekkk
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: udp
     up: 125
     down: 125
@@ -207,7 +211,8 @@ proxies:
     port: 17879
     auth_str: freekkk
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: udp
     up: 125
     down: 125
@@ -221,7 +226,8 @@ proxies:
     port: 10307
     auth_str: freekkk
     #obfs: yourpassword
-    alpn: h3
+    alpn: 
+      - h3
     protocol: udp
     up: 125
     down: 125
