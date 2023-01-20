@@ -284,7 +284,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md" # 放机场订阅链接
+    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2F81d32c8b81cda5cec1dad768a2814802%2Fraw%2Fedbbf390a8591c0959b259e6eef7743e49940b98%2Fsub3&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&xudp=true&udp=true&tfo=false&expand=true&scv=false&fdn=false&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
