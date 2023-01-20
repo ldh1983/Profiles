@@ -148,7 +148,7 @@ proxies:
   # VMess(Websocket + TLS)
   - name: "mg"
     type: vmess
-    server: yicanny.ga
+    server: tw1.yicanny.com
     port: 2053
     uuid: 3ff1a03a-5966-11ec-a844-42010a8c0022
     alterId: 0
