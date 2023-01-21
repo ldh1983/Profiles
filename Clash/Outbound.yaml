@@ -134,7 +134,6 @@ proxies:
     type: hysteria
     server: tw1.yicanny.com.com
     port: 20777
-    auth_str:
     obfs:freekkk
     alpn: 
       - h3
