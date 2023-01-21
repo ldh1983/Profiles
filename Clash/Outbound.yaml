@@ -142,7 +142,7 @@ proxies:
     up: 110
     down: 110
     udp: true
-    sni: tw1.yicanny.com.com
+    sni: tw1.yicanny.com
     skip-cert-verify: false
 
   # VMess(Websocket + TLS)
