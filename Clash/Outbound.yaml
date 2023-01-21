@@ -132,18 +132,18 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: sharehy1.giize.com
-    port: 2022
-    auth_str: sharehy1
-    #obfs: yourpassword
+    server: tw1.yicanny.com.com
+    port: 20777
+    auth_str:
+    obfs:freekkk
     alpn: 
       - h3
     protocol: udp
-    up: 10
-    down: 50
+    up: 110
+    down: 110
     udp: true
-    #sni: test1.ratzsuck.tk
-    #skip-cert-verify: false
+    sni: tw1.yicanny.com.com
+    skip-cert-verify: false
 
   # VMess(Websocket + TLS)
   - name: "mg"
