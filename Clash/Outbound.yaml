@@ -132,8 +132,9 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: tw1.yicanny.com.com
+    server: tw1.yicanny.com
     port: 20777
+    auth_str: freekkk
     obfs: freekkk
     alpn: 
       - h3
