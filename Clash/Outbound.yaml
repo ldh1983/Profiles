@@ -194,6 +194,7 @@ proxies:
     type: hysteria
     server: de.yicanny.com
     port: 20888
+    ports: 36777-37777
     auth_str: frekkk
     #obfs: yourpassword
     alpn: 
