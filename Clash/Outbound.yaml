@@ -192,7 +192,7 @@ proxies:
     
   - name: "DE"
     type: hysteria
-    server: 34.89.178.199
+    server: de.yicanny.com:20888,36777-37777
     port: 20888
     auth_str: frekkk
     #obfs: yourpassword
@@ -202,7 +202,7 @@ proxies:
     up: 125
     down: 125
     udp: true
-    sni: yicanny.ml
+    sni: de.yicanny.com
     skip-cert-verify: false
 
   - name: "hk1"
