@@ -192,7 +192,7 @@ proxies:
     
   - name: "DE"
     type: hysteria
-    server: de.yicanny.com:20888,36777-37777
+    server: de.yicanny.com
     port: 20888
     auth_str: frekkk
     #obfs: yourpassword
