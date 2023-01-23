@@ -133,7 +133,7 @@ proxies:
   - name: "ca"
     type: hysteria
     server: tw1.yicanny.com
-    port: 20777
+    port: 20888
     auth_str: freekkk
     obfs: freekkk
     alpn: 
