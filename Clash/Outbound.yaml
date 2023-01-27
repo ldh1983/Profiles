@@ -163,8 +163,8 @@ proxies:
   - name: "hk"
     type: hysteria
     server: 34.150.81.240
-    port: 10307
-    auth_str: freekkk
+    port: 20666
+    auth_str: freekk
     #obfs: yourpassword
     alpn: 
       - h3
@@ -172,8 +172,8 @@ proxies:
     up: 125
     down: 125
     udp: true
-    sni: wechat.com
-    skip-cert-verify: true
+    sni: yicanny.com
+    skip-cert-verify: false
 
   - name: "us"
     type: hysteria
@@ -218,8 +218,8 @@ proxies:
     up: 125
     down: 125
     udp: true
-    sni: wechat.com
-    skip-cert-verify: true
+    sni: hk.yicanny.com
+    skip-cert-verify: false
 
   - name: "bhk"
     type: hysteria
@@ -233,8 +233,8 @@ proxies:
     up: 125
     down: 125
     udp: true
-    sni: wechat.com
-    skip-cert-verify: true
+    sni: tw.yicanny.com
+    skip-cert-verify: false
     
   - name: "ssv"
     type: ss
