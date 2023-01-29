@@ -162,7 +162,7 @@ proxies:
   # Trojan
   - name: "hk"
     type: hysteria
-    server: 34.150.81.240
+    server: yicanny.com
     port: 20666
     auth_str: freekk
     #obfs: yourpassword
@@ -177,7 +177,7 @@ proxies:
 
   - name: "us"
     type: hysteria
-    server: 34.94.121.122
+    server: us.yicanny.com
     port: 20777
     auth_str: frekkk
     #obfs: yourpassword
@@ -208,7 +208,7 @@ proxies:
 
   - name: "hk1"
     type: hysteria
-    server: 34.92.168.10
+    server: hk.yicanny.com
     port: 17879
     auth_str: freekkk
     #obfs: yourpassword
@@ -223,7 +223,7 @@ proxies:
 
   - name: "bhk"
     type: hysteria
-    server: 34.80.63.170
+    server: tw.yicanny.com
     port: 10307
     auth_str: freekkk
     #obfs: yourpassword
