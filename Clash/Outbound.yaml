@@ -162,17 +162,18 @@ proxies:
   # Trojan
   - name: "hk"
     type: hysteria
-    server: yicanny.com
-    port: 20666
-    auth_str: freekk
+    server: hk.yicanny.com
+    port: 17879
+    ports: 46777-47777
+    auth_str: freekkk
     #obfs: yourpassword
     alpn: 
       - h3
     protocol: udp
-    up: 125
-    down: 125
+    up: 19
+    down: 110
     udp: true
-    sni: yicanny.com
+    sni: hk.yicanny.com
     skip-cert-verify: false
 
   - name: "us"
@@ -184,8 +185,8 @@ proxies:
     alpn: 
       - h3
     protocol: wechat-video
-    up: 125
-    down: 125
+    up: 110
+    down: 110
     udp: true
     sni: us.yicanny.com
     skip-cert-verify: false
@@ -200,40 +201,42 @@ proxies:
     alpn: 
       - h3
     protocol: udp
-    up: 125
-    down: 125
+    up: 110
+    down: 110
     udp: true
     sni: de.yicanny.com
     skip-cert-verify: false
 
   - name: "hk1"
     type: hysteria
-    server: hk.yicanny.com
-    port: 17879
+    server: hk2.yicanny.com
+    port: 20666
+    ports: 25777-26777
     auth_str: freekkk
     #obfs: yourpassword
     alpn: 
       - h3
     protocol: udp
-    up: 125
-    down: 125
+    up: 19
+    down: 110
     udp: true
-    sni: hk.yicanny.com
+    sni: hk2.yicanny.com
     skip-cert-verify: false
 
-  - name: "bhk"
+  - name: "tw1"
     type: hysteria
-    server: tw.yicanny.com
-    port: 10307
+    server: tw2.yicanny.com
+    port: 20777
+    ports: 26777-27777
     auth_str: freekkk
     #obfs: yourpassword
     alpn: 
       - h3
     protocol: udp
-    up: 125
-    down: 125
+    up: 19
+    down: 110
     udp: true
-    sni: tw.yicanny.com
+    sni: tw2.yicanny.com
     skip-cert-verify: false
     
   - name: "ssv"
@@ -285,7 +288,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2F81d32c8b81cda5cec1dad768a2814802%2Fraw%2Fedbbf390a8591c0959b259e6eef7743e49940b98%2Fsub3&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FMeilieage%2Fwebcdn%2Fmain%2Frule%2FArea_Media_NoAuto.ini&emoji=true&list=true&xudp=true&udp=true&tfo=false&expand=true&scv=false&fdn=false&new_name=true" # 放机场订阅链接
+    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2F81d32c8b81cda5cec1dad768a2814802%2Fraw%2F08804b659b4b15083020153b81271b26dced234e%2Fsub3&insert=false&emoji=true&list=false&xudp=true&udp=true&tfo=false&expand=true&scv=false&fdn=false&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
