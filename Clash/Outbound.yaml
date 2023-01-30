@@ -223,7 +223,7 @@ proxies:
     sni: hk2.yicanny.com
     skip-cert-verify: false
 
-  - name: "tw1"
+  - name: "bhk"
     type: hysteria
     server: tw2.yicanny.com
     port: 20777
