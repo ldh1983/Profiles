@@ -239,7 +239,7 @@ proxies:
     sni: tw2.yicanny.com
     skip-cert-verify: false
     
-  - name: "bhk"
+  - name: "ssv"
     type: hysteria
     server: yicanny.com
     port: 20167
