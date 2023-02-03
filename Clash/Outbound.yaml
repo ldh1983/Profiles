@@ -239,7 +239,23 @@ proxies:
     sni: tw2.yicanny.com
     skip-cert-verify: false
     
-  - name: "ssv"
+  - name: "bhk"
+    type: hysteria
+    server: yicanny.com
+    port: 20167
+    ports: 25387-26387
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: yicanny.com
+    skip-cert-verify: false
+    
+  #- name: "ssv"
     type: ss
     server: 207.148.67.196
     port: 8888
