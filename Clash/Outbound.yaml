@@ -255,7 +255,7 @@ proxies:
     sni: yicanny.com
     skip-cert-verify: false
     
-  #- name: "ssv"
+  - name: "ssv1"
     type: ss
     server: 207.148.67.196
     port: 8888
