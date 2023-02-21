@@ -624,7 +624,7 @@ rules:
   - PROCESS-NAME,com.google.android.youtube.tvmusic,StreamingSE
   - PROCESS-NAME, Telegram.exe, telegram
   - PROCESS-NAME, YouTube Music.exe, StreamingSE
-  - PROCESS-NAME, com.okinc.okex.gp, PROXY
+  #- PROCESS-NAME, com.okinc.okex.gp, PROXY
   #- RULE-SET,YouTubeMusic,ymusic
   
   - RULE-SET,Apple,Apple
