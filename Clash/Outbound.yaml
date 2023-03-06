@@ -294,7 +294,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https%3A%2F%2Fconfig.51mdss.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3DnbxiyzP0q7TCgfmJ" # 放机场订阅链接
+    url: "https%3A%2F%2Fcentos.config-mdss.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3DnbxiyzP0q7TCgfmJ" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
