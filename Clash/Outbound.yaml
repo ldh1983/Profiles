@@ -499,6 +499,7 @@ proxy-groups:
     proxies:
       - Fallback
       - Url-test
+      - DIRECT
       - ca
       - mg
       - hk
