@@ -132,18 +132,18 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
-    server: tw1.yicanny.com
+    server: 104.155.212.127
     port: 20357
     auth_str: freekkk
-    #obfs: freekkk
+    obfs: freekkk
     alpn: 
       - h3
     protocol: udp
     up: 19
     down: 110
     udp: true
-    sni: tw1.yicanny.com
-    skip-cert-verify: false
+    sni: wechat.com
+    skip-cert-verify: true
 
   # VMess(Websocket + TLS)
   - name: "mg"
