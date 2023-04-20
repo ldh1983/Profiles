@@ -294,7 +294,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fupdate-debian.config-mdss.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D774fd85605552ded35d818e3628234d1&insert=false&emoji=true&list=false&xudp=true&udp=true&tfo=true&expand=true&scv=false&fdn=false&new_name=true" # 放机场订阅链接
+    url: "https://update-debian.config-mdss.xyz/api/v1/client/subscribe?token=341daddbbcef1ebf75197edcb77b90b4" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
