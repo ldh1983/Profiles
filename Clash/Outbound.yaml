@@ -294,7 +294,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https%3A%2F%2F01.laomao1.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dbd66614883add04f1f377b3d0b9c9b27" # 放机场订阅链接
+    url: "https://03.laomao1.xyz/api/v1/client/subscribe?token=bd66614883add04f1f377b3d0b9c9b27" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
