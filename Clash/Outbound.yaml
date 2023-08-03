@@ -138,6 +138,8 @@ proxies:
     reduce-rtt: true
     request-timeout: 8000
     udp-relay-mode: native
+    alpn: [h3]
+    ongestion-controller: bbr
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
