@@ -128,7 +128,16 @@ dns:
 
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
-
+  - name: tuic
+    server: yicanny.com
+    port: 2099
+    type: tuic
+    uuid: 0bb30e83-da88-4d0f-adac-551ed82e7947
+    password: 0bb30e83-da88-4d0f-adac-551ed82e7947
+    disable-sni: true
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
   # Shadowsocks(Websocket + TLS)
   - name: "ca"
     type: hysteria
@@ -360,6 +369,7 @@ proxy-groups:
       - YList
       - MyList
     proxies:
+      - tuic
       - ca
       - hk
       - us
@@ -379,6 +389,7 @@ proxy-groups:
       - YList
       - MyList
     proxies:
+      - tuic
       - ca
       - mg
       - hk
@@ -400,6 +411,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - tuic
       - ca
       - mg
       - hk
@@ -419,6 +431,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - tuic
       - ca
       - mg
       - hk
@@ -438,6 +451,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - tuic
       - ca
       - mg
       - hk
@@ -458,6 +472,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - tuic
       - ca
       - mg
       - hk
@@ -480,6 +495,7 @@ proxy-groups:
       - Url-test
       - Fallback
       - PROXY
+      - tuic
       - ca
       - mg
       - hk
@@ -500,6 +516,7 @@ proxy-groups:
       - Url-test
       - Fallback
       - PROXY
+      - tuic
       - ca
       - mg
       - hk
@@ -520,6 +537,7 @@ proxy-groups:
       - Fallback
       - Url-test
       - DIRECT
+      - tuic
       - ca
       - mg
       - hk
@@ -540,6 +558,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - tuic
       - ca
       - mg
       - hk
