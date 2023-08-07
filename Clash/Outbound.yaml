@@ -413,6 +413,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - tuic
       - ca
       - mg
@@ -433,6 +434,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - tuic
       - ca
       - mg
@@ -453,6 +455,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - tuic
       - ca
       - mg
@@ -474,6 +477,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - tuic
       - ca
       - mg
@@ -496,6 +500,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - PROXY
       - tuic
       - ca
@@ -517,6 +522,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - PROXY
       - tuic
       - ca
@@ -538,6 +544,7 @@ proxy-groups:
     proxies:
       - Fallback
       - Url-test
+      - HK
       - DIRECT
       - tuic
       - ca
@@ -560,6 +567,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - tuic
       - ca
       - mg
@@ -570,6 +578,27 @@ proxy-groups:
       - bhk
       - ssv
       - DIRECT
+
+  - name: "HK"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+      - DIRECT
+    filter: "(?i)港|hk|hongkong|hong kong"
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
