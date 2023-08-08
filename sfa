@@ -1,1 +1,970 @@
-
+{
+    "dns": {
+        "rules": [
+            {
+                "clash_mode": "global",
+                "server": "remote"
+            },
+            {
+                "clash_mode": "direct",
+                "server": "local"
+            },
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "local"
+            },
+            {
+                "geosite": "cn",
+                "server": "local"
+            }
+        ],
+        "servers": [
+            {
+                "address": "https://1.1.1.1/dns-query",
+                "detour": "select",
+                "tag": "remote"
+            },
+            {
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "direct",
+                "tag": "local"
+            }
+        ],
+        "strategy": "ipv4_only"
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "secret": "",
+            "store_selected": true
+        }
+    },
+    "inbounds": [
+        {
+            "auto_route": true,
+            "domain_strategy": "ipv4_only",
+            "endpoint_independent_nat": true,
+            "inet4_address": "172.19.0.1/30",
+            "mtu": 9000,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "strict_route": true,
+            "type": "tun"
+        },
+        {
+            "domain_strategy": "ipv4_only",
+            "listen": "127.0.0.1",
+            "listen_port": 2333,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "socks-in",
+            "type": "socks",
+            "users": []
+        },
+        {
+            "domain_strategy": "ipv4_only",
+            "listen": "127.0.0.1",
+            "listen_port": 2334,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "mixed-in",
+            "type": "mixed",
+            "users": []
+        }
+    ],
+    "log": {},
+    "outbounds": [
+        {
+            "tag": "gfw",
+            "type": "selector",
+            "default": "urltest",
+            "outbounds": [
+                "urltest",
+                "🇭🇰 HK vmg",
+                "🇭🇰 HK WSS",
+                "🇨🇳 TW wss",
+                "🇨🇳 TW tr",
+                "🇨🇳 TW 1tr",
+                "🇺🇸 US tr",
+                "🇬🇧 UK",
+                "GE wss",
+                "🇨🇳 tw h2",
+                "🇺🇸 US vmg",
+                "GE vmg",
+                "🇬🇧 UK vmg",
+                "🇭🇰 HK 1WSS",
+                "🇨🇳 TW 1WSS",
+                "🇺🇸 US WSS",
+                "🇭🇰 HK 1TR",
+                "🇭🇰 1香港集群-ChaGPT全网优化(vmess)",
+                "🇭🇰 2香港-专线(iOS优化)",
+                "🇯🇵 6日本-北方优化(vmess)",
+                "🇰🇷 8韩国集群-全网优化(vmess)",
+                "🇰🇷 9韩国-专线(iOS优化)",
+                "🇯🇵 10日本-专线(iOS优化)",
+                "🇺🇸 11美国-ChatGPT(iOS优化)",
+                "🇺🇸 12美国凤凰城-ChatGPT(vmess)",
+                "🇸🇬 15新加坡-专线(iOS优化)",
+                "01-CC-N01",
+                "01-CC-N02",
+                "CC-01",
+                "CC-02",
+                "CC-03",
+                "Dedi01-1",
+                "Dedi01-2",
+                "Dedi01-3",
+                "🇭🇰 Hongkong-KR01-relay",
+                "🇭🇰 Hongkong-KR02-relay",
+                "🇭🇰 Hongkong-KR03-relay",
+                "🇸🇬 Singapore-01  unlock-ChatGPT",
+                "🇸🇬 Singapore-02  unlock-ChatGPT",
+                "🇸🇬 Singapore-03  unlock-ChatGPT"
+            ]
+        },
+        {
+            "tag": "match",
+            "type": "selector",
+            "default": "urltest",
+            "outbounds": [
+                "urltest",
+                "🇭🇰 HK vmg",
+                "🇭🇰 HK WSS",
+                "🇨🇳 TW wss",
+                "🇨🇳 TW tr",
+                "🇨🇳 TW 1tr",
+                "🇺🇸 US tr",
+                "🇬🇧 UK",
+                "GE wss",
+                "🇨🇳 tw h2",
+                "🇺🇸 US vmg",
+                "GE vmg",
+                "🇬🇧 UK vmg",
+                "🇭🇰 HK 1WSS",
+                "🇨🇳 TW 1WSS",
+                "🇺🇸 US WSS",
+                "🇭🇰 HK 1TR",
+                "🇭🇰 1香港集群-ChaGPT全网优化(vmess)",
+                "🇭🇰 2香港-专线(iOS优化)",
+                "🇯🇵 6日本-北方优化(vmess)",
+                "🇰🇷 8韩国集群-全网优化(vmess)",
+                "🇰🇷 9韩国-专线(iOS优化)",
+                "🇯🇵 10日本-专线(iOS优化)",
+                "🇺🇸 11美国-ChatGPT(iOS优化)",
+                "🇺🇸 12美国凤凰城-ChatGPT(vmess)",
+                "🇸🇬 15新加坡-专线(iOS优化)",
+                "01-CC-N01",
+                "01-CC-N02",
+                "CC-01",
+                "CC-02",
+                "CC-03",
+                "Dedi01-1",
+                "Dedi01-2",
+                "Dedi01-3",
+                "🇭🇰 Hongkong-KR01-relay",
+                "🇭🇰 Hongkong-KR02-relay",
+                "🇭🇰 Hongkong-KR03-relay",
+                "🇸🇬 Singapore-01  unlock-ChatGPT",
+                "🇸🇬 Singapore-02  unlock-ChatGPT",
+                "🇸🇬 Singapore-03  unlock-ChatGPT"
+            ]
+        },
+        {
+            "tag": "google",
+            "type": "selector",
+            "default": "urltest",
+            "outbounds": [
+                "urltest",
+                "🇭🇰 HK vmg",
+                "🇭🇰 HK WSS",
+                "🇨🇳 TW wss",
+                "🇨🇳 TW tr",
+                "🇨🇳 TW 1tr",
+                "🇺🇸 US tr",
+                "🇬🇧 UK",
+                "GE wss",
+                "🇨🇳 tw h2",
+                "🇺🇸 US vmg",
+                "GE vmg",
+                "🇬🇧 UK vmg",
+                "🇭🇰 HK 1WSS",
+                "🇨🇳 TW 1WSS",
+                "🇺🇸 US WSS",
+                "🇭🇰 HK 1TR",
+                "🇭🇰 1香港集群-ChaGPT全网优化(vmess)",
+                "🇭🇰 2香港-专线(iOS优化)",
+                "🇯🇵 6日本-北方优化(vmess)",
+                "🇰🇷 8韩国集群-全网优化(vmess)",
+                "🇰🇷 9韩国-专线(iOS优化)",
+                "🇯🇵 10日本-专线(iOS优化)",
+                "🇺🇸 11美国-ChatGPT(iOS优化)",
+                "🇺🇸 12美国凤凰城-ChatGPT(vmess)",
+                "🇸🇬 15新加坡-专线(iOS优化)",
+                "01-CC-N01",
+                "01-CC-N02",
+                "CC-01",
+                "CC-02",
+                "CC-03",
+                "Dedi01-1",
+                "Dedi01-2",
+                "Dedi01-3",
+                "🇭🇰 Hongkong-KR01-relay",
+                "🇭🇰 Hongkong-KR02-relay",
+                "🇭🇰 Hongkong-KR03-relay",
+                "🇸🇬 Singapore-01  unlock-ChatGPT",
+                "🇸🇬 Singapore-02  unlock-ChatGPT",
+                "🇸🇬 Singapore-03  unlock-ChatGPT"
+            ]
+        },
+        {
+            "server": "hk.yicanny.com",
+            "server_port": 2053,
+            "tag": "🇭🇰 HK vmg",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk.yicanny.com"
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "fvV7cXyt"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "52da20de-76bf-11ec-81f5-42010aaa000c"
+        },
+        {
+            "server": "hk.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇭🇰 HK WSS",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "hk.yicanny.com"
+                    ]
+                },
+                "path": "/oC13d0PS/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "d18d8d88-5e16-11ec-81f5-42010aaa000c"
+        },
+        {
+            "server": "tw1.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇨🇳 TW wss",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw1.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "tw1.yicanny.com"
+                    ]
+                },
+                "path": "/FTtV9jIR/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "38782c08-596a-11ec-a844-42010a8c0022"
+        },
+        {
+            "password": "jim19830816",
+            "server": "tw1.yicanny.com",
+            "server_port": 443,
+            "tag": "🇨🇳 TW tr",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw1.yicanny.com"
+            },
+            "type": "trojan"
+        },
+        {
+            "password": "jim19830816",
+            "server": "tw2.yicanny.com",
+            "server_port": 443,
+            "tag": "🇨🇳 TW 1tr",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw2.yicanny.com"
+            },
+            "type": "trojan"
+        },
+        {
+            "password": "jim19830816",
+            "server": "us.yicanny.com",
+            "server_port": 443,
+            "tag": "🇺🇸 US tr",
+            "tls": {
+                "enabled": true,
+                "server_name": "us.yicanny.com"
+            },
+            "type": "trojan"
+        },
+        {
+            "server": "uk.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇬🇧 UK",
+            "tls": {
+                "enabled": true,
+                "server_name": "uk.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "uk.yicanny.com"
+                    ]
+                },
+                "path": "/v8HnqNwA/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "0c21d0b3-e144-11eb-ac14-42010a9a0002"
+        },
+        {
+            "server": "de.yicanny.com",
+            "server_port": 2096,
+            "tag": "GE wss",
+            "tls": {
+                "enabled": true,
+                "server_name": "de.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "de.yicanny.com"
+                    ]
+                },
+                "path": "/xihayWM5/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "a14bf39f-eddc-11eb-8b61-42010a9c0002"
+        },
+        {
+            "server": "tw1.yicanny.com",
+            "server_port": 2053,
+            "tag": "🇨🇳 tw h2",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw1.yicanny.com"
+            },
+            "transport": {
+                "path": "/ck5aeJIX/",
+                "type": "http",
+                "host": [
+                    "tw1.yicanny.com"
+                ]
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "3ff1a03a-5966-11ec-a844-42010a8c0022"
+        },
+        {
+            "server": "us.yicanny.com",
+            "server_port": 2053,
+            "tag": "🇺🇸 US vmg",
+            "tls": {
+                "enabled": true,
+                "server_name": "us.yicanny.com"
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "tojQZyeJ"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "65d8b398-79e5-11ec-9405-42010aa80002"
+        },
+        {
+            "server": "de.yicanny.com",
+            "server_port": 2053,
+            "tag": "GE vmg",
+            "tls": {
+                "enabled": true,
+                "server_name": "de.yicanny.com"
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "FybIGjkD"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "c8de82e2-79e0-11ec-8b61-42010a9c0002"
+        },
+        {
+            "server": "uk.yicanny.com",
+            "server_port": 2053,
+            "tag": "🇬🇧 UK vmg",
+            "tls": {
+                "enabled": true,
+                "server_name": "uk.yicanny.com"
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "nftUML5p"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "4ce0300e-79e1-11ec-ac14-42010a9a0002"
+        },
+        {
+            "server": "hk2.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇭🇰 HK 1WSS",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk2.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "hk2.yicanny.com"
+                    ]
+                },
+                "path": "/cU3oEG2d/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "bed92880-aaa8-46fb-b906-0f9b939aa220"
+        },
+        {
+            "server": "tw2.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇨🇳 TW 1WSS",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw2.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "tw2.yicanny.com"
+                    ]
+                },
+                "path": "/plbLV1A4/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "467cbf8c-9bfc-4618-b06f-4d798660566c"
+        },
+        {
+            "server": "us.yicanny.com",
+            "server_port": 2096,
+            "tag": "🇺🇸 US WSS",
+            "tls": {
+                "enabled": true,
+                "server_name": "us.yicanny.com"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "us.yicanny.com"
+                    ]
+                },
+                "path": "/M0nmS6Pr/",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "4fb085aa-b043-4b0c-9e64-f44fe1646f72"
+        },
+        {
+            "password": "jim19830816",
+            "server": "hk2.yicanny.com",
+            "server_port": 443,
+            "tag": "🇭🇰 HK 1TR",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk2.yicanny.com"
+            },
+            "type": "trojan"
+        },
+        {
+            "server": "1hk.prometheusnet01.xyz",
+            "server_port": 17848,
+            "tag": "🇭🇰 1香港集群-ChaGPT全网优化(vmess)",
+            "tls": {
+                "enabled": true,
+                "server_name": "1hk.prometheusnet01.xyz"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "8e431636-d42f-470f-9f67-11895d18d19a"
+        },
+        {
+            "password": "8e431636-d42f-470f-9f67-11895d18d19a",
+            "server": "dnsmart.dg-cdn.mob.networklinkpro.com",
+            "server_port": 17880,
+            "tag": "🇭🇰 2香港-专线(iOS优化)",
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305"
+        },
+        {
+            "server": "6jp.prometheusnet01.xyz",
+            "server_port": 17848,
+            "tag": "🇯🇵 6日本-北方优化(vmess)",
+            "tls": {
+                "enabled": true,
+                "server_name": "6jp.prometheusnet01.xyz"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "8e431636-d42f-470f-9f67-11895d18d19a"
+        },
+        {
+            "server": "8kr.prometheusnet01.xyz",
+            "server_port": 17848,
+            "tag": "🇰🇷 8韩国集群-全网优化(vmess)",
+            "tls": {
+                "enabled": true,
+                "server_name": "8kr.prometheusnet01.xyz"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "8e431636-d42f-470f-9f67-11895d18d19a"
+        },
+        {
+            "password": "8e431636-d42f-470f-9f67-11895d18d19a",
+            "server": "dnsmart.dg-cdn.mob.networklinkpro.com",
+            "server_port": 17881,
+            "tag": "🇰🇷 9韩国-专线(iOS优化)",
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305"
+        },
+        {
+            "password": "8e431636-d42f-470f-9f67-11895d18d19a",
+            "server": "dnsmart.dg-cdn.mob.networklinkpro.com",
+            "server_port": 17882,
+            "tag": "🇯🇵 10日本-专线(iOS优化)",
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305"
+        },
+        {
+            "password": "8e431636-d42f-470f-9f67-11895d18d19a",
+            "server": "dnsmart.dg-cdn.mob.networklinkpro.com",
+            "server_port": 17884,
+            "tag": "🇺🇸 11美国-ChatGPT(iOS优化)",
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305"
+        },
+        {
+            "server": "12us.prometheusnet01.xyz",
+            "server_port": 17848,
+            "tag": "🇺🇸 12美国凤凰城-ChatGPT(vmess)",
+            "tls": {
+                "enabled": true,
+                "server_name": "12us.prometheusnet01.xyz"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "8e431636-d42f-470f-9f67-11895d18d19a"
+        },
+        {
+            "password": "8e431636-d42f-470f-9f67-11895d18d19a",
+            "server": "dnsmart.dg-cdn.mob.networklinkpro.com",
+            "server_port": 17883,
+            "tag": "🇸🇬 15新加坡-专线(iOS优化)",
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305"
+        },
+        {
+            "server": "4.1808.cf",
+            "server_port": 30001,
+            "tag": "01-CC-N01",
+            "tls": {
+                "enabled": true,
+                "server_name": "rnc.status.skin"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "rnc.status.skin"
+                    ]
+                },
+                "path": "/wss_ray.html",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "3a3e263d-223f-49cc-bbdb-f7e07a55e6fe"
+        },
+        {
+            "server": "5.1808.cf",
+            "server_port": 30001,
+            "tag": "01-CC-N02",
+            "tls": {
+                "enabled": true,
+                "server_name": "rnc.status.skin"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "rnc.status.skin"
+                    ]
+                },
+                "path": "/wss_ray.html",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "3a3e263d-223f-49cc-bbdb-f7e07a55e6fe"
+        },
+        {
+            "server": "4.1808.cf",
+            "server_port": 30001,
+            "tag": "CC-01",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230518cc.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230518cc.1808.cf"
+                    ]
+                },
+                "path": "de47c57e",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "de47c57e-aa7b-4816-b7d4-f81458e627c7"
+        },
+        {
+            "server": "5.1808.cf",
+            "server_port": 30001,
+            "tag": "CC-02",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230518cc.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230518cc.1808.cf"
+                    ]
+                },
+                "path": "de47c57e",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "de47c57e-aa7b-4816-b7d4-f81458e627c7"
+        },
+        {
+            "server": "6.1808.cf",
+            "server_port": 30001,
+            "tag": "CC-03",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230518cc.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230518cc.1808.cf"
+                    ]
+                },
+                "path": "de47c57e",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "de47c57e-aa7b-4816-b7d4-f81458e627c7"
+        },
+        {
+            "server": "4.1808.cf",
+            "server_port": 30001,
+            "tag": "Dedi01-1",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230514.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230514.1808.cf"
+                    ]
+                },
+                "path": "d7ebcf5b",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "d7ebcf5b-9b56-4dc8-96f3-2a357d293b87"
+        },
+        {
+            "server": "5.1808.cf",
+            "server_port": 30001,
+            "tag": "Dedi01-2",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230514.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230514.1808.cf"
+                    ]
+                },
+                "path": "d7ebcf5b",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "d7ebcf5b-9b56-4dc8-96f3-2a357d293b87"
+        },
+        {
+            "server": "6.1808.cf",
+            "server_port": 30001,
+            "tag": "Dedi01-3",
+            "tls": {
+                "enabled": true,
+                "server_name": "20230514.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "20230514.1808.cf"
+                    ]
+                },
+                "path": "d7ebcf5b",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "d7ebcf5b-9b56-4dc8-96f3-2a357d293b87"
+        },
+        {
+            "server": "4.1808.cf",
+            "server_port": 30001,
+            "tag": "🇭🇰 Hongkong-KR01-relay",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "hk.1808.cf"
+                    ]
+                },
+                "path": "/cqfgvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "f4d2a0d2-fe76-450c-bd1b-e3e6b2d74308"
+        },
+        {
+            "server": "5.1808.cf",
+            "server_port": 30001,
+            "tag": "🇭🇰 Hongkong-KR02-relay",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "hk.1808.cf"
+                    ]
+                },
+                "path": "/cqfgvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "f4d2a0d2-fe76-450c-bd1b-e3e6b2d74308"
+        },
+        {
+            "server": "6.1808.cf",
+            "server_port": 30001,
+            "tag": "🇭🇰 Hongkong-KR03-relay",
+            "tls": {
+                "enabled": true,
+                "server_name": "hk.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "hk.1808.cf"
+                    ]
+                },
+                "path": "/cqfgvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "f4d2a0d2-fe76-450c-bd1b-e3e6b2d74308"
+        },
+        {
+            "server": "4.1808.cf",
+            "server_port": 30001,
+            "tag": "🇸🇬 Singapore-01  unlock-ChatGPT",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "sg.1808.cf"
+                    ]
+                },
+                "path": "/tiadvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "06698fb5-3208-48c7-ab97-25c2ba1cae6d"
+        },
+        {
+            "server": "5.1808.cf",
+            "server_port": 30001,
+            "tag": "🇸🇬 Singapore-02  unlock-ChatGPT",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "sg.1808.cf"
+                    ]
+                },
+                "path": "/tiadvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "06698fb5-3208-48c7-ab97-25c2ba1cae6d"
+        },
+        {
+            "server": "6.1808.cf",
+            "server_port": 30001,
+            "tag": "🇸🇬 Singapore-03  unlock-ChatGPT",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg.1808.cf"
+            },
+            "transport": {
+                "headers": {
+                    "Host": [
+                        "sg.1808.cf"
+                    ]
+                },
+                "path": "/tiadvws",
+                "type": "ws"
+            },
+            "type": "vmess",
+            "security": "auto",
+            "uuid": "06698fb5-3208-48c7-ab97-25c2ba1cae6d"
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "urltest",
+            "type": "urltest",
+            "outbounds": [
+                "🇭🇰 HK vmg",
+                "🇭🇰 HK WSS",
+                "🇨🇳 TW wss",
+                "🇨🇳 TW tr",
+                "🇨🇳 TW 1tr",
+                "🇺🇸 US tr",
+                "🇬🇧 UK",
+                "GE wss",
+                "🇨🇳 tw h2",
+                "🇺🇸 US vmg",
+                "GE vmg",
+                "🇬🇧 UK vmg",
+                "🇭🇰 HK 1WSS",
+                "🇨🇳 TW 1WSS",
+                "🇺🇸 US WSS",
+                "🇭🇰 HK 1TR",
+                "🇭🇰 1香港集群-ChaGPT全网优化(vmess)",
+                "🇭🇰 2香港-专线(iOS优化)",
+                "🇯🇵 6日本-北方优化(vmess)",
+                "🇰🇷 8韩国集群-全网优化(vmess)",
+                "🇰🇷 9韩国-专线(iOS优化)",
+                "🇯🇵 10日本-专线(iOS优化)",
+                "🇺🇸 11美国-ChatGPT(iOS优化)",
+                "🇺🇸 12美国凤凰城-ChatGPT(vmess)",
+                "🇸🇬 15新加坡-专线(iOS优化)",
+                "01-CC-N01",
+                "01-CC-N02",
+                "CC-01",
+                "CC-02",
+                "CC-03",
+                "Dedi01-1",
+                "Dedi01-2",
+                "Dedi01-3",
+                "🇭🇰 Hongkong-KR01-relay",
+                "🇭🇰 Hongkong-KR02-relay",
+                "🇭🇰 Hongkong-KR03-relay",
+                "🇸🇬 Singapore-01  unlock-ChatGPT",
+                "🇸🇬 Singapore-02  unlock-ChatGPT",
+                "🇸🇬 Singapore-03  unlock-ChatGPT"
+            ]
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "rules": [
+            {
+                "geosite": "category-ads-all",
+                "outbound": "block"
+            },
+            {
+                "outbound": "dns-out",
+                "protocol": "dns"
+            },
+            {
+                "clash_mode": "direct",
+                "outbound": "direct"
+            },
+            {
+                "clash_mode": "global",
+                "outbound": "select"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": "geolocation-!cn",
+                "outbound": "select"
+            },
+            {
+                "geosite": "cn",
+                "outbound": "direct"
+            }
+        ]
+    }
+}
