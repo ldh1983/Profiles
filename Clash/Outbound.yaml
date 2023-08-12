@@ -689,7 +689,7 @@ rule-providers:
 
 # 规则
 rules:
-  - DOMAIN-KEYWORD,agora,MATCH
+  - DOMAIN-KEYWORD,gnews,MATCH
   #- DOMAIN-KEYWORD,google,PROXY
   #- DOMAIN,youtubei.googleapis.com,PROXY
   #- DOMAIN,music.youtube.com,PROXY
