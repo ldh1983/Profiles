@@ -43,6 +43,14 @@ external-controller: 127.0.0.1:9090
 
 find-process-mode: always
 
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+
 # A relative path to the configuration directory or an absolute path to a
 # directory in which you put some static web resource. Clash core will then
 # serve it at `${API}/ui`.
