@@ -742,10 +742,10 @@ rules:
   - IP-CIDR,182.254.116.0/24,DIRECT
   
   - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,icloud@cn,DIRECT
-  - GEOSITE,apple@cn,DIRECT
-  - GEOSITE,apple-cn,DIRECT
-  - GEOSITE,microsoft@cn,DIRECT
+  #- GEOSITE,icloud@cn,DIRECT
+  #- GEOSITE,apple@cn,DIRECT
+  #- GEOSITE,apple-cn,DIRECT
+  #- GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,facebook,PROXY
   - GEOSITE,youtube,PROXY
   - GEOSITE,geolocation-cn,DIRECT
