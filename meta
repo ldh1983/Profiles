@@ -306,7 +306,7 @@ proxy-groups:
   - {name: 巴哈姆特, <<: *pr}
 
 #分隔,下面是地区分组
-  - {name: 香港, <<: *use, proxies: [tuic,ca,hk,us,DE,hk1,bhk,ssv,mg], filter: "(?i)港|hk|hongkong|Hongkong|hong kong", type: url-test}
+  - {name: 香港, filter: "(?i)港|hk|hongkong|Hongkong|hong kong", <<: *use, proxies: [tuic,ca,hk,us,DE,hk1,bhk,ssv,mg], type: url-test}
 
   - {name: 台湾, <<: *use, filter: "(?i)台|tw|taiwan", type: url-test}
 
