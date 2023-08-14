@@ -116,9 +116,9 @@ proxy-groups:
   # - {name: dns, type: select, proxies: [DIRECT, WARP, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}  # 加入 WARP
   - {name: dns, type: select, proxies: [DIRECT, 自动选择, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点]}
 
-  - {name: Google, <<: *use, <<: *pr}
+  - {name: Google, <<: *use, proxies: [DIRECT, 自动选择, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, DIRECT,]}
 
-  - {name: Telegram, <<: *pr}
+  - {name: Telegram, <<: *use, proxies: [DIRECT, 自动选择, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, DIRECT,]}
 
   - {name: Twitter, <<: *pr}
 
