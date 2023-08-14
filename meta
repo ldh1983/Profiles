@@ -20,14 +20,16 @@ proxy-providers:
   provider1:
     <<: *p
     url: "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c"
+    path: ./proxy_providers/provider1.yaml
 
   provider2:
     <<: *p
     url: "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md&insert=false&append_type=false&emoji=true&list=false&scv=false&fdn=false&sort=false&udp=true&clash.doh=true&new_name=true"
-
+    path: ./proxy_providers/provider2.yaml
   provider3:
     <<: *p
     url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2F1808.netlify.app&insert=false&emoji=true&list=true&udp=true&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
+    path: ./proxy_providers/provider3.yaml
 
 mode: rule
 ipv6: true
