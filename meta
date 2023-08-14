@@ -407,7 +407,7 @@ rule-providers:
 
 rules:
   # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
-  - DOMAIN-KEYWORD,gnews,gfw
+  - DOMAIN-KEYWORD,gnews,默认
   - RULE-SET,UDP,UDP
   - RULE-SET,Apple,Apple
   - PROCESS-NAME,com.google.android.apps.youtube.music,Spotify
