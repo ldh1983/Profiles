@@ -312,11 +312,11 @@ proxy-groups:
 
   - {name: 日本, <<: *use, filter: "(?i)日本|jp|japan", type: url-test}
 
-  - {name: 美国, <<: *use, filter: "(?i)美|us|unitedstates|united states", type: url-test, proxies: us}
+  - {name: 美国, <<: *use, filter: "(?i)美|us|unitedstates|united states", type: url-test, proxies: [us]}
 
   - {name: 新加坡, <<: *use, filter: "(?i)(新加坡|sg|singapore)", type: url-test}
 
-  - {name: 其它地区, <<: *use, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*", type: fallback, proxies: DE}
+  - {name: 其它地区, <<: *use, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*", type: fallback, proxies: [DE]}
 
 
   - {name: 自动选择, <<: *use, tolerance: 2, type: url-test}
