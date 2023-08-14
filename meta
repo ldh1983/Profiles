@@ -319,9 +319,9 @@ proxy-groups:
   - {name: 其它地区, <<: *use, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*", type: fallback, proxies: [DE]}
 
 
-  - {name: 自动选择, <<: *use, tolerance: 2, proxies: [tuic,hk,hk1,ssv,ca,bhk.mg,us,DE], type: url-test}
+  - {name: 自动选择, <<: *use, tolerance: 2, proxies: [tuic,hk,hk1,ssv,ca,bhk,mg,us,DE], type: url-test}
 
-  - {name: 自动回退, <<: *use, tolerance: 2, proxies: [tuic,hk,hk1,ssv,ca,bhk.mg,us,DE], type: fallback}
+  - {name: 自动回退, <<: *use, tolerance: 2, proxies: [tuic,hk,hk1,ssv,ca,bhk,mg,us,DE], type: fallback}
 
 rule-providers:
 # name: # Provider 名称
