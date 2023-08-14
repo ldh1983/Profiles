@@ -516,6 +516,7 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - tuicv5
       - tuic
       - ca
       - mg
