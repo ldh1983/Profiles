@@ -279,6 +279,8 @@ proxy-groups:
 
   - {name: 全部节点, <<: *use, proxies: [tuic,ca,hk,us,DE,hk1,bhk,ssv,mg,自动回退, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT]}
 
+  - {name: Apple, <<: *use, proxies: [tuic,ca,hk,us,DE,hk1,bhk,ssv,mg,自动回退, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, DIRECT]}
+
   - {name: Twitter, <<: *pr}
 
   - {name: YouTube, <<: *pr}
