@@ -109,6 +109,161 @@ proxies:
   #   dns:
   #     - https://dns.cloudflare.com/dns-query
 
+  - name: tuic
+    server: yicanny.com
+    port: 2099
+    type: tuic
+    uuid: 0bb30e83-da88-4d0f-adac-551ed82e7947
+    password: 0bb30e83-da88-4d0f-adac-551ed82e7947
+    disable-sni: true
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
+    alpn: [h3]
+    ongestion-controller: bbr
+  # Shadowsocks(Websocket + TLS)
+  - name: "ca"
+    type: hysteria
+    server: 104.155.212.127
+    port: 20357
+    auth_str: freekkk
+    obfs: freekkk
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: wechat.com
+    skip-cert-verify: true
+
+  # VMess(Websocket + TLS)
+  - name: "mg"
+    type: vmess
+    server: tw1.yicanny.com
+    port: 2053
+    uuid: 3ff1a03a-5966-11ec-a844-42010a8c0022
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: h2
+    tls: true
+    h2-opts:
+        path: /ck5aeJIX/
+
+  # Trojan
+  - name: "hk"
+    type: hysteria
+    server: hk.yicanny.com
+    port: 17879
+    ports: 46777-47777
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: hk.yicanny.com
+    skip-cert-verify: false
+
+  - name: "us"
+    type: hysteria
+    server: us.yicanny.com
+    port: 20777
+    auth_str: frekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: wechat-video
+    up: 110
+    down: 110
+    udp: true
+    sni: us.yicanny.com
+    skip-cert-verify: false
+    
+  - name: "DE"
+    type: hysteria
+    server: de.yicanny.com
+    port: 20888
+    ports: 36777-37777
+    auth_str: frekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 110
+    down: 110
+    udp: true
+    sni: de.yicanny.com
+    skip-cert-verify: false
+
+  - name: "hk1"
+    type: hysteria
+    server: hk2.yicanny.com
+    port: 20666
+    ports: 25777-26777
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: hk2.yicanny.com
+    skip-cert-verify: false
+
+  - name: "bhk"
+    type: hysteria
+    server: tw2.yicanny.com
+    port: 20777
+    ports: 26777-27777
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: tw2.yicanny.com
+    skip-cert-verify: false
+    
+  - name: "ssv"
+    type: hysteria
+    server: yicanny.com
+    port: 20167
+    ports: 25387-26387
+    auth_str: freekkk
+    #obfs: yourpassword
+    alpn: 
+      - h3
+    protocol: udp
+    up: 19
+    down: 110
+    udp: true
+    sni: yicanny.com
+    skip-cert-verify: false
+    
+  - name: "ssv2ray"
+    type: ss
+    server: 207.148.67.196
+    port: 8888
+    cipher: aes-256-gcm
+    password: "passwd123"
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket # no QUIC now
+      tls: false # wss
+      # skip-cert-verify: true
+      host: cloudfront.com
+      path: "/"
+      mux: true
+      #headers: cloudfront.com
+      #custom: 8
+
 proxy-groups:
 
   - {name: 默认, <<: *use, proxies: [DIRECT, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
