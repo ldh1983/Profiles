@@ -565,6 +565,7 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - TW
       - PROXY
       - tuic
       - ca
@@ -628,8 +629,60 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - Url-test
-      - Fallback
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    filter: "(?i)港|hk|hongkong|hong kong"
+
+  - name: "TW"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    filter: "(?i)台|tw|taiwan"
+
+  - name: "新家坡"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    filter: "(?i)(新加坡|sg|singapore)"
+
+  - name: "JP"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
       - tuic
       - ca
       - mg
@@ -640,7 +693,43 @@ proxy-groups:
       - bhk
       - ssv
       - DIRECT
-    filter: "(?i)港|hk|hongkong|hong kong"
+    filter: "(?i)日本|jp|japan"
+
+  - name: "US"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    filter: "(?i)美|us|unitedstates|united states"
+
+  - name: "other"
+    type: fallback
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*"
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
