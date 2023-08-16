@@ -405,44 +405,6 @@ proxy-groups:
   # 手动选择订阅节点
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
-  - name: "Fallback"
-    type: fallback 
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuic
-      - ca
-      - hk
-      - us
-      - DE
-      - hk1
-      - bhk
-      - ssv
-      - mg
-
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
-
-  - name: "Url-test"
-    type: url-test 
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuic
-      - ca
-      - mg
-      - hk
-      - us
-      - DE
-      - hk1
-      - bhk
-      - ssv
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
     
   # 代理节点选择
   - name: "PROXY"
@@ -621,6 +583,45 @@ proxy-groups:
       - bhk
       - ssv
       - DIRECT
+
+  - name: "Fallback"
+    type: fallback 
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+      - mg
+
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: "Url-test"
+    type: url-test 
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
 
   - name: "HK"
     type: url-test
