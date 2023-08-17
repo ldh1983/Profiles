@@ -36,7 +36,7 @@ mode: rule
 log-level: info
 
 # When set to false, resolver won't translate hostnames to IPv6 addresses
-ipv6: true
+ipv6: false
 
 # RESTful web API listening address
 external-controller: 127.0.0.1:9090
@@ -459,7 +459,10 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
-      - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
       - tuic
       - ca
       - mg
@@ -551,6 +554,7 @@ proxy-groups:
       - Fallback
       - Url-test
       - HK
+      - US
       - DIRECT
       - tuic
       - ca
@@ -574,6 +578,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
       - tuic
       - ca
       - mg
