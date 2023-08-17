@@ -439,6 +439,7 @@ proxy-groups:
       - Fallback
       - HK
       - tuic
+      - tuicv5
       - ca
       - mg
       - hk
