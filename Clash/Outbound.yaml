@@ -417,6 +417,9 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - 新家坡
+      - JP
+      - other
       - tuic
       - ca
       - mg
@@ -640,13 +643,8 @@ proxy-groups:
       - MyList
     proxies:
       - tuic
-      - ca
-      - mg
       - hk
-      - us
-      - DE
       - hk1
-      - bhk
       - ssv
     filter: "(?i)港|hk|hongkong|hong kong"
 
@@ -657,15 +655,9 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
       - ca
-      - mg
-      - hk
-      - us
-      - DE
-      - hk1
       - bhk
-      - ssv
+      - mg
     filter: "(?i)台|tw|taiwan"
 
   - name: "新家坡"
@@ -674,16 +666,6 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
       - MyList
-    proxies:
-      - tuic
-      - ca
-      - mg
-      - hk
-      - us
-      - DE
-      - hk1
-      - bhk
-      - ssv
     filter: "(?i)(新加坡|sg|singapore)"
 
   - name: "JP"
@@ -692,17 +674,6 @@ proxy-groups:
       - MList # 这是上面「proxy-providers」的名称
       - YList
       - MyList
-    proxies:
-      - tuic
-      - ca
-      - mg
-      - hk
-      - us
-      - DE
-      - hk1
-      - bhk
-      - ssv
-      - DIRECT
     filter: "(?i)日本|jp|japan"
 
   - name: "US"
@@ -712,15 +683,9 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
-      - ca
-      - mg
-      - hk
+      - tuicv5
       - us
-      - DE
-      - hk1
-      - bhk
-      - ssv
+
     filter: "(?i)美|us|unitedstates|united states"
 
   - name: "other"
