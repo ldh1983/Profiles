@@ -596,6 +596,32 @@ proxy-groups:
       - ssv
       - DIRECT
 
+  - name: "H"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
+      - tuicv5
+      - tuic
+      - ca
+      - mg
+      - hk
+      - us
+      - DE
+      - hk1
+      - bhk
+      - ssv
+      - DIRECT
+
   - name: "Fallback"
     type: fallback 
     use: # 注意此处是「use」
@@ -796,6 +822,7 @@ rule-providers:
 # 规则
 rules:
   - DOMAIN-KEYWORD,gnews,MATCH
+  - DOMAIN-KEYWORD,himalaya,H
   #- DOMAIN-KEYWORD,google,PROXY
   #- DOMAIN,youtubei.googleapis.com,PROXY
   #- DOMAIN,music.youtube.com,PROXY
