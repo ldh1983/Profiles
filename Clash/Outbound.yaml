@@ -417,8 +417,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
-      - 新家坡
+      - TW
       - JP
+      - US
+      - 新家坡
       - other
       - tuic
       - ca
@@ -441,6 +443,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
       - tuic
       - tuicv5
       - ca
@@ -462,6 +468,7 @@ proxy-groups:
     proxies:
       - Url-test
       - Fallback
+      - HK
       - TW
       - JP
       - US
@@ -488,6 +495,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
       - tuicv5
       - tuic
       - ca
@@ -512,6 +523,10 @@ proxy-groups:
       - Url-test
       - Fallback
       - HK
+      - TW
+      - JP
+      - US
+      - 新家坡
       - PROXY
       - tuic
       - ca
@@ -535,6 +550,9 @@ proxy-groups:
       - Fallback
       - HK
       - TW
+      - JP
+      - US
+      - 新家坡
       - PROXY
       - tuic
       - ca
@@ -557,7 +575,10 @@ proxy-groups:
       - Fallback
       - Url-test
       - HK
+      - TW
+      - JP
       - US
+      - 新家坡
       - DIRECT
       - tuic
       - ca
