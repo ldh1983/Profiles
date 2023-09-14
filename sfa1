@@ -54,13 +54,6 @@
         "domain_keyword": "ntp",
         "server": "local"
       },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-       
-      }
     ],
     "fakeip": [
       "enabled": "true",
