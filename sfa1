@@ -59,7 +59,7 @@
           "A",
           "AAAA"
         ],
-        "server": "fakedns"
+       
       }
     ],
     "fakeip": [
