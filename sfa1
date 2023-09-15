@@ -101,6 +101,7 @@
   },
 
   "inbounds": [
+    {
       "tag": "tun",
       "type": "tun",
       "interface_name": "tun1",
@@ -111,6 +112,7 @@
       "sniff": true,
       "sniff_override_destination": false,
       "domain_strategy": "ipv4_only",
+    }
   ],
 // 这里的 proxyproviedrs 需要使用 https://github.com/yaotthaha/sing-box-pub/tree/dev-next-yaott
   "proxyproviders": [
