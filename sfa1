@@ -54,12 +54,19 @@
         "domain_keyword": "ntp",
         "server": "local"
       },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakedns"
+      }
     ],
-    "fakeip": [
-      "enabled": "true",
+    "fakeip": {
+      "enabled": true,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
-    ],
+    },
     "strategy": "prefer_ipv4",
   },
   "inbounds": [
@@ -103,14 +110,14 @@
   "providers": [
     {
       "tag": "provider1",
-      "url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
+      "url": "base64 订阅链接1",
       "interval": "24h",
       "cache_file": "provider1.txt",
       "download_detour": "direct"
     },
     {
       "tag": "provider2",
-      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
+      "url": "base64 订阅链接2",
       "interval": "18h",
       "cache_file": "provider2.txt",
       "download_detour": "direct",
@@ -119,7 +126,7 @@
     },
     {
       "tag": "provider3",
-      "url": "https://1808.netlify.app",
+      "url": "base64 订阅链接3",
       "interval": "12h",
       "cache_file": "provider3.txt",
       "download_detour": "direct",
