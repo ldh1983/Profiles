@@ -21,7 +21,7 @@
       {
         "tag": "domesticDns",
         "address": "https://223.5.5.5/dns-query",
-        "detour": "domestic"
+        "detour": "direct"
       },
       {
         "tag": "proxyDns",
@@ -91,7 +91,7 @@
           "category-games@cn",
           "cn"
         ],
-        "server": "domesticDns"
+        "server": "direct"
       }
     ],
     "final": "proxyDns",
