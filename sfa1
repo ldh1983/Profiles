@@ -1,58 +1,57 @@
 {
   "log": {
-    "level": "info",
-    "output": "sing-box.log",
+    "disabled": false,
+    "level": "error",
+    "output": "./src/log/box.log",
     "timestamp": true
   },
   "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
     "servers": [
       {
-        "tag": "cloudflare",
-        "address": "tls://1.1.1.1",
-        "detour": "Proxy"
+        "tag": "proxyServerNameServer",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "tag": "domesticDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "domestic"
+      },
+      {
+        "tag": "proxyDns",
+        "address": "tcp://1.1.1.1",
+        "detour": "proxy"
       },
       {
         "tag": "fakedns",
         "address": "fakeip"
       },
       {
-        "tag": "local",
-        "address": "https://1.12.12.12/dns-query",
-        "detour": "direct"
-      },
-      {
-        "tag": "block",
-        "address": "rcode://success"
+        "tag": "nxdomain",
+        "address": "RCode://name_error"
       }
     ],
     "rules": [
-      // https://github.com/SagerNet/sing-box/releases/tag/v1.2.2
       {
-        "outbound": "any",
-        "server": "local",
-        "disable_cache": true
-      },
-      {
-        "clash_mode": "Global",
-        "server": "cloudflare"
-      },
-      {
-        "clash_mode": "Direct",
-        "server": "local"
-      },
-      {
-        "geosite": "category-ads-all",
-        "server": "block"
-      },
-      {
-        "geosite": [
-          "cn",
-          "apple@cn",
-          "category-games@cn",
-          "private"
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "outbound": "direct",
+            "invert": true
+          },
+          {
+            "outbound": "any"
+          }
         ],
-        "domain_keyword": "ntp",
-        "server": "local"
+        "server": "proxyServerNameServer",
+        "disable_cache": true
       },
       {
         "query_type": [
@@ -60,15 +59,47 @@
           "AAAA"
         ],
         "server": "fakedns"
+      },
+      {
+        "domain_suffix": [
+          ".xn--ngstr-lra8j.com",
+          ".googleapis.cn",
+          ".dev"
+        ],
+        "geosite": "tiktok",
+        "server": "proxyDns"
+      },
+      {
+        "domain": "www.gstatic.com",
+        "domain_keyword": [
+          "ntp",
+          "wx.qlogo",
+          "weixin",
+          "wechat",
+          "wxpay",
+          "wxmp",
+          "miniprogram",
+          "tencent",
+          "tenpay"
+        ],
+        "domain_suffix": ".push.apple.com",
+        "domain_regex": "^(alt[1-8]-)?mtalk4?(-(staging|dev))?\\.google\\.com$",
+        "geosite": [
+          "bytedance",
+          "microsoft@cn",
+          "apple@cn",
+          "category-games@cn",
+          "cn"
+        ],
+        "server": "domesticDns"
       }
     ],
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
-    "strategy": "prefer_ipv4",
+    "final": "proxyDns",
+    "strategy": "ipv4_only",
+    "reverse_mapping": true,
+    "independent_cache": true
   },
+
   "inbounds": [
     {
       "type": "mixed",
@@ -106,32 +137,36 @@
     }
   ],
 
-// 这里的 proviedrs 需要使用 https://github.com/qjebbs/sing-box
-  "providers": [
+// 这里的 proxyproviedrs 需要使用 https://github.com/yaotthaha/sing-box-pub/tree/dev-next-yaott
+  "proxyproviders": [
     {
-      "tag": "provider1",
-      "url": "base64 订阅链接1",
-      "interval": "24h",
-      "cache_file": "provider1.txt",
-      "download_detour": "direct"
+      "tag": "Provider1",
+      "url": "Clash.Meta 订阅链接1",
+      "cache_file": "provider1.cache",
+//      "force_update": "24h",
+      "dns": "https://1.12.12.12/dns-query",
+      "filter": {
+        "white_mode": true,
+        "rule": [
+          "游戏",
+          "专线",
+          "IEPL"
+        ]
+      }
     },
     {
-      "tag": "provider2",
-      "url": "base64 订阅链接2",
-      "interval": "18h",
-      "cache_file": "provider2.txt",
-      "download_detour": "direct",
-
-      "exclude": "官网|剩余|到期|流量"
-    },
-    {
-      "tag": "provider3",
-      "url": "base64 订阅链接3",
-      "interval": "12h",
-      "cache_file": "provider3.txt",
-      "download_detour": "direct",
-
-      "include": "IEPL|专线"
+      "tag": "Provider2",
+      "url": "Clash.Meta 订阅链接2",
+      "cache_file": "provider2.cache",
+//      "force_update": "24h",
+      "dns": "https://1.12.12.12/dns-query",
+      "filter": {
+        "rule": [
+          "到期",
+          "流量",
+          "官网"
+        ]
+      }
     }
   ],
   "outbounds": [
@@ -150,12 +185,9 @@
     {
       "type": "selector",
       "tag": "Proxy",
-      "providers": [
-        "provider1",
-        "provider2",
-        "provider3"
-      ],
       "outbounds": [
+        "Provider1",
+        "Provider2",
         "direct"
       ]
     }
