@@ -144,7 +144,7 @@
       "url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
       "cache_file": "provider1.cache",
 //      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query",
+      "dns": "https://1.12.12.12/dns-query"
       
     },
     {
@@ -152,15 +152,15 @@
       "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
       "cache_file": "provider2.cache",
 //      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query",
+      "dns": "https://1.12.12.12/dns-query"
       
-    }
+    },
     {
       "tag": "Provider3",
       "url": "https://1808.netlify.app",
       "cache_file": "provider3.cache",
 //      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query",
+      "dns": "https://1.12.12.12/dns-query"
       
     }
   ],
@@ -183,7 +183,7 @@
       "outbounds": [
         "Provider1",
         "Provider2",
-        "Provider3"
+        "Provider3",
         "direct"
       ]
     }
