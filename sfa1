@@ -102,41 +102,47 @@
 
   "inbounds": [
     {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
-      "listen_port": 1080,
-      "sniff": true
-//      "domain_strategy": "prefer_ipv4" // remove this line if you want to resolve the domain remotely (if the server is not sing-box, UDP may not work due to wrong behavior).
-//      "set_system_proxy": false
-    },
-//    {
-//      "type": "tun",
-//      "tag": "tun-in",
-//      "interface_name": "tun3",
-//      "inet4_address": "172.19.0.1/30",
-//      "inet6_address": "fdfe:dcba:9876::1/126",
-//      "stack": "system",
-//      "auto_route": true,
-//      "strict_route": true,
-//      "sniff": true,
-//      "platform": {
-//        "http_proxy": {
-//          "enabled": true,
-//          "server": "127.0.0.1",
-//          "server_port": 1080
-//        }
-//      }
-//    },
-    {
-      "type": "tproxy",
-      "tag": "tproxy-in",
-      "listen": "::",
-      "listen_port": 1536,
-      "sniff": true
+      "tag": "tun",
+      "type": "tun",
+      "interface_name": "tun1",
+      "inet4_address": "172.19.0.1/30",
+      "strict_route": true,
+      "auto_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": false,
+      "domain_strategy": "ipv4_only",
+      "sniff_override_rules": [
+        {
+          "domain": [
+            "Mijia Cloud",
+            "dlg.io.mi.com"
+          ],
+          "ip_cidr": [
+            "17.249.0.0/16",
+            "17.252.0.0/16",
+            "17.57.114.0/22",
+            "17.118.128.0/18",
+            "17.118.20.0/23",
+            "2620:149:a44::/48",
+            "2403:300:a42::/48",
+            "2403:300:a51::/48",
+            "2a01:b740:a42::/48"
+          ],
+          "domain_suffix": [
+            ".ess.apple.com",
+            ".push.apple.com",
+            ".i.tplinknbu.com",
+            "wap-gw.tplinkcloud.com",
+            "stun.tplinkcloud.com",
+            ".feishu.cn"
+          ],
+          "domain_regex": "^(alt[1-8]-)?mtalk4?(-(staging|dev))?\\.google\\.com$",
+          "invert": true
+        }
+      ]
     }
   ],
-
 // 这里的 proxyproviedrs 需要使用 https://github.com/yaotthaha/sing-box-pub/tree/dev-next-yaott
   "proxyproviders": [
     {
