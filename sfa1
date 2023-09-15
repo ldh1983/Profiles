@@ -26,7 +26,7 @@
       {
         "tag": "proxyDns",
         "address": "tcp://1.1.1.1",
-        "detour": "proxy"
+        "detour": "Proxy"
       },
       {
         "tag": "fakedns",
