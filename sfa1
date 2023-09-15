@@ -141,32 +141,27 @@
   "proxyproviders": [
     {
       "tag": "Provider1",
-      "url": "Clash.Meta 订阅链接1",
+      "url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
       "cache_file": "provider1.cache",
 //      "force_update": "24h",
       "dns": "https://1.12.12.12/dns-query",
-      "filter": {
-        "white_mode": true,
-        "rule": [
-          "游戏",
-          "专线",
-          "IEPL"
-        ]
-      }
+      
     },
     {
       "tag": "Provider2",
-      "url": "Clash.Meta 订阅链接2",
+      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
       "cache_file": "provider2.cache",
 //      "force_update": "24h",
       "dns": "https://1.12.12.12/dns-query",
-      "filter": {
-        "rule": [
-          "到期",
-          "流量",
-          "官网"
-        ]
-      }
+      
+    }
+    {
+      "tag": "Provider3",
+      "url": "https://1808.netlify.app",
+      "cache_file": "provider3.cache",
+//      "force_update": "24h",
+      "dns": "https://1.12.12.12/dns-query",
+      
     }
   ],
   "outbounds": [
@@ -188,6 +183,7 @@
       "outbounds": [
         "Provider1",
         "Provider2",
+        "Provider3"
         "direct"
       ]
     }
