@@ -2,7 +2,7 @@
   "log": {
     "disabled": false,
     "level": "error",
-    "output": "./src/log/box.log",
+    "output": "/storage/emulated/0/Android/data/io.nekohasekai.sfa/files/sing-box.log",
     "timestamp": true
   },
   "dns": {
