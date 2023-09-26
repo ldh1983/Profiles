@@ -1,31 +1,14 @@
 {
   "log": {
-    "disabled": false,
-    "level": "error",
-    "output": "/storage/emulated/0/Android/data/io.nekohasekai.sfa/files/sing-box.log",
+    "level": "info",
+    "output": "sing-box.log",
     "timestamp": true
   },
   "dns": {
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
     "servers": [
       {
-        "tag": "proxyServerNameServer",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "direct",
-        "strategy": "prefer_ipv4"
-      },
-      {
-        "tag": "domesticDns",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "direct"
-      },
-      {
-        "tag": "proxyDns",
-        "address": "tcp://1.1.1.1",
+        "tag": "cloudflare",
+        "address": "tls://1.1.1.1",
         "detour": "Proxy"
       },
       {
@@ -33,25 +16,43 @@
         "address": "fakeip"
       },
       {
-        "tag": "nxdomain",
-        "address": "RCode://name_error"
+        "tag": "local",
+        "address": "https://1.12.12.12/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
       }
     ],
     "rules": [
+      // https://github.com/SagerNet/sing-box/releases/tag/v1.2.2
       {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "outbound": "direct",
-            "invert": true
-          },
-          {
-            "outbound": "any"
-          }
-        ],
-        "server": "proxyServerNameServer",
+        "outbound": "any",
+        "server": "local",
         "disable_cache": true
+      },
+      {
+        "clash_mode": "Global",
+        "server": "cloudflare"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      },
+      {
+        "geosite": "category-ads-all",
+        "server": "block"
+      },
+      {
+        "geosite": [
+          "cn",
+          "apple@cn",
+          "category-games@cn",
+          "private"
+        ],
+        "domain_keyword": "ntp",
+        "server": "local"
       },
       {
         "query_type": [
@@ -59,86 +60,77 @@
           "AAAA"
         ],
         "server": "fakedns"
-      },
-      {
-        "domain_suffix": [
-          ".xn--ngstr-lra8j.com",
-          ".googleapis.cn",
-          ".dev"
-        ],
-        "geosite": "tiktok",
-        "server": "proxyDns"
-      },
-      {
-        "domain": "www.gstatic.com",
-        "domain_keyword": [
-          "ntp",
-          "wx.qlogo",
-          "weixin",
-          "wechat",
-          "wxpay",
-          "wxmp",
-          "miniprogram",
-          "tencent",
-          "tenpay"
-        ],
-        "domain_suffix": ".push.apple.com",
-        "domain_regex": "^(alt[1-8]-)?mtalk4?(-(staging|dev))?\\.google\\.com$",
-        "geosite": [
-          "bytedance",
-          "microsoft@cn",
-          "apple@cn",
-          "category-games@cn",
-          "cn"
-        ],
-        "server": "direct"
       }
     ],
-    "final": "proxyDns",
-    "strategy": "ipv4_only",
-    "reverse_mapping": true,
-    "independent_cache": true
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "strategy": "prefer_ipv4"
   },
-
   "inbounds": [
     {
-      "tag": "tun",
-      "type": "tun",
-      "interface_name": "tun1",
-      "inet4_address": "172.19.0.1/30",
-      "strict_route": true,
-      "auto_route": true,
-      "stack": "system",
-      "sniff": true,
-      "sniff_override_destination": false,
-      "domain_strategy": "ipv4_only"
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 1080,
+      "sniff": true
+//      "domain_strategy": "prefer_ipv4" // remove this line if you want to resolve the domain remotely (if the server is not sing-box, UDP may not work due to wrong behavior).
+//      "set_system_proxy": false
+    },
+//    {
+//      "type": "tun",
+//      "tag": "tun-in",
+//      "interface_name": "tun3",
+//      "inet4_address": "172.19.0.1/30",
+//      "inet6_address": "fdfe:dcba:9876::1/126",
+//      "stack": "system",
+//      "auto_route": true,
+//      "strict_route": true,
+//      "sniff": true,
+//      "platform": {
+//        "http_proxy": {
+//          "enabled": true,
+//          "server": "127.0.0.1",
+//          "server_port": 1080
+//        }
+//      }
+//    },
+    {
+      "type": "tproxy",
+      "tag": "tproxy-in",
+      "listen": "::",
+      "listen_port": 1536,
+      "sniff": true
     }
   ],
-// 这里的 proxyproviedrs 需要使用 https://github.com/yaotthaha/sing-box-pub/tree/dev-next-yaott
-  "proxyproviders": [
+
+// 这里的 proviedrs 需要使用 https://github.com/qjebbs/sing-box
+  "providers": [
     {
-      "tag": "Provider1",
-      "url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md&insert=false&append_type=true&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true&surge.doh=true&clash.doh=true&new_name=true",
-      "cache_file": "/storage/emulated/0/Android/data/io.nekohasekai.sfa/files/providers/provider1.cache",
-//      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query"
-      
+      "tag": "provider1",
+      "url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
+      "interval": "24h",
+      "cache_file": "provider1.txt",
+      "download_detour": "direct"
     },
     {
-      "tag": "Provider2",
+      "tag": "provider2",
       "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
-      "cache_file": "/storage/emulated/0/Android/data/io.nekohasekai.sfa/files/providers/provider2.cache",
-//      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query"
-      
+      "interval": "18h",
+      "cache_file": "provider2.txt",
+      "download_detour": "direct",
+
+      "exclude": "官网|剩余|到期|流量"
     },
     {
-      "tag": "Provider3",
-      "url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2F1808.netlify.app%7C&insert=false&append_type=true&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true&surge.doh=true&clash.doh=true&new_name=true",
-      "cache_file": "/storage/emulated/0/Android/data/io.nekohasekai.sfa/files/providers/provider3.cache",
-//      "force_update": "24h",
-      "dns": "https://1.12.12.12/dns-query"
-      
+      "tag": "provider3",
+      "url": "https://1808.netlify.app",
+      "interval": "12h",
+      "cache_file": "provider3.txt",
+      "download_detour": "direct",
+
     }
   ],
   "outbounds": [
@@ -157,10 +149,156 @@
     {
       "type": "selector",
       "tag": "Proxy",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
       "outbounds": [
-        "Provider1",
-        "Provider2",
-        "Provider3",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "gn",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "hi",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "google",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "yt",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "ytm",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "spotify",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "te",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "apple",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "micro",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "ge",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "gfw",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "w",
+      "providers": [
+        "provider1",
+        "provider2",
+        "provider3"
+      ],
+      "outbounds": [
         "direct"
       ]
     }
@@ -180,14 +318,46 @@
         "outbound": "direct"
       },
       {
-        "geosite": "category-ads-all",
-        "outbound": "block"
+        "domain_keyword": "himalaya",
+        "server": "hi"
+      },
+      {
+        "geosite": "youtube",
+        "outbound": "yt"
+      },
+      {
+        "domain_keyword": "gnews",
+        "server": "gn"
+      },
+      {
+        "geosite": "spotify",
+        "outbound": "spotify"
+      },
+      {
+        "geosite": "google",
+        "outbound": "google"
+      },
+      {
+        "geosite": "apple",
+        "outbound": "apple"
+      },
+      {
+        "geosite": "gfw",
+        "outbound": "gfw"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "w"
+      },
+      {
+        "geoip": "telegram",
+        "outbound": "te"
       },
       {
         "geosite": [
           "apple@cn",
           "category-games@cn",
-          "cn",
+          "geolocation-cn",
           "private"
         ],
         "geoip": [
