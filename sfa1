@@ -327,7 +327,7 @@
       },
       {
         "domain_keyword": "gnews",
-        "server": "gn"
+        "outbound": "gn"
       },
       {
         "geosite": "spotify",
