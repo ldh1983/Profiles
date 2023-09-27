@@ -2938,11 +2938,11 @@
                 "outbound": "gn"
             },
             {
-                "outbound": "ytm",
                 "package_name": [
                     "com.google.android.apps.youtube.music",
                     "app.revanced.android.apps.youtube.music"
-                ]
+                ],
+                "outbound": "ytm"
             },
             {
                 "geosite": "spotify",
