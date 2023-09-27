@@ -2930,6 +2930,10 @@
                 "outbound": "hi"
             },
             {
+                "domain_keyword": "gettr",
+                "outbound": "gr"
+            },
+            {
                 "package_name": [
                     "org.telegram.messenger.web",
                     "org.telegram.plus"
@@ -2944,6 +2948,26 @@
                     "com.instagram.android",
                     "com.facebook.katana"
                 ],
+                "outbound": "gl"
+            },
+            {
+                "geosite": "twitter",
+                "outbound": "gl"
+            },
+            {
+                "geosite": "discord",
+                "outbound": "gl"
+            },
+            {
+                "geosite": "whatsapp",
+                "outbound": "gl"
+            },
+            {
+                "geosite": "facebook",
+                "outbound": "gl"
+            },
+            {
+                "geosite": "instagram",
                 "outbound": "gl"
             },
             {
@@ -2967,16 +2991,16 @@
                 "outbound": "ap"
             },
             {
+                "geosite": "telegram",
+                "outbound": "te"
+            },
+            {
                 "geosite": "gfw",
                 "outbound": "gfw"
             },
             {
                 "geosite": "geolocation-!cn",
                 "outbound": "w"
-            },
-            {
-                "geosite": "telegram",
-                "outbound": "te"
             },
             {
                 "geosite": "geolocation-cn",
