@@ -2979,14 +2979,14 @@
                 "outbound": "te"
             },
             {
+                "geosite": "geolocation-cn",
+                "outbound": "direct"
+            },
+            {
                 "geoip": [
                     "cn",
                     "private"
                 ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": "cn",
                 "outbound": "direct"
             }
         ]
