@@ -319,7 +319,7 @@
       },
       {
         "domain_keyword": "himalaya",
-        "server": "hi"
+        "outbound": "hi"
       },
       {
         "geosite": "youtube",
