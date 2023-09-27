@@ -2944,7 +2944,7 @@
                     "com.instagram.android"
                     "com.facebook.katana"
                 ],
-                "outbound": "te"
+                "outbound": "gl"
             },
             {
                 "geosite": "youtube",
