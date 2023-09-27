@@ -2937,6 +2937,16 @@
                 "outbound": "te"
             },
             {
+                "package_name": [
+                    "com.twitter.android",
+                    "com.discord"
+                    "com.whatsapp"
+                    "com.instagram.android"
+                    "com.facebook.katana"
+                ],
+                "outbound": "te"
+            },
+            {
                 "geosite": "youtube",
                 "outbound": "yt"
             },
