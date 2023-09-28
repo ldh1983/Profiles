@@ -111,223 +111,115 @@
       "outbounds":[
         "auto",
         "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"gfw",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🧩 gn",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🧩 hi",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🧩 gr",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🤖 OpenAI",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🌌 Google",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🌌 youtube",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"📟 Telegram",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🐦 Twitter",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"👤 Facebook",
       "type":"selector",
       "outbounds":[
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
       ]
     },
     {
       "tag":"🛍️ Amazon",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"🍎 Apple",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"🧩 Microsoft",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"🎮 Game",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"📺 Bilibili",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"🎬 MediaVideo",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
       "tag":"🌏 !cn",
       "type":"selector",
       "outbounds":[
-        "direct",
-        "HK",
-        "TW",
-        "US",
-        "sg",
-        "JP",
-        "KR"
+        "direct"
       ]
     },
     {
