@@ -110,7 +110,7 @@
       "type":"selector",
       "outbounds":[
         "auto",
-        "direct",
+        "direct"
       ]
     },
     {
