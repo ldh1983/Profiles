@@ -336,9 +336,11 @@
         "domain_keyword":"gnews",
         "outbound":"🧩 gn"
       },
+      {
         "domain_keyword":"gettr",
         "outbound":"🧩 gr"
       },
+      {
         "domain_keyword":"himalaya",
         "outbound":"🧩 hi"
       },
