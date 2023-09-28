@@ -117,66 +117,88 @@
       "tag":"gfw",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🧩 gn",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🧩 hi",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🧩 gr",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🤖 OpenAI",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🌌 Google",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🌌 youtube",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"📟 Telegram",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🐦 Twitter",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"👤 Facebook",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
       ]
     },
     {
       "tag":"🛍️ Amazon",
       "type":"selector",
       "outbounds":[
+        "auto",
+        "direct"
         "direct"
       ]
     },
@@ -184,6 +206,7 @@
       "tag":"🍎 Apple",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
@@ -191,6 +214,7 @@
       "tag":"🧩 Microsoft",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
@@ -198,6 +222,7 @@
       "tag":"🎮 Game",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
@@ -205,6 +230,7 @@
       "tag":"📺 Bilibili",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
@@ -212,6 +238,7 @@
       "tag":"🎬 MediaVideo",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
@@ -219,6 +246,7 @@
       "tag":"🌏 !cn",
       "type":"selector",
       "outbounds":[
+        "auto",
         "direct"
       ]
     },
