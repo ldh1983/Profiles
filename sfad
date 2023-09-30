@@ -8,7 +8,6 @@
                 "server": "local"
             },
             {
-                "enabled": false,
                 "disable_cache": true,
                 "geosite": [
                     "category-ads-all"
