@@ -8,7 +8,7 @@
                 "server": "local"
             },
             {
-                "enabled": "false"
+                "enabled": false
                 "disable_cache": true,
                 "geosite": [
                     "category-ads-all"
@@ -2925,7 +2925,7 @@
     },
         "rules": [
             {
-                "enabled": "false"
+                "enabled": false
                 "geosite": "category-ads-all",
                 "outbound": "block"
             },
