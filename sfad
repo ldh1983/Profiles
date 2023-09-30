@@ -8,13 +8,6 @@
                 "server": "local"
             },
             {
-                "disable_cache": true,
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "server": "block"
-            },
-            {
                 "clash_mode": "global",
                 "server": "remote"
             },
@@ -2923,11 +2916,6 @@
       "download_detour": "select"
     },
         "rules": [
-            {
-                "enabled": false,
-                "geosite": "category-ads-all",
-                "outbound": "block"
-            },
             {
                 "outbound": "dns-out",
                 "protocol": "dns"
