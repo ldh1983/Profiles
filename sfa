@@ -2919,7 +2919,7 @@
       "download_detour": "select"
     },
     "geosite": {
-      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_url": "https://github.com/CHIZI-0618/v2ray-rules-dat/releases/latest/download/geosite.db",
       "download_detour": "select"
     },
         "rules": [
