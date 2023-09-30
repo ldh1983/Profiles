@@ -2997,6 +2997,7 @@
                 "outbound": "ap"
             },
             {
+                "geoip":"telegram",
                 "geosite": "telegram",
                 "outbound": "te"
             },
