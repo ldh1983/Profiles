@@ -2306,6 +2306,12 @@
             "outbounds": [
                 "tuic",
                 "tuicv5",
+                "HK",
+                "TW",
+                "US",
+                "sg",
+                "JP",
+                "KR",
                 "ca",
                 "mg",
                 "hk",
