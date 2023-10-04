@@ -751,7 +751,7 @@ proxy-groups:
     proxies:
       - tw
       - tw 1
-      - tw vmg
+      - tw h2
     filter: "(?i)台|tw|taiwan"
 
   - name: "新家坡"
