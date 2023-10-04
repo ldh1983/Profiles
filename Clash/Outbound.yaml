@@ -155,7 +155,7 @@ dns:
 
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
-  - name: tuic
+  - name:  hk tuic
     server: yicanny.com
     port: 2099
     type: tuic
@@ -182,7 +182,7 @@ proxies:
     ongestion-controller: bbr
     sni: cdn.divineengine.net
   # Shadowsocks(Websocket + TLS)
-  - name: "ca"
+  - name: "tw"
     type: hysteria
     server: 104.155.212.127
     port: 20357
@@ -198,7 +198,7 @@ proxies:
     skip-cert-verify: true
 
   # VMess(Websocket + TLS)
-  - name: "mg"
+  - name: "tw vmg"
     type: vmess
     server: tw1.yicanny.com
     port: 2053
@@ -275,7 +275,7 @@ proxies:
     sni: hk2.yicanny.com
     skip-cert-verify: false
 
-  - name: "bhk"
+  - name: "tw 1"
     type: hysteria
     server: tw2.yicanny.com
     port: 20777
@@ -291,7 +291,7 @@ proxies:
     sni: tw2.yicanny.com
     skip-cert-verify: false
     
-  - name: "ssv"
+  - name: "hk 2"
     type: hysteria
     server: yicanny.com
     port: 20167
@@ -319,6 +319,15 @@ proxies:
       host: "cloud.tencent.com"
       password: "duckduckgo"
       version: 3 # support 1/2/3
+
+      
+  - name: "ss"
+    type: ss
+    server: ss.a.nekoe.eu.org
+    port: 6000
+    cipher: aes-256-cfb
+    password: "https://t.me/nekoemtp"
+      
 # 服务器节点订阅
 proxy-providers:
   # name: # Provider 名称
