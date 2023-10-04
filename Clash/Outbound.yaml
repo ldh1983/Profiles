@@ -736,7 +736,7 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
+      - hk tuic
       - hk
       - hk1
       - hk 2
