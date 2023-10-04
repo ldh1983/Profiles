@@ -181,6 +181,7 @@ proxies:
     alpn: [h3]
     ongestion-controller: bbr
     sni: cdn.divineengine.net
+    
   # Shadowsocks(Websocket + TLS)
   - name: "tw"
     type: hysteria
@@ -198,7 +199,7 @@ proxies:
     skip-cert-verify: true
 
   # VMess(Websocket + TLS)
-  - name: "tw vmg"
+  - name: "tw h2"
     type: vmess
     server: tw1.yicanny.com
     port: 2053
@@ -427,15 +428,18 @@ proxy-groups:
       - US
       - 新家坡
       - other
-      - tuic
-      - ca
-      - mg
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
       
       
   - name: "UDP"
@@ -452,16 +456,19 @@ proxy-groups:
       - JP
       - US
       - 新家坡
-      - tuic
+      - other
       - tuicv5
-      - ca
-      - mg
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
        # 嵌套使用订阅节点策略组
        
   - name: "telegram"
@@ -478,15 +485,19 @@ proxy-groups:
       - JP
       - US
       - 新家坡
-      - tuic
-      - ca
-      - mg
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
       
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
@@ -504,16 +515,19 @@ proxy-groups:
       - JP
       - US
       - 新家坡
+      - other
       - tuicv5
-      - tuic
-      - ca
-      - mg
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
       - PROXY
       - DIRECT
 
@@ -532,16 +546,20 @@ proxy-groups:
       - JP
       - US
       - 新家坡
-      - PROXY
-      - tuic
-      - ca
-      - mg
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
+      - PROXY
       # - US
 
   - name: "Spotify"
@@ -558,16 +576,20 @@ proxy-groups:
       - JP
       - US
       - 新家坡
-      - PROXY
-      - tuic
-      - ca
-      - mg
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
+      - PROXY
       # - US
       
   - name: "Apple"
@@ -577,23 +599,28 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - Fallback
       - Url-test
+      - Fallback
       - HK
       - TW
       - JP
       - US
       - 新家坡
-      - DIRECT
-      - tuic
-      - ca
-      - mg
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
+      - PROXY
+      - DIRECT
 
   # 中国流媒体服务（面向海外版本）
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
@@ -611,15 +638,20 @@ proxy-groups:
       - JP
       - US
       - 新家坡
-      - tuic
-      - ca
-      - mg
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
+      - PROXY
       - DIRECT
 
   - name: "H"
@@ -636,17 +668,20 @@ proxy-groups:
       - JP
       - US
       - 新家坡
+      - other
       - tuicv5
-      - tuic
-      - ca
-      - mg
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
-      - DIRECT
+      - tw 1
+      - hk 2
+      - PROXY
 
   - name: "Fallback"
     type: fallback 
@@ -655,15 +690,19 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
-      - ca
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
-      - mg
+      - tw 1
+      - hk 2
+
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -675,15 +714,18 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
-      - ca
-      - mg
+      - tuicv5
+      - ssv2ray
+      - ss
+      - hk tuic
+      - tw
+      - tw h2
       - hk
       - us
       - DE
       - hk1
-      - bhk
-      - ssv
+      - tw 1
+      - hk 2
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -697,7 +739,7 @@ proxy-groups:
       - tuic
       - hk
       - hk1
-      - ssv
+      - hk 2
     filter: "(?i)港|hk|hongkong|hong kong"
 
   - name: "TW"
@@ -707,9 +749,9 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - ca
-      - bhk
-      - mg
+      - tw
+      - tw 1
+      - tw vmg
     filter: "(?i)台|tw|taiwan"
 
   - name: "新家坡"
@@ -740,6 +782,16 @@ proxy-groups:
 
     filter: "(?i)美|us|unitedstates|united states"
 
+  - name: "KR"
+    type: url-test
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+
+
+    filter: "(?i)韩|kr|korean"
+
   - name: "other"
     type: fallback
     use: # 注意此处是「use」
@@ -747,15 +799,10 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tuic
-      - ca
-      - mg
-      - hk
-      - us
+      - tuicv5
+      - ssv2ray
+      - ss
       - DE
-      - hk1
-      - bhk
-      - ssv
     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*"
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
@@ -907,6 +954,7 @@ rules:
   - GEOSITE,facebook,PROXY
   - GEOSITE,youtube,PROXY
   - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,gfw,UDP
   - GEOSITE,geolocation-!cn,MATCH
   # GeoIP China
   - GEOIP,CN,DIRECT
