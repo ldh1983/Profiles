@@ -249,20 +249,23 @@ proxies:
     
   - name: "ssv2ray"
     type: ss
-    server: 207.148.67.196
-    port: 8888
+    server: 50.114.242.11
+    port: 8443
     cipher: aes-256-gcm
-    password: "passwd123"
-    plugin: v2ray-plugin
+    password: "duckduckgo"
+    plugin: shadow-tls
+    client-fingerprint: chrome
     plugin-opts:
-      mode: websocket # no QUIC now
-      tls: false # wss
-      # skip-cert-verify: true
-      host: cloudfront.com
-      path: "/"
-      mux: true
-      #headers: cloudfront.com
-      #custom: 8
+      host: "cloud.tencent.com"
+      password: "duckduckgo"
+      version: 3 # support 1/2/3
+     
+  - name: "ss"
+    type: ss
+    server: ss.a.nekoe.eu.org
+    port: 6000
+    cipher: aes-256-cfb
+    password: "https://t.me/nekoemtp"
 
 proxy-groups:
 
@@ -427,12 +430,12 @@ rules:
   - GEOSITE,spotify,Spotify
   - GEOSITE,gfw,默认
   - GEOSITE,geolocation-!cn,全部节点
+  - GEOSITE,geolocation-cn,国内
 
   - GEOIP,google,Google
   - GEOIP,netflix,NETFLIX
   - GEOIP,telegram,Telegram
   - GEOIP,twitter,Twitter
-  - GEOSITE,CN,国内
   - GEOIP,CN,国内
   - MATCH,其他
 
