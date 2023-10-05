@@ -59,7 +59,7 @@
       "listen": "::",
       "listen_port": 1536,
       "sniff": true
-        }
+        },
         {
             "domain_strategy": "prefer_ipv4",
             "listen": "127.0.0.1",
