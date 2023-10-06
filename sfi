@@ -205,6 +205,7 @@
             },
             "type": "tuic",
             "udp_relay_mode": "native",
+            "congestion_control": "bbr",
             "uuid": "8029997D-2954-4125-9743-EA75F88C0C15",
             "zero_rtt_handshake": true
         },
