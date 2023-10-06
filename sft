@@ -5,7 +5,7 @@
                 "outbound": [
                     "any"
                 ],
-                "server": "local"
+                "server": "remote"
             },
             {
                 "disable_cache": true,
@@ -193,7 +193,7 @@
         {
             "heartbeat": "0ms",
             "password": "TUIC",
-            "server": "47.87.203.102",
+            "server": "108.165.169.213",
             "server_port": 8443,
             "tag": "tuicv5",
             "tls": {
