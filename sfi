@@ -2971,20 +2971,45 @@
             },
             {
                 "package_name": [
-                    "org.telegram.messenger.web",
                     "org.telegram.plus"
                 ],
                 "outbound": "te"
             },
             {
                 "package_name": [
-                    "com.twitter.android",
-                    "com.discord",
-                    "com.whatsapp",
-                    "com.instagram.android",
                     "com.facebook.katana"
                 ],
                 "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.instagram.android"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.whatsapp"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.discord"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.twitter.android"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "org.telegram.messenger.web"
+                ],
+                "outbound": "te"
             },
             {
                 "geosite": "twitter",
