@@ -3109,7 +3109,6 @@
                 "outbound": "direct"
             }
         ],
-        "find_process": true,
         "final": "final"
     }
 }
