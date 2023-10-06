@@ -193,7 +193,7 @@
         {
             "heartbeat": "0ms",
             "password": "TUIC",
-            "server": "47.87.203.102",
+            "server": "108.165.169.213",
             "server_port": 8443,
             "tag": "tuicv5",
             "tls": {
@@ -205,6 +205,7 @@
             },
             "type": "tuic",
             "udp_relay_mode": "native",
+            "congestion_control": "bbr",
             "uuid": "8029997D-2954-4125-9743-EA75F88C0C15",
             "zero_rtt_handshake": true
         },
@@ -3030,20 +3031,45 @@
             },
             {
                 "package_name": [
-                    "org.telegram.messenger.web",
                     "org.telegram.plus"
                 ],
                 "outbound": "te"
             },
             {
                 "package_name": [
-                    "com.twitter.android",
-                    "com.discord",
-                    "com.whatsapp",
-                    "com.instagram.android",
                     "com.facebook.katana"
                 ],
                 "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.instagram.android"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.whatsapp"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.discord"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "com.twitter.android"
+                ],
+                "outbound": "gl"
+            },
+            {
+                "package_name": [
+                    "org.telegram.messenger.web"
+                ],
+                "outbound": "te"
             },
             {
                 "geosite": "twitter",
@@ -3086,6 +3112,7 @@
                 "outbound": "ap"
             },
             {
+                "geoip":"telegram",
                 "geosite": "telegram",
                 "outbound": "te"
             },
