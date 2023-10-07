@@ -3524,6 +3524,10 @@
         ],
         "outbound": "🎬 MediaVideo"
       },
+            {
+                "geosite": "gfw",
+                "outbound": "🌏 final"
+            },
       {
         "geosite": "geolocation-!cn",
         "outbound": "🌏 !cn"
@@ -3531,7 +3535,7 @@
       {
         "geosite": [
           "private",
-          "cn"
+          "geolocation-cn"
         ],
         "geoip": [
           "private",
