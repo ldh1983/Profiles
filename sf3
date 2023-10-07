@@ -3467,6 +3467,18 @@
       },
       {
         "package_name": [
+          "app.revanced.android.apps.youtube.music"
+        ],
+        "outbound": "🌌 ytm"
+      },
+      {
+        "package_name": [
+          "app.google.android.apps.youtube.music"
+        ],
+        "outbound": "🌌 ytm"
+      },
+      {
+        "package_name": [
           "com.whatsapp"
         ],
         "outbound": "🌌 Google"
@@ -3483,7 +3495,7 @@
       },
       {
         "geosite": "youtube",
-        "outbound": "🌌 Google"
+        "outbound": "🌌 yt"
       },
       {
         "geoip": "google",
