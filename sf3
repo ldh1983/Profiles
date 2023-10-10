@@ -2189,12 +2189,12 @@
             "tag": "ssv2ray-shadowtls",
             "tls": {
                 "enabled": true,
-                "server_name": "cloud.tencent.com"，
+                "server_name": "cloud.tencent.com",
                 "insecure": true
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                },
+                }
             },
             "type": "shadowtls",
             "version": 3
