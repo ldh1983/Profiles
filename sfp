@@ -141,7 +141,7 @@
     },
     {
       "tag": "Provider3",
-      "url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7Chttps%3A%2F%2F1808.netlify.app&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true",
+      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
       "cache_file": "provider3.json",
       "dns": "https://223.6.6.6/dns-query",
       "update_interval": "24h",
