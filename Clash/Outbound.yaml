@@ -902,6 +902,7 @@ rules:
   #- DOMAIN,music.youtube.com,PROXY
   # Unbreak
   - RULE-SET,Unbreak,PROXY
+  - GEOSITE,discord,PROXY
   
   - RULE-SET,UDP,UDP
   
