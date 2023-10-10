@@ -2194,7 +2194,7 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
+                },
             },
             "type": "shadowtls",
             "version": 3
