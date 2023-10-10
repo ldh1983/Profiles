@@ -110,7 +110,7 @@
   "proxyproviders": [
     {
       "tag": "Provider1",
-      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
+      "url": "https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/Outbound.yaml",
       "cache_file": "provider1.json",
       "dns": "https://223.6.6.6/dns-query",
       "update_interval": "12h",
@@ -126,7 +126,7 @@
     },
     {
       "tag": "Provider2",
-      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
+      "url": "https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/Outbound.yaml",
       "cache_file": "provider2.json",
       "dns": "https://223.6.6.6/dns-query",
       "update_interval": "24h",
@@ -141,7 +141,7 @@
     },
     {
       "tag": "Provider3",
-      "url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
+      "url": "https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/Outbound.yaml",
       "cache_file": "provider3.json",
       "dns": "https://223.6.6.6/dns-query",
       "update_interval": "24h",
