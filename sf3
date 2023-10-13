@@ -544,6 +544,12 @@
       "tag": "🐦 Twitter",
       "type": "selector",
       "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "📺 JP",
+        "📺 US",
+        "📺 KR",
         "🧩auto",
         "hk tuic",
         "tuicv5",
