@@ -3482,13 +3482,13 @@
         "package_name": [
           "com.whatsapp"
         ],
-        "outbound": "🌌 Google"
+        "outbound": "🐦 Twitter"
       },
       {
         "package_name": [
           "com.discord"
         ],
-        "outbound": "🌌 Google"
+        "outbound": "🐦 Twitter"
       },
       {
         "geosite": "openai",
@@ -3514,7 +3514,7 @@
       {
         "geoip": "twitter",
         "geosite": "twitter",
-        "outbound": "🌌 Google"
+        "outbound": "🐦 Twitter"
       },
       {
         "geoip": "facebook",
@@ -3522,7 +3522,7 @@
           "facebook",
           "instagram"
         ],
-        "outbound": "🌌 Google"
+        "outbound": "🐦 Twitter"
       },
       {
         "geosite": "amazon",
@@ -3530,7 +3530,7 @@
       },
       {
         "geosite": "spotify",
-        "outbound": "🎬 spo"
+        "outbound": "🛍️ spo"
       },
       {
         "geosite": "apple",
