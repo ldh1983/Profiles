@@ -339,7 +339,7 @@
       "includes": [
         "^HK\\..+"
       ]
-    },
+    }
   ],
   "route": {
     "rules": [
