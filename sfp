@@ -500,7 +500,7 @@
         ],
         "outbound": "direct"
       }
-    ]
+    ],
     "auto_detect_interface": true,
 //    Tun 一般需要开启
 //    "default_mark": 233,
