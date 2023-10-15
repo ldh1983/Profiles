@@ -165,15 +165,6 @@
     },
     {
       "type": "selector",
-      "tag": "🤖 hi",
-      "providers": [
-        "singbox-http",
-        "clash-http",
-        "base64-http"
-      ]
-    },
-    {
-      "type": "selector",
       "tag": "🤖 gn",
       "providers": [
         "singbox-http",
@@ -210,15 +201,6 @@
     },
     {
       "type": "selector",
-      "tag": "🌌 ytm",
-      "providers": [
-        "singbox-http",
-        "clash-http",
-        "base64-http"
-      ]
-    },
-    {
-      "type": "selector",
       "tag": "🐦 Twitter",
       "providers": [
         "singbox-http",
@@ -237,6 +219,15 @@
     },
     {
       "type": "selector",
+      "tag": "🌌 ytm",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
       "tag": "🍎 Apple",
       "providers": [
         "singbox-http",
@@ -247,6 +238,15 @@
     {
       "type": "selector",
       "tag": "🧩 Microsoft",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 hi",
       "providers": [
         "singbox-http",
         "clash-http",
@@ -481,10 +481,10 @@
         ],
         "outbound": "🎬 MediaVideo"
       },
-            {
-                "geosite": "gfw",
-                "outbound": "🌏 final"
-            },
+      {
+        "geosite": "gfw",
+        "outbound": "🌏 final"
+      },
       {
         "geosite": "geolocation-!cn",
         "outbound": "🌏 !cn"
