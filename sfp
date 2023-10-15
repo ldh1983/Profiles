@@ -153,7 +153,193 @@
         "clash-http",
         "base64-http"
       ]
-    }
+    },
+    {
+      "type": "selector",
+      "tag": "🌏 !cn",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 hi",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 gn",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 gr",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📟 Telegram",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 yt",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 ytm",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐦 Twitter",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 Google",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🍎 Apple",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🧩 Microsoft",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛍️ spo",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌏 final",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 OpenAI",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "👤 Facebook",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "outbounds": [
+        "🐦 Twitter"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛍️ Amazon",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎬 MediaVideo",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📺 Bilibili",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎮 Game",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 HK",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^HK\\..+"
+      ]
+    },
   ],
   "route": {
     "rules": [
@@ -258,7 +444,7 @@
           "facebook",
           "instagram"
         ],
-        "outbound": "🐦 Twitter"
+        "outbound": "👤 Facebook"
       },
       {
         "geosite": "amazon",
