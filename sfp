@@ -188,6 +188,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -197,6 +205,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -215,6 +231,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -224,6 +248,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -233,6 +265,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -242,6 +283,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -260,6 +310,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -289,7 +347,13 @@
         "base64-http"
       ],
       "outbounds": [
-        "🐦 Twitter"
+        "🐦 Twitter",
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
@@ -299,6 +363,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -308,6 +381,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -317,6 +399,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -326,6 +417,15 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
       ]
     },
     {
@@ -459,6 +559,12 @@
           "app.google.android.apps.youtube.music"
         ],
         "outbound": "🌌 ytm"
+      },
+      {
+        "package_name": [
+          "com.gettr.gettr"
+        ],
+        "outbound": "🤖 gr"
       },
       {
         "package_name": [
