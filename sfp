@@ -399,7 +399,7 @@
       "includes": [
         "^韩|kr|KR|korean|\\..+"
       ]
-    },
+    }
   ],
   "route": {
     "rules": [
