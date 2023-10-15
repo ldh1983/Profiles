@@ -437,7 +437,7 @@
         "base64-http"
       ],
       "includes": [
-        "^HK|hk|香港|\\..+"
+        "^HK|hk|香港|hongkong\\..+"
       ]
     },
     {
@@ -449,7 +449,7 @@
         "base64-http"
       ],
       "includes": [
-        "^|台|TW|tw|taiwan|\\..+"
+        "^TW|tw|台湾|taiwan\\..+"
       ]
     },
     {
@@ -461,7 +461,7 @@
         "base64-http"
       ],
       "includes": [
-        "^|新加坡|sg|SG|singapore|\\..+"
+        "^星城|新加坡|sg|SG|singapore|星\\..+"
       ]
     },
     {
@@ -473,7 +473,7 @@
         "base64-http"
       ],
       "includes": [
-        "^|日本|jp|JP|japan|\\..+"
+        "^本|日本|jp|JP|japan|日\\..+"
       ]
     },
     {
@@ -485,7 +485,7 @@
         "base64-http"
       ],
       "includes": [
-        "^|美|us|US|unitedstates|united states|\\..+"
+        "^美国|美|us|US|unitedstates|united states\\..+"
       ]
     },
     {
@@ -497,7 +497,7 @@
         "base64-http"
       ],
       "includes": [
-        "^|韩|kr|KR|korean|\\..+"
+        "^韩国|韩|kr|KR|korean\\..+"
       ]
     }
   ],
