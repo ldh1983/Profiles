@@ -339,7 +339,67 @@
       "includes": [
         "^HK|hk|香港|\\..+"
       ]
-    }
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 TW",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^台|TW|tw|taiwan|\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 SG",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^新加坡|sg|SG|singapore|\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 JP",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^日本|jp|JP|japan|\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 US",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^美|us|US|unitedstates|united states|\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 KR",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http"
+      ],
+      "includes": [
+        "^韩|kr|KR|korean|\\..+"
+      ]
+    },
   ],
   "route": {
     "rules": [
