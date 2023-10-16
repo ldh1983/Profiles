@@ -3545,6 +3545,12 @@
       },
       {
         "package_name": [
+          "com.gettr.gettr"
+        ],
+        "outbound": "🤖 gr"
+      },
+      {
+        "package_name": [
           "org.telegram.plus"
         ],
         "outbound": "📟 Telegram"
