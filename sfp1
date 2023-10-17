@@ -222,6 +222,14 @@
         "singbox-http",
         "clash-http",
         "base64-http"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
       ]
     },
     {
