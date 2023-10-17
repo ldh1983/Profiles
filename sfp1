@@ -103,7 +103,7 @@
     {
       "tag": "singbox-http",
       "type": "http",
-      "download_url": "https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/Outbound.yaml",
+      "download_url": "https://clash2sfa-xmdhs.koyeb.app/sub?sub=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2FProfiles%2Fmaster%2FClash%2FOutbound.yaml",
       "download_interval": "24h",
       "path": "singbox-http.json",
       "healthcheck_interval": "1h",
