@@ -2163,6 +2163,23 @@
       "network": "tcp",
       "detour": "ssv2ray-shadowtls"
     },
+        {
+            "password": "duckduckgo",
+            "server": "50.114.242.11",
+            "server_port": 8443,
+            "tag": "ssv2ray-shadowtls",
+            "tls": {
+                "enabled": true,
+                "server_name": "cloud.tencent.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "type": "shadowtls",
+            "version": 3
+    },
     {
       "password": "https://t.me/nekoemtp",
       "server": "ss.a.nekoe.eu.org",
