@@ -1939,7 +1939,7 @@
     },
     {
       "tag": "urltest",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [
         "hk tuic",
         "tuicv5",
@@ -1956,7 +1956,7 @@
     },
     {
       "tag": "auto",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [
         "自动最优线路(新协议)-网址: dg1.top",
         "1香港集群-全网优化(新协议)",
