@@ -1988,10 +1988,7 @@
         "21智利-ChatGPT(新协议)",
         "22土耳其-电信/联通(新协议)",
         "23法国-全网优化(新协议)"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      ]
     },
     {
       "type": "direct",
