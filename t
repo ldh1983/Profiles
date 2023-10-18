@@ -3316,6 +3316,12 @@
       },
       {
         "package_name": [
+          "com.gettr.gettr"
+        ],
+        "outbound": "🤖 gr"
+      },
+      {
+        "package_name": [
           "com.whatsapp"
         ],
         "outbound": "🐦 Twitter"
@@ -3358,7 +3364,7 @@
           "facebook",
           "instagram"
         ],
-        "outbound": "🐦 Twitter"
+        "outbound": "👤 Facebook"
       },
       {
         "geosite": "amazon",
