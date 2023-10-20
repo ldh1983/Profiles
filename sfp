@@ -40,14 +40,8 @@
         "server": "local"
       },
       {
-        "geosite": "category-ads-all",
-        "server": "block"
-      },
-      {
         "geosite": [
           "cn",
-          "apple@cn",
-          "category-games@cn",
           "private"
         ],
         "domain_keyword": "ntp",
@@ -728,7 +722,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9999",
+      "external_controller": "127.0.0.1:9090",
       "external_ui": "dashboard",
       "store_selected": true,
       "store_fakeip": true
