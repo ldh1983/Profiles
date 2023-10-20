@@ -127,7 +127,7 @@
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "v2ray",
+      "download_ua": "sing-box",
       "download_detour": "direct"
     },
     {
@@ -135,9 +135,9 @@
       "type": "http",
       "download_url": "https://1808.netlify.app",
       "download_interval": "24h",
-      "path": "base64.txt",
+      "path": "base641.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "v2ray",
+      "download_ua": "sing-box",
       "download_detour": "direct"
     }
     // 上述所有格式订阅均支持本地文件，自动识别
