@@ -161,7 +161,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
