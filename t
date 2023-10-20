@@ -33,10 +33,6 @@
         "server": "localDns"
       },
       {
-        "geosite": "category-ads-all",
-        "server": "block"
-      },
-      {
         "outbound": "any",
         "server": "localDns",
         "disable_cache": true
@@ -3256,10 +3252,6 @@
       {
         "network": "udp",
         "port": 443,
-        "outbound": "block"
-      },
-      {
-        "geosite": "category-ads-all",
         "outbound": "block"
       },
       {
