@@ -123,7 +123,17 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2Fsub3%2Fmaster%2FREADME.md%7Chttps%3A%2F%2F1808.netlify.app&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true",
+      "download_url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
+      "download_interval": "24h",
+      "path": "base64.txt",
+      "healthcheck_interval": "1h",
+      "download_ua": "Clash.Meta",
+      "download_detour": "direct"
+    },
+    {
+      "tag": "base64-http1",
+      "type": "http",
+      "download_url": "https://1808.netlify.app",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
@@ -160,7 +170,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -169,7 +180,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -178,7 +190,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -187,7 +200,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -204,7 +218,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -221,7 +236,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -238,7 +254,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -255,7 +272,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -272,7 +290,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -290,7 +309,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -308,7 +328,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -317,7 +338,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -334,7 +356,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -343,7 +366,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ]
     },
     {
@@ -352,7 +376,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🐦 Twitter",
@@ -370,7 +395,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -388,7 +414,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -406,7 +433,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -424,7 +452,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "outbounds": [
         "🎬 HK",
@@ -442,7 +471,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^HK|hk|香港|hongkong\\..+"
@@ -454,7 +484,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^TW|tw|台湾|taiwan\\..+"
@@ -466,7 +497,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^星城|新加坡|sg|SG|singapore|星\\..+"
@@ -478,7 +510,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^本|日本|jp|JP|japan|日\\..+"
@@ -490,7 +523,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^美国|美|us|US|unitedstates|united states\\..+"
@@ -502,7 +536,8 @@
       "providers": [
         "singbox-http",
         "clash-http",
-        "base64-http"
+        "base64-http",
+        "base64-http1"
       ],
       "includes": [
         "^韩国|韩|kr|KR|korean\\..+"
