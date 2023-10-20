@@ -42,8 +42,6 @@
       {
         "geosite": [
           "cn",
-          "apple@cn",
-          "category-games@cn",
           "private"
         ],
         "domain_keyword": "ntp",
