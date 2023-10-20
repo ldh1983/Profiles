@@ -128,7 +128,7 @@
       "path": "base64.txt",
       "healthcheck_interval": "1h",
       "download_ua": "v2ray",
-      "download_detour": "direct"
+      "download_detour": "Proxy"
     },
     {
       "tag": "base64-http1",
