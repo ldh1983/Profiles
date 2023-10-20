@@ -108,7 +108,7 @@
       "path": "singbox-http.json",
       "healthcheck_interval": "1h",
       "download_ua": "Clash.Meta",
-      "download_detour": "direct"
+      "download_detour": "Proxy"
     },
     {
       "tag": "clash-http",
@@ -127,7 +127,7 @@
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "sing-box",
+      "download_ua": "Proxy",
       "download_detour": "direct"
     },
     {
