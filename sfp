@@ -103,11 +103,11 @@
     {
       "tag": "singbox-http",
       "type": "http",
-      "download_url": "https://raw.githubusercontent.com/ldh1983/Profiles/master/Clash/Outbound.yaml",
+      "download_url": "https://clash2sfa-xmdhs.koyeb.app/sub?sub=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2FProfiles%2Fmaster%2FClash%2FOutbound.yaml",
       "download_interval": "24h",
       "path": "singbox-http.json",
       "healthcheck_interval": "1h",
-      "download_ua": "Clash.Meta",
+      "download_ua": "sing-box",
       "download_detour": "Proxy"
     },
     {
@@ -127,8 +127,8 @@
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "Proxy",
-      "download_detour": "direct"
+      "download_ua": "v2ray",
+      "download_detour": "Proxy"
     },
     {
       "tag": "base64-http1",
@@ -546,6 +546,14 @@
     }
   ],
   "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "proxy"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "proxy"
+    },
     "rules": [
       {
         "port": 53,
