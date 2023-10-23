@@ -958,6 +958,7 @@ rules:
   - GEOSITE,gfw,UDP
   - GEOSITE,geolocation-!cn,MATCH
   # GeoIP China
+  - GEOIP,private,DIRECT
   - GEOIP,CN,DIRECT
 
   - MATCH,MATCH
