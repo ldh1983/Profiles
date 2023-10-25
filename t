@@ -2017,21 +2017,20 @@
     },
     {
       "server": "104.155.212.127",
-      "server_port": 20357,
+      "server_port": 3796,
       "tag": "tw",
       "tls": {
         "enabled": true,
-        "server_name": "wechat.com",
+        "server_name": "mozilla.com",
         "alpn": [
           "h3"
         ],
         "insecure": true
       },
-      "type": "hysteria",
-      "auth_str": "freekkk",
-      "down_mbps": 110,
-      "up_mbps": 19,
-      "obfs": "freekkk"
+      "type": "hysteria2",
+      "password": "freekkk",
+      "down_mbps": 300,
+      "up_mbps": 60,
     },
     {
       "server": "tw1.yicanny.com",
