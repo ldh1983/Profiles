@@ -2030,7 +2030,7 @@
       "type": "hysteria2",
       "password": "freekkk",
       "down_mbps": 300,
-      "up_mbps": 60,
+      "up_mbps": 60
     },
     {
       "server": "tw1.yicanny.com",
