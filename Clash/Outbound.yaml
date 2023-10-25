@@ -184,18 +184,17 @@ proxies:
     
   # Shadowsocks(Websocket + TLS)
   - name: "tw"
-    type: hysteria
+    type: hysteria2
     server: 104.155.212.127
-    port: 20357
-    auth_str: freekkk
-    obfs: freekkk
+    port: 3796
+    password: freekkk
+    #obfs: freekkk
     alpn: 
       - h3
-    protocol: udp
-    up: 19
-    down: 110
+    up: 60
+    down: 300
     udp: true
-    sni: wechat.com
+    sni: mozilla.com
     skip-cert-verify: true
 
   # VMess(Websocket + TLS)
