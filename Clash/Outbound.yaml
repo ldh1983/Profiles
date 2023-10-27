@@ -100,6 +100,7 @@ hosts:
 dns:
   enable: true
   listen: 0.0.0.0:53
+  prefer-h3: true
   # ipv6: false # when false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
@@ -683,6 +684,38 @@ proxy-groups:
       - PROXY
       - DIRECT
 
+  - name: "microsoft"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - stchy2
+      - hk tuic
+      - tw
+      - tw h2
+      - hk
+      - us
+      - DE
+      - hk1
+      - tw 1
+      - hk 2
+      - PROXY
+      - DIRECT
+
   - name: "H"
     type: select
     use: # 注意此处是「use」
@@ -959,6 +992,8 @@ rules:
 
   # (StreamingSE)
   - RULE-SET,StreamingSE,StreamingSE
+
+  - GEOSITE,microsoft,microsoft
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
