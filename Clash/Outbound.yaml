@@ -181,6 +181,20 @@ proxies:
     alpn: [h3]
     ongestion-controller: bbr
     sni: cdn.divineengine.net
+
+  - name: "stchy2"
+    type: hysteria2
+    server: 108.165.169.213
+    port: 6443
+    password: hysteria
+    #obfs: freekkk
+    alpn: 
+      - h3
+    up: 60
+    down: 300
+    udp: true
+    sni: cdn.divineengine.net
+    skip-cert-verify: true
     
   # Shadowsocks(Websocket + TLS)
   - name: "tw"
@@ -431,6 +445,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -461,6 +476,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -491,6 +507,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -522,6 +539,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -554,6 +572,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -585,6 +604,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -616,6 +636,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -649,6 +670,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -680,6 +702,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -701,6 +724,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
@@ -725,6 +749,7 @@ proxy-groups:
       - tuicv5
       - ssv2ray
       - ss
+      - stchy2
       - hk tuic
       - tw
       - tw h2
