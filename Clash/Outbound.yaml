@@ -934,12 +934,13 @@ rules:
   #- DOMAIN,youtubei.googleapis.com,PROXY
   #- DOMAIN,music.youtube.com,PROXY
   # Unbreak
+  - PROCESS-NAME, com.gettr.gettr,UDP
   - RULE-SET,Unbreak,PROXY
   - GEOSITE,discord,PROXY
   
   - RULE-SET,UDP,UDP
   
-  - PROCESS-NAME, com.google.android.apps.youtube.music, StreamingSE
+  - PROCESS-NAME, com.google.android.apps.youtube.music,StreamingSE
   - PROCESS-NAME,com.google.android.youtube.tvmusic,StreamingSE
   - PROCESS-NAME, Telegram.exe, telegram
   - PROCESS-NAME, YouTube Music.exe, StreamingSE
