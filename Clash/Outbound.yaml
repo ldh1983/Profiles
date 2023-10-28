@@ -998,6 +998,8 @@ rules:
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
 
+  - GEOSITE,microsoft,microsoft
+
 
   # China Area Network
   - RULE-SET,China,DIRECT
