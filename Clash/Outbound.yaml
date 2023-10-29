@@ -553,6 +553,38 @@ proxy-groups:
       - PROXY
       - DIRECT
 
+  - name: "google"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - stchy2
+      - hk tuic
+      - tw
+      - tw h2
+      - hk
+      - us
+      - DE
+      - hk1
+      - tw 1
+      - hk 2
+      - PROXY
+      - DIRECT
+
   # 国际流媒体服务
   - name: "Streaming"
     type: select
@@ -746,6 +778,72 @@ proxy-groups:
       - tw 1
       - hk 2
       - PROXY
+
+  - name: "gfw"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - UDP
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - stchy2
+      - hk tuic
+      - tw
+      - tw h2
+      - hk
+      - us
+      - DE
+      - hk1
+      - tw 1
+      - hk 2
+      - PROXY
+      - DIRECT
+
+  - name: "!cn"
+    type: select
+    use: # 注意此处是「use」
+      - MList # 这是上面「proxy-providers」的名称
+      - YList
+      - MyList
+    proxies:
+      - Url-test
+      - Fallback
+      - MATCH
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - tuicv5
+      - ssv2ray
+      - ss
+      - stchy2
+      - hk tuic
+      - tw
+      - tw h2
+      - hk
+      - us
+      - DE
+      - hk1
+      - tw 1
+      - hk 2
+      - PROXY
+      - DIRECT
 
   - name: "Fallback"
     type: fallback 
@@ -992,6 +1090,8 @@ rules:
 
   # (StreamingSE)
   - RULE-SET,StreamingSE,StreamingSE
+
+  - GEOSITE,google,google
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
