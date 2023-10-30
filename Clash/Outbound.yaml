@@ -1124,8 +1124,8 @@ rules:
   - GEOSITE,facebook,PROXY
   - GEOSITE,youtube,PROXY
   - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,gfw,UDP
-  - GEOSITE,geolocation-!cn,MATCH
+  - GEOSITE,gfw,gfw
+  - GEOSITE,geolocation-!cn,!cn
   # GeoIP China
   - GEOIP,private,DIRECT
   - GEOIP,CN,DIRECT
