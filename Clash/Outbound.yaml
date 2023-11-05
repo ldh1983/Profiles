@@ -366,7 +366,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c" # 放机场订阅链接
+    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fjubrghns.doggygo.xyz%2Fapi%2Fv1%2Fclient%2F5295fab587267d295b5bf37fcc3bf86c&insert=false&emoji=true&list=false&xudp=true&udp=true&tfo=true&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
@@ -376,7 +376,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md" # 放机场订阅链接
+    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2F81d32c8b81cda5cec1dad768a2814802%2Fraw%2F4de52d51a7f1bfadd34fac0b59751be4afdf24fd%2Fsub3&insert=false&emoji=true&list=false&xudp=true&udp=true&tfo=true&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
