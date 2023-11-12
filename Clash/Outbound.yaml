@@ -156,13 +156,13 @@ dns:
 
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
-  - name:  hk tuic
-    server: yicanny.com
-    port: 2099
+  - name:  rn tuic
+    server: rn.yicanny.com
+    port: 47777
     type: tuic
-    uuid: 0bb30e83-da88-4d0f-adac-551ed82e7947
-    password: 0bb30e83-da88-4d0f-adac-551ed82e7947
-    disable-sni: true
+    uuid: b3c76f0e-f2c6-4518-9ddc-b21b3339d550
+    password: b3c76f0e-f2c6-4518-9ddc-b21b3339d550
+    disable-sni: false
     reduce-rtt: true
     request-timeout: 8000
     udp-relay-mode: native
@@ -198,19 +198,19 @@ proxies:
     skip-cert-verify: true
     
   # Shadowsocks(Websocket + TLS)
-  - name: "tw"
+  - name: "rnhy2"
     type: hysteria2
-    server: 104.155.212.127
-    port: 3796
-    password: freekkk
+    server: 06.217.143.7
+    port: 47976
+    password: b3c76f0e-f2c6-4518-9ddc-b21b3339d550
     #obfs: freekkk
     alpn: 
       - h3
     up: 60
     down: 300
     udp: true
-    sni: mozilla.com
-    skip-cert-verify: true
+    sni: rn.yicanny.com
+    skip-cert-verify: false
 
   # VMess(Websocket + TLS)
   - name: "tw h2"
