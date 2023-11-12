@@ -200,7 +200,7 @@ proxies:
   # Shadowsocks(Websocket + TLS)
   - name: "rnhy2"
     type: hysteria2
-    server: 06.217.143.7
+    server: 206.217.143.7
     port: 47976
     password: b3c76f0e-f2c6-4518-9ddc-b21b3339d550
     #obfs: freekkk
