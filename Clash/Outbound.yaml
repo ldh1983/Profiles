@@ -447,8 +447,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -478,8 +478,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -509,8 +509,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -541,8 +541,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -573,8 +573,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -606,8 +606,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -638,8 +638,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -670,8 +670,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -704,8 +704,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -736,8 +736,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -768,8 +768,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -800,8 +800,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -833,8 +833,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -856,8 +856,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -881,8 +881,8 @@ proxy-groups:
       - ssv2ray
       - ss
       - stchy2
-      - hk tuic
-      - tw
+      - rn tuic
+      - rnhy2
       - tw h2
       - hk
       - us
@@ -900,7 +900,6 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - hk tuic
       - hk
       - hk1
       - hk 2
@@ -913,7 +912,6 @@ proxy-groups:
       - YList
       - MyList
     proxies:
-      - tw
       - tw 1
       - tw h2
     filter: "(?i)台|tw|taiwan"
@@ -943,6 +941,8 @@ proxy-groups:
     proxies:
       - tuicv5
       - us
+      - rn tuic
+      - rnhy2
 
     filter: "(?i)美|us|unitedstates|united states"
 
@@ -964,6 +964,8 @@ proxy-groups:
       - MyList
     proxies:
       - tuicv5
+      - rn tuic
+      - rnhy2
       - ssv2ray
       - ss
       - DE
