@@ -101,6 +101,8 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   prefer-h3: true
+  nameserver-policy:
+  '＋.yicanny.com': [8.8.8.8,1.1.1.1,223.5.5.5,tls://8.8.4.4, https://1.0.0.1/dns-query]
   # ipv6: false # when false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
@@ -125,6 +127,8 @@ dns:
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
     - 119.29.29.29
     - tls://dns.rubyfish.cn:853 # DNS over TLS
     - https://1.1.1.1/dns-query # DNS over HTTPS
