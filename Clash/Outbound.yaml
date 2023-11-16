@@ -218,65 +218,59 @@ proxies:
 
   # VMess(Websocket + TLS)
   - name: "tw h2"
-    type: vmess
-    server: tw1.yicanny.com
-    port: 2053
-    uuid: 3ff1a03a-5966-11ec-a844-42010a8c0022
-    alterId: 0
-    cipher: auto
+    type: hysteria2
+    server: 3.39.194.232
+    port: 40795
+    password: c8068e04-e3d7-4e89-a551-311ad762b87f
+    #obfs: freekkk
+    alpn: 
+      - h3
+    up: 60
+    down: 300
     udp: true
-    network: h2
-    tls: true
-    h2-opts:
-        path: /ck5aeJIX/
+    sni: aws.yicanny.com
+    skip-cert-verify: false
 
   # Trojan
   - name: "hk"
-    type: hysteria
-    server: hk.yicanny.com
-    port: 17879
-    ports: 46777-47777
-    auth_str: freekkk
-    #obfs: yourpassword
-    alpn: 
-      - h3
-    protocol: udp
-    up: 19
-    down: 110
-    udp: true
-    sni: hk.yicanny.com
-    skip-cert-verify: false
+    server: aws.yicanny.com
+    port: 44645
+    type: tuic
+    uuid: c8068e04-e3d7-4e89-a551-311ad762b87f
+    password: c8068e04-e3d7-4e89-a551-311ad762b87f
+    disable-sni: false
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
+    alpn: [h3]
+    ongestion-controller: bbr
 
   - name: "us"
-    type: hysteria
-    server: us.yicanny.com
-    port: 20777
-    auth_str: frekkk
-    #obfs: yourpassword
+    type: hysteria2
+    server: 74.48.95.50
+    port: 31108
+    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    #obfs: freekkk
     alpn: 
       - h3
-    protocol: wechat-video
-    up: 110
-    down: 110
+    up: 60
+    down: 300
     udp: true
-    sni: us.yicanny.com
+    sni: yicanny.com
     skip-cert-verify: false
     
   - name: "DE"
-    type: hysteria
-    server: de.yicanny.com
-    port: 20888
-    ports: 36777-37777
-    auth_str: frekkk
-    #obfs: yourpassword
-    alpn: 
-      - h3
-    protocol: udp
-    up: 110
-    down: 110
-    udp: true
-    sni: de.yicanny.com
-    skip-cert-verify: false
+    server: yicanny.com
+    port: 22785
+    type: tuic
+    uuid: 64db2a61-4296-4747-8f50-017201a4c5e4
+    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    disable-sni: false
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
+    alpn: [h3]
+    ongestion-controller: bbr
 
   - name: "hk1"
     type: hysteria
