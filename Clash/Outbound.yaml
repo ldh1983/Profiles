@@ -1059,6 +1059,7 @@ rule-providers:
 # 规则
 rules:
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
+  - DOMAIN-KEYWORD,oracle,DIRECT
   - DOMAIN-KEYWORD,gnews,MATCH
   - DOMAIN-KEYWORD,himalaya,H
   #- DOMAIN-KEYWORD,google,PROXY
