@@ -117,7 +117,7 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://raw.githubusercontent.com/ldh1983/sub3/master/README.md",
+      "download_url": "https://raw.githubusercontent.com/ldh1983/sub2/master/README.md",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
