@@ -364,7 +364,7 @@ proxy-providers:
 
   MList: #「冲鸭机场」订阅
     type: http
-    url: "https://aqcokz.doggygo.top:8443/api/v1/client/5295fab587267d295b5bf37fcc3bf86c" # 放机场订阅链接
+    url: "https://jvici9hr.doggygo.top:8443/api/v1/client/5295fab587267d295b5bf37fcc3bf86c?flag=clashmeta" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList.yaml # 注意此处文件名不可相同
     health-check:
