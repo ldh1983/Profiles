@@ -153,8 +153,8 @@
       "type": "selector",
       "tag": "Proxy",
       "providers": [
-        "singbox-http",
         "clash-http",
+        "singbox-http",
         "base64-http",
         "base64-http1"
       ]
