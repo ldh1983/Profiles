@@ -625,6 +625,10 @@
         "outbound": "🐦 Twitter"
       },
       {
+        "geosite": "paypal",
+        "outbound": "direct"
+      },
+      {
         "geosite": "openai",
         "outbound": "🤖 OpenAI"
       },
