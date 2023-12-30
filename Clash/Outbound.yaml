@@ -46,6 +46,8 @@ global-client-fingerprint: chrome
 
 geodata-loader: standard
 
+geodata-mode: true
+
 
 profile:
   store-selected: true
