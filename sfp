@@ -117,21 +117,21 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://raw.githubusercontent.com/ldh1983/sub2/master/README.md",
+      "download_url": "https://api.v1.mk/sub?target=singbox&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2F81d32c8b81cda5cec1dad768a2814802%2Fraw%2Fdb9f37a35da3099a2f3eeac0f1cd17f442b635ac%2Fsub3&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "v2ray",
-      "download_detour": "Proxy"
+      "download_ua": "sing-box",
+      "download_detour": "direct"
     },
     {
       "tag": "base64-http1",
       "type": "http",
-      "download_url": "https://1808.netlify.app",
+      "download_url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2F1808.netlify.app&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true",
       "download_interval": "24h",
       "path": "base641.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "v2ray",
+      "download_ua": "sing-box",
       "download_detour": "direct"
     }
     // 上述所有格式订阅均支持本地文件，自动识别
