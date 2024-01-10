@@ -117,7 +117,7 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://gist.githubusercontent.com/ldh1983/81d32c8b81cda5cec1dad768a2814802/raw/sub3",
+      "download_url": "https://gist.githubusercontent.com/ldh1983/81d32c8b81cda5cec1dad768a2814802/raw/2",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
