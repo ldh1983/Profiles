@@ -725,11 +725,14 @@
     "final": "Proxy"
   },
   "experimental": {
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "dashboard",
-      "store_selected": true,
+    "cache_file": {
+      "enabled": true,
       "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "secret": "",
+      "external_ui": "ui"
     }
   }
 }
