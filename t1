@@ -7904,14 +7904,6 @@
   "route": {
     "auto_detect_interface": true,
     "final": "proxy",
-    "geoip": {
-      "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db",
-      "download_detour": "🌌 Google"
-    },
-    "geosite": {
-      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
-      "download_detour": "🌌 Google"
-    },
     "rules": [
       {
         "protocol": "dns",
