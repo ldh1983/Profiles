@@ -121,7 +121,7 @@
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
-      "download_ua": "Clash.Meta",
+      "download_ua": "sing-box",
       "download_detour": "direct"
     },
     {
