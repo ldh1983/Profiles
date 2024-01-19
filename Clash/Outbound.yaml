@@ -863,6 +863,7 @@ proxy-groups:
 
   - name: "Fallback"
     type: fallback 
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
