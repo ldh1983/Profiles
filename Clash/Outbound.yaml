@@ -698,7 +698,7 @@ proxy-groups:
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
   - name: "StreamingSE"
     type: select
-    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -796,6 +796,7 @@ proxy-groups:
 
   - name: "gfw"
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -863,7 +864,7 @@ proxy-groups:
 
   - name: "Fallback"
     type: fallback 
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -889,6 +890,7 @@ proxy-groups:
 
   - name: "Url-test"
     type: url-test 
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -912,6 +914,7 @@ proxy-groups:
 
   - name: "HK"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -924,6 +927,7 @@ proxy-groups:
 
   - name: "TW"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -935,6 +939,7 @@ proxy-groups:
 
   - name: "新家坡"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -943,6 +948,7 @@ proxy-groups:
 
   - name: "JP"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -951,6 +957,7 @@ proxy-groups:
 
   - name: "US"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -965,6 +972,7 @@ proxy-groups:
 
   - name: "KR"
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -975,6 +983,7 @@ proxy-groups:
 
   - name: "other"
     type: fallback
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
