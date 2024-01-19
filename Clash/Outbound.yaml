@@ -433,6 +433,7 @@ proxy-groups:
   # 代理节点选择
   - name: "PROXY"
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -464,6 +465,7 @@ proxy-groups:
       
   - name: "UDP"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Star+.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -495,6 +497,7 @@ proxy-groups:
        
   - name: "telegram"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -527,6 +530,7 @@ proxy-groups:
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -559,6 +563,7 @@ proxy-groups:
 
   - name: "google"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -592,6 +597,7 @@ proxy-groups:
   # 国际流媒体服务
   - name: "Streaming"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -624,6 +630,7 @@ proxy-groups:
 
   - name: "Spotify"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -656,6 +663,7 @@ proxy-groups:
       
   - name: "Apple"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -690,6 +698,7 @@ proxy-groups:
   # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
   - name: "StreamingSE"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -722,6 +731,7 @@ proxy-groups:
 
   - name: "microsoft"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -754,6 +764,7 @@ proxy-groups:
 
   - name: "H"
     type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HC.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
@@ -818,6 +829,7 @@ proxy-groups:
 
   - name: "!cn"
     type: select
+    https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
     use: # 注意此处是「use」
       - MList # 这是上面「proxy-providers」的名称
       - YList
