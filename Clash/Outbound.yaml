@@ -1005,7 +1005,15 @@ rule-providers:
 #   behavior: classical # 或 ipcidr、domain
 #   path: # 文件路径
 #   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
-#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用 
+  秋风广告规则:
+    type: http
+    behavior: domain
+    format: yaml
+    path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
+    #此处“/rule_providers”自行参考
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
+    interval: 60480
 
   Unbreak:
     type: http
@@ -1086,6 +1094,8 @@ rule-providers:
 
 # 规则
 rules:
+  - RULE-SET,秋风广告规则,REJECT
+  #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
   - DOMAIN-KEYWORD,oracle,DIRECT
   - DOMAIN-KEYWORD,gnews,MATCH
