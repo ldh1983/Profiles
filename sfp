@@ -261,6 +261,23 @@
         "🎬 KR"
       ]
     },
+      "type": "selector",
+      "tag": "🛍️ discord",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
     {
       "type": "selector",
       "tag": "🌌 ytm",
@@ -347,7 +364,7 @@
     },
     {
       "type": "selector",
-      "tag": "🌏 final",
+      "tag": "🌏 gfw",
       "providers": [
         "singbox-http",
         "clash-http",
@@ -622,7 +639,11 @@
         "package_name": [
           "com.discord"
         ],
-        "outbound": "🐦 Twitter"
+        "outbound": "🛍️ discord"
+      },
+      {
+        "geosite": "discord",
+        "outbound": "🛍️ discord"
       },
       {
         "geosite": "paypal",
@@ -699,7 +720,7 @@
       },
       {
         "geosite": "gfw",
-        "outbound": "🌏 final"
+        "outbound": "🌏 gfw"
       },
       {
         "geosite": "geolocation-!cn",
