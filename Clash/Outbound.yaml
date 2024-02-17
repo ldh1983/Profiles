@@ -180,7 +180,7 @@ proxies:
     ongestion-controller: bbr
 
   - name: tuicv5
-    server: 108.165.169.213
+    server: 47.87.203.102
     port: 8443
     type: tuic
     uuid: 8029997D-2954-4125-9743-EA75F88C0C15
