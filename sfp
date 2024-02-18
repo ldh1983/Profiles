@@ -261,6 +261,7 @@
         "🎬 KR"
       ]
     },
+    {
       "type": "selector",
       "tag": "🛍️ discord",
       "providers": [
