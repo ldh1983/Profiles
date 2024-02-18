@@ -166,6 +166,33 @@ dns:
 
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
+  - name: "us"
+    type: hysteria2
+    server: 74.48.95.50
+    port: 31108
+    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    #obfs: freekkk
+    alpn: 
+      - h3
+    up: 60
+    down: 300
+    udp: true
+    sni: yicanny.com
+    skip-cert-verify: false
+    
+  - name: "DE"
+    server: yicanny.com
+    port: 22785
+    type: tuic
+    uuid: 64db2a61-4296-4747-8f50-017201a4c5e4
+    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    disable-sni: false
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
+    alpn: [h3]
+    ongestion-controller: bbr
+    
   - name:  rn tuic
     server: rn.yicanny.com
     port: 47777
@@ -244,33 +271,6 @@ proxies:
     type: tuic
     uuid: c8068e04-e3d7-4e89-a551-311ad762b87f
     password: c8068e04-e3d7-4e89-a551-311ad762b87f
-    disable-sni: false
-    reduce-rtt: true
-    request-timeout: 8000
-    udp-relay-mode: native
-    alpn: [h3]
-    ongestion-controller: bbr
-
-  - name: "us"
-    type: hysteria2
-    server: 74.48.95.50
-    port: 31108
-    password: 64db2a61-4296-4747-8f50-017201a4c5e4
-    #obfs: freekkk
-    alpn: 
-      - h3
-    up: 60
-    down: 300
-    udp: true
-    sni: yicanny.com
-    skip-cert-verify: false
-    
-  - name: "DE"
-    server: yicanny.com
-    port: 22785
-    type: tuic
-    uuid: 64db2a61-4296-4747-8f50-017201a4c5e4
-    password: 64db2a61-4296-4747-8f50-017201a4c5e4
     disable-sni: false
     reduce-rtt: true
     request-timeout: 8000
