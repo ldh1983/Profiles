@@ -1105,6 +1105,7 @@ rules:
   #- DOMAIN,music.youtube.com,PROXY
   # Unbreak
   - PROCESS-NAME, com.gettr.gettr,UDP
+  - PROCESS-NAME, com.twitter.android,PROXY
   - RULE-SET,Unbreak,PROXY
   - GEOSITE,discord,PROXY
   
