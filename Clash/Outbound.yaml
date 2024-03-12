@@ -581,44 +581,52 @@ proxy-groups:
   - name: "HK"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)港|hk|hongkong|hong kong"
 
   - name: "TW"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)台|tw|taiwan"
 
   - name: "新家坡"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)(新加坡|sg|singapore)"
 
   - name: "JP"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)日本|jp|japan"
 
   - name: "US"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)美|us|unitedstates|united states"
+    proxies:
+    - us cc hy2
+    - us cc tuic
+    - rn hy2 us
+    - rn tuic us
 
   - name: "KR"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-    include-all: true
+    include-all-providers: true
+    proxies:
+    - kr hy2
+    - kr tuic
 
     filter: "(?i)韩|kr|korean"
 
   - name: "other"
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-    include-all: true
+    include-all-providers: true
     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*"
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
