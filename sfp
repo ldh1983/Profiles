@@ -20,6 +20,11 @@
         "detour": "direct"
       },
       {
+        "tag": "jxym",
+        "address": "https://1.0.0.1/dns-query",
+        "detour": "direct"
+      },
+      {
         "tag": "block",
         "address": "rcode://success"
       }
@@ -28,7 +33,7 @@
       // https://github.com/SagerNet/sing-box/releases/tag/v1.2.2
       {
         "outbound": "any",
-        "server": "local",
+        "server": "jxym",
         "disable_cache": true
       },
       {
@@ -69,7 +74,7 @@
       "tag": "mixed-in",
       "listen": "::",
       "listen_port": 1080,
-      "sniff": true
+      "sniff": false
 //      "domain_strategy": "prefer_ipv4" // remove this line if you want to resolve the domain remotely (if the server is not sing-box, UDP may not work due to wrong behavior).
 //      "set_system_proxy": false
     },
@@ -78,10 +83,11 @@
       "tag": "tun-in",
       "interface_name": "tun3",
       "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "stack": "system",
       "auto_route": true,
       "strict_route": true,
-      "sniff": true,
+      "sniff": false,
       "platform": {
         "http_proxy": {
           "enabled": true,
