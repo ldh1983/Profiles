@@ -170,7 +170,7 @@ dns:
 
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
-  - name: "us"
+  - name: "us cc hy2"
     type: hysteria2
     server: 74.48.95.50
     port: 31108
@@ -184,7 +184,7 @@ proxies:
     sni: yicanny.com
     skip-cert-verify: false
     
-  - name: "DE"
+  - name: "us cc tuic"
     server: yicanny.com
     port: 22785
     type: tuic
@@ -197,7 +197,7 @@ proxies:
     alpn: [h3]
     ongestion-controller: bbr
     
-  - name:  rn tuic
+  - name:  rn tuic us
     server: rn.yicanny.com
     port: 47777
     type: tuic
@@ -210,36 +210,10 @@ proxies:
     alpn: [h3]
     ongestion-controller: bbr
 
-  - name: tuicv5
-    server: 47.87.203.102
-    port: 8443
-    type: tuic
-    uuid: 8029997D-2954-4125-9743-EA75F88C0C15
-    password: TUIC
-    disable-sni: false
-    reduce-rtt: true
-    request-timeout: 8000
-    udp-relay-mode: native
-    alpn: [h3]
-    ongestion-controller: bbr
-    sni: cdn.divineengine.net
 
-  - name: "stchy2"
-    type: hysteria2
-    server: 108.165.169.213
-    port: 6443
-    password: hysteria
-    #obfs: freekkk
-    alpn: 
-      - h3
-    up: 60
-    down: 300
-    udp: true
-    sni: cdn.divineengine.net
-    skip-cert-verify: true
     
   # Shadowsocks(Websocket + TLS)
-  - name: "rnhy2"
+  - name: rn hy2 us
     type: hysteria2
     server: 206.217.143.7
     port: 47976
@@ -254,7 +228,7 @@ proxies:
     skip-cert-verify: false
 
   # VMess(Websocket + TLS)
-  - name: "tw h2"
+  - name: "kr hy2"
     type: hysteria2
     server: 3.39.194.232
     port: 40795
@@ -269,7 +243,7 @@ proxies:
     skip-cert-verify: false
 
   # Trojan
-  - name: "hk"
+  - name: "kr tuic"
     server: aws.yicanny.com
     port: 44645
     type: tuic
@@ -282,74 +256,7 @@ proxies:
     alpn: [h3]
     ongestion-controller: bbr
 
-  - name: "hk1"
-    type: hysteria
-    server: hk2.yicanny.com
-    port: 20666
-    ports: 25777-26777
-    auth_str: freekkk
-    #obfs: yourpassword
-    alpn: 
-      - h3
-    protocol: udp
-    up: 19
-    down: 110
-    udp: true
-    sni: hk2.yicanny.com
-    skip-cert-verify: false
 
-  - name: "tw 1"
-    type: hysteria
-    server: tw2.yicanny.com
-    port: 20777
-    ports: 26777-27777
-    auth_str: freekkk
-    #obfs: yourpassword
-    alpn: 
-      - h3
-    protocol: udp
-    up: 19
-    down: 110
-    udp: true
-    sni: tw2.yicanny.com
-    skip-cert-verify: false
-    
-  - name: "hk 2"
-    type: hysteria
-    server: yicanny.com
-    port: 20167
-    ports: 25387-26387
-    auth_str: freekkk
-    #obfs: yourpassword
-    alpn: 
-      - h3
-    protocol: udp
-    up: 19
-    down: 110
-    udp: true
-    sni: yicanny.com
-    skip-cert-verify: false
-    
-  - name: "ssv2ray"
-    type: ss
-    server: 50.114.242.11
-    port: 8443
-    cipher: aes-256-gcm
-    password: "duckduckgo"
-    plugin: shadow-tls
-    client-fingerprint: chrome
-    plugin-opts:
-      host: "cloud.tencent.com"
-      password: "duckduckgo"
-      version: 3 # support 1/2/3
-
-      
-  - name: "ss"
-    type: ss
-    server: ss.a.nekoe.eu.org
-    port: 6000
-    cipher: aes-256-cfb
-    password: "https://t.me/nekoemtp"
       
 # 服务器节点订阅
 proxy-providers:
@@ -438,10 +345,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -452,28 +356,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
+
       
       
   - name: "UDP"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Star+.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -484,28 +373,12 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
        # 嵌套使用订阅节点策略组
        
   - name: "telegram"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -516,29 +389,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -549,29 +406,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
   - name: "google"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -582,19 +423,6 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
@@ -602,10 +430,7 @@ proxy-groups:
   - name: "Streaming"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -616,29 +441,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       # - US
 
   - name: "Spotify"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -649,29 +458,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       # - US
       
   - name: "Apple"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -682,19 +475,6 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
@@ -703,10 +483,7 @@ proxy-groups:
   - name: "StreamingSE"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -717,29 +494,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
   - name: "microsoft"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -750,29 +511,13 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
   - name: "H"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HC.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
@@ -780,35 +525,18 @@ proxy-groups:
       - TW
       - JP
       - US
-      - 新家坡
       - KR
+      - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
 
   - name: "gfw"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
-      - UDP
       - HK
       - TW
       - JP
@@ -816,33 +544,16 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
   - name: "!cn"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     proxies:
       - Url-test
       - Fallback
-      - MATCH
       - HK
       - TW
       - JP
@@ -850,155 +561,64 @@ proxy-groups:
       - KR
       - 新家坡
       - other
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
       - PROXY
       - DIRECT
 
   - name: "Fallback"
     type: fallback 
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
-
-
+    include-all: true
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
   - name: "Url-test"
     type: url-test 
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuicv5
-      - ssv2ray
-      - ss
-      - stchy2
-      - rn tuic
-      - rnhy2
-      - tw h2
-      - hk
-      - us
-      - DE
-      - hk1
-      - tw 1
-      - hk 2
+    include-all: true
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
   - name: "HK"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - hk
-      - hk1
-      - hk 2
+    include-all: true
     filter: "(?i)港|hk|hongkong|hong kong"
 
   - name: "TW"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tw 1
-      - tw h2
+    include-all: true
     filter: "(?i)台|tw|taiwan"
 
   - name: "新家坡"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     filter: "(?i)(新加坡|sg|singapore)"
 
   - name: "JP"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
+    include-all: true
     filter: "(?i)日本|jp|japan"
 
   - name: "US"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuicv5
-      - us
-      - rn tuic
-      - rnhy2
-
+    include-all: true
     filter: "(?i)美|us|unitedstates|united states"
 
   - name: "KR"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-
+    include-all: true
 
     filter: "(?i)韩|kr|korean"
 
   - name: "other"
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-    use: # 注意此处是「use」
-      - MList # 这是上面「proxy-providers」的名称
-      - YList
-      - MyList
-    proxies:
-      - tuicv5
-      - rn tuic
-      - rnhy2
-      - ssv2ray
-      - ss
-      - DE
+    include-all: true
     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates)).*"
      
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
