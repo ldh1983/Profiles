@@ -133,6 +133,7 @@ dns:
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
+    - https://1.12.12.12/dns-query
     - 114.114.114.114
     - 8.8.8.8
     - 119.29.29.29
@@ -140,7 +141,7 @@ dns:
     - https://1.1.1.1/dns-query # DNS over HTTPS
 
   proxy-server-nameserver:
-    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.
