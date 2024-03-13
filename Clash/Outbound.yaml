@@ -777,7 +777,7 @@ rules:
   #- GEOSITE,apple-cn,DIRECT
   #- GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,facebook,PROXY
-  - GEOSITE,youtube,PROXY
+  - GEOSITE,youtube,Streaming
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,gfw,gfw
   - GEOSITE,geolocation-!cn,!cn
