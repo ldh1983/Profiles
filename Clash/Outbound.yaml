@@ -644,7 +644,7 @@ rule-providers:
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt"
     interval: 60480
 
   Unbreak:
@@ -727,6 +727,7 @@ rule-providers:
 # 规则
 rules:
   - RULE-SET,秋风广告规则,REJECT
+  - GEOSITE,category-ads-all,REJECT
   #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
   - DOMAIN-KEYWORD,oracle,DIRECT
@@ -738,6 +739,7 @@ rules:
   # Unbreak
   - PROCESS-NAME, com.gettr.gettr,UDP
   - PROCESS-NAME, com.twitter.android,PROXY
+  - GEOSITE,twitter,PROXY
   - RULE-SET,Unbreak,PROXY
   - GEOSITE,discord,PROXY
   
@@ -770,6 +772,16 @@ rules:
 
   - GEOSITE,microsoft,microsoft
 
+  #- GEOSITE,icloud@cn,DIRECT
+  #- GEOSITE,apple@cn,DIRECT
+  #- GEOSITE,apple-cn,DIRECT
+  #- GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,facebook,PROXY
+  - GEOSITE,youtube,PROXY
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,gfw,gfw
+  - GEOSITE,geolocation-!cn,!cn
+
 
   # China Area Network
   - RULE-SET,China,DIRECT
@@ -788,17 +800,8 @@ rules:
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
   
-  - GEOSITE,category-ads-all,REJECT
-  #- GEOSITE,icloud@cn,DIRECT
-  #- GEOSITE,apple@cn,DIRECT
-  #- GEOSITE,apple-cn,DIRECT
-  #- GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,facebook,PROXY
-  - GEOSITE,youtube,PROXY
-  - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,gfw,gfw
-  - GEOSITE,geolocation-!cn,!cn
   # GeoIP China
+  - GEOIP,twitter,PROXY
   - GEOIP,private,DIRECT
   - GEOIP,CN,DIRECT
 
