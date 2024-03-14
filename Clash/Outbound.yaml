@@ -137,7 +137,7 @@ dns:
 # DNS over HTTPS
 
   proxy-server-nameserver:
-    - https://1.0.0.1/dns-query
+    - https://cn-a-rsa.iqiqz.com/cdn
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.
