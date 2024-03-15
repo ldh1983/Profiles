@@ -385,6 +385,8 @@ proxy-groups:
       - KR
       - 新家坡
       - other
+      - PROXY
+      - DIRECT
       
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
