@@ -144,9 +144,9 @@ dns:
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
   fallback:
-    - https://8.8.4.4/dns-query
+    # - https://8.8.4.4/dns-query
     - https://1.0.0.1/dns-query
-    - 94.140.14.141
+    # - 94.140.14.141
 
   # If IP addresses resolved with servers in `nameservers` are in the specified
   # subnets below, they are considered invalid and results from `fallback`
