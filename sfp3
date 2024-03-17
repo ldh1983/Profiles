@@ -1,1 +1,770 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "cloudflare",
+        "address": "tls://1.1.1.1",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "fakedns",
+        "address": "fakeip"
+      },
+      {
+        "tag": "local",
+        "address": "https://1.12.12.12/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "jxym",
+        "address": "https://1.0.0.1/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      // https://github.com/SagerNet/sing-box/releases/tag/v1.2.2
+      {
+        "outbound": "any",
+        "server": "jxym",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Global",
+        "server": "cloudflare"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      },
+      {
+        "geosite": [
+          "cn",
+          "private"
+        ],
+        "domain_keyword": "ntp",
+        "server": "local"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakedns"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 1080,
+      "sniff": false
+//      "domain_strategy": "prefer_ipv4" // remove this line if you want to resolve the domain remotely (if the server is not sing-box, UDP may not work due to wrong behavior).
+//      "set_system_proxy": false
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun3",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "stack": "system",
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": false,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1080
+        }
+      }
+    }
+  ],
 
+// 这里的 proviedrs 需要使用 https://github.com/PuerNya/sing-box/tree/building
+  "outbound_providers": [
+    {
+      "tag": "singbox-http",
+      "type": "http",
+      "download_url": "https://clash2sfa-xmdhs.koyeb.app/sub?sub=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2FProfiles%2Fmaster%2FClash%2FOutbound.yaml",
+      "download_interval": "24h",
+      "path": "singbox-http.json",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
+      "tag": "clash-http",
+      "type": "http",
+      "download_url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
+      "download_interval": "24h",
+      "path": "clash.yaml",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
+      "tag": "base64-http",
+      "type": "http",
+      "download_url": "https://gist.githubusercontent.com/ldh1983/81d32c8b81cda5cec1dad768a2814802/raw/sub3",
+      "download_interval": "24h",
+      "path": "base64.txt",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "Proxy"
+    },
+    {
+      "tag": "base64-http1",
+      "type": "http",
+      "download_url": "https://v.id9.cc/sub?target=clash&url=https%3A%2F%2F1808.netlify.app&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true",
+      "download_interval": "24h",
+      "path": "base641.txt",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    }
+    // 上述所有格式订阅均支持本地文件，自动识别
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "selector",
+      "tag": "Proxy",
+      "providers": [
+        "clash-http",
+        "singbox-http",
+        "base64-http",
+        "base64-http1"
+      ]
+      "default": "15新加坡-专线(iOS优化)"
+    },
+    {
+      "type": "selector",
+      "tag": "🌏 !cn",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 gn",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 gr",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📟 Telegram",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 yt",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐦 Twitter",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 Google",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛍️ discord",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌌 ytm",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🍎 Apple",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🧩 Microsoft",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 hi",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛍️ spo",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌏 gfw",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 OpenAI",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "👤 Facebook",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🐦 Twitter",
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛍️ Amazon",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎬 MediaVideo",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📺 Bilibili",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎮 Game",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "outbounds": [
+        "🎬 HK",
+        "🎬 TW",
+        "🎬 SG",
+        "🎬 JP",
+        "🎬 US",
+        "🎬 KR",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 HK",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^HK|hk|香港|hongkong\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 TW",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^TW|tw|台湾|taiwan\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 SG",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^星城|新加坡|sg|SG|singapore|星\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 JP",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^本|日本|jp|JP|japan|日\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 US",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^美国|美|us|US|unitedstates|united states\\..+"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🎬 KR",
+      "providers": [
+        "singbox-http",
+        "clash-http",
+        "base64-http",
+        "base64-http1"
+      ],
+      "includes": [
+        "^韩国|韩|kr|KR|korean\\..+"
+      ]
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "Proxy"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "Proxy"
+    },
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "Proxy"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "domain_keyword": "himalaya",
+        "outbound": "🤖 hi"
+      },
+      {
+        "domain_keyword": "gnews",
+        "outbound": "🤖 gn"
+      },
+      {
+        "domain_keyword": "gettr",
+        "outbound": "🤖 gr"
+      },
+      {
+        "package_name": [
+          "org.telegram.plus"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "package_name": [
+          "org.telegram.messenger.web"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "package_name": [
+          "app.revanced.android.apps.youtube.music"
+        ],
+        "outbound": "🌌 ytm"
+      },
+      {
+        "package_name": [
+          "app.google.android.apps.youtube.music"
+        ],
+        "outbound": "🌌 ytm"
+      },
+      {
+        "package_name": [
+          "com.gettr.gettr"
+        ],
+        "outbound": "🤖 gr"
+      },
+      {
+        "package_name": [
+          "com.whatsapp"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "package_name": [
+          "com.discord"
+        ],
+        "outbound": "🛍️ discord"
+      },
+      {
+        "geosite": "discord",
+        "outbound": "🛍️ discord"
+      },
+      {
+        "geosite": "paypal",
+        "outbound": "direct"
+      },
+      {
+        "geosite": "openai",
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": "youtube",
+        "outbound": "🌌 yt"
+      },
+      {
+        "geoip": "google",
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geoip": "telegram",
+        "geosite": "telegram",
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geoip": "twitter",
+        "geosite": "twitter",
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geoip": "facebook",
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": "amazon",
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": "spotify",
+        "outbound": "🛍️ spo"
+      },
+      {
+        "geosite": "apple",
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": "microsoft",
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": "category-games",
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": "bilibili",
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geoip": "netflix",
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": "gfw",
+        "outbound": "🌏 gfw"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "private",
+          "geolocation-cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true,
+//    Tun 一般需要开启
+//    "default_mark": 233,
+//    Tproxy 可能用到
+    "find_process": true,
+    "final": "Proxy"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "",
+      "external_ui": "ui",
+      "secret": "",
+      "default_mode": "rule"
+    }
+  }
+}
