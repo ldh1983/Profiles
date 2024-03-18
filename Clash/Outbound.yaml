@@ -159,9 +159,9 @@ dns:
   # are always used, and answers from `nameservers` are discarded.
   #
   # This is a countermeasure against DNS pollution attacks.
-  fallback-filter:
-    geoip: true
-    ipcidr:
+  # fallback-filter:
+    # geoip: true
+    # ipcidr:
       # - 240.0.0.0/4
 
 proxies:
