@@ -46,7 +46,7 @@
       },
       {
         "geosite": [
-          "geolocation-cn"
+          "geolocation-cn",
           "cn",
           "private"
         ],
