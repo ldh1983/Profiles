@@ -580,6 +580,19 @@
         "outbound": "dns-out"
       },
       {
+                "port": 853,
+                "network": "tcp",
+                "outbound": "block"
+            },
+            {
+                "port": [
+                    443,
+                    853
+                ],
+                "network": "udp",
+                "outbound": "block"
+            },
+      {
         "clash_mode": "Global",
         "outbound": "Proxy"
       },
@@ -736,9 +749,13 @@
         "outbound": "🌏 !cn"
       },
       {
+        "geosite": "tld-!cn",
+        "outbound": "🌏 !cn"
+      },
+      {
         "geosite": [
           "private",
-          "geolocation-cn"
+          "cn"
         ],
         "geoip": [
           "private",
