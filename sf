@@ -109,7 +109,7 @@ m = select, policy-path=https://gist.githubusercontent.com/ldh1983/e77f9521e8069
 🚀 g = select, policy-path=https://alygn0.doggygo.top:8443/api/v1/client/5295fab587267d295b5bf37fcc3bf86c, interval=300, update-interval=86400
 e = select, policy-path=https://1808.netlify.app, interval=300, update-interval=86400
 a = select, policy-path=https://app.lwjyj.com/api/v1/client/subscribe?token=a803a6976b94e41e3a264d1fe75dd2fe, interval=300, update-interval=86400
-b = select, policy-path=https://subs.xttlove.uk/api/v1/client/subscribe?token=a5c52bd6b40110375e4163539bf4036e, interval=300, update-interval=86400
+b = select, policy-path=https://gist.githubusercontent.com/ldh1983/e77f9521e80697ebf732873b4d3144e4/raw/1sf, interval=300, update-interval=86400
 
 
 # > 节点地区分流
