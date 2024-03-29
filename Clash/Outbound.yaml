@@ -134,6 +134,7 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - https://1.12.12.12/dns-query
+    - 'https://223.6.6.6/dns-query#h3=true'
 # DNS over HTTPS
 
   proxy-server-nameserver:
