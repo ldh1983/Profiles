@@ -108,7 +108,7 @@ dns:
   listen: 0.0.0.0:53
   prefer-h3: true
   nameserver-policy:
-  # '＋.yicanny.com': [https://1.0.0.1/dns-query]
+    '＋.yicanny.com': ['https://1.0.0.1/dns-query#DIRECT&h3=true']
   # ipv6: false # when false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
