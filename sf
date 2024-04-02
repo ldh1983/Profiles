@@ -166,7 +166,7 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Emby.list,📽�
 
 # 国外网站
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/ProxyGFW.list,🌏 GFW
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global.list,🌏 国外网站
+RULE-SET,https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/Global/Global.list,🌏 国外网站
 DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global_Domain.list,🌏 国外网站
 
 
