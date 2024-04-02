@@ -127,7 +127,7 @@ b = select, policy-path=https://gist.githubusercontent.com/ldh1983/e77f9521e8069
 [Rule]
 
 # 去广告
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Ads_Dlerio.list,🛑 广告拦截
+#RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Ads_Dlerio.list,🛑 广告拦截
 
 # OpenAI
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/OpenAI.list,🤖 OpenAI
