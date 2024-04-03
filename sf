@@ -169,6 +169,8 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/ProxyGFW.list,�
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global.list,🌏 国外网站
 DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global_Domain.list,🌏 国外网站
 
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_Domain.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax.list,DIRECT
 
 # 局域网
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Lan.list,DIRECT
