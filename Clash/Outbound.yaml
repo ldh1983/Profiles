@@ -715,7 +715,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/China.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml
     interval: 86400
 
   ChinaIP:
@@ -741,6 +741,7 @@ rules:
   - PROCESS-NAME, com.gettr.gettr,UDP
   - PROCESS-NAME, com.twitter.android,PROXY
   - GEOSITE,twitter,PROXY
+  - GEOSITE,paypal,DIRECT
   - RULE-SET,Unbreak,PROXY
   - GEOSITE,discord,PROXY
   
