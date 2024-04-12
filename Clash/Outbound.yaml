@@ -1,4 +1,4 @@
-M#SUBSCRIBED https://jsd.onmicrosoft.cn/gh/ldh1983/Profiles@master/Clash/Outbound.yaml
+#SUBSCRIBED https://jsd.onmicrosoft.cn/gh/ldh1983/Profiles@master/Clash/Outbound.yaml
 
 # Port of HTTP(S) proxy server on the local end
 # port: 7890 cbffdd683cd64e098d3bd4c016bb3c4c
