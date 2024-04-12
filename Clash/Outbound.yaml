@@ -170,7 +170,7 @@ dns:
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
   - {name: "aws kr brutal xtls-reality", type: vless, server: 3.39.194.232, port: 27777, uuid: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, client-fingerprint: chrome, reality-opts: {public-key: zGlrjvl3sIcO-JzaFhTXHcQKR12UOQSjbOvHrhIUvT0, short-id: ""}, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false,brutal-opts: {enabled: true, up: 1000, down: 1000 } } }
-  - {name: "aws kr brutal grpc-reality", type: vless, server: 3.39.194.232, port: 27786, uuid: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0, network: grpc, tls: true, udp: true, client-fingerprint: chrome, servername: addons.mozilla.org, grpc-opts: {  grpc-service-name: "grpc" }, reality-opts: { public-key: zGlrjvl3sIcO-JzaFhTXHcQKR12UOQSjbOvHrhIUvT0, short-id: "" } }
+  
   - name: "us cc hy2"
     type: hysteria2
     server: 74.48.95.50
