@@ -170,7 +170,7 @@ dns:
 proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
   - {name: "aws kr brutal xtls-reality", type: vless, server: 3.39.194.232, port: 27777, uuid: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, client-fingerprint: chrome, reality-opts: {public-key: zGlrjvl3sIcO-JzaFhTXHcQKR12UOQSjbOvHrhIUvT0, short-id: ""}, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false,brutal-opts: {enabled: true, up: 1000, down: 1000 } } }
-
+  - {name: "aws kr brutal grpc-reality", type: vless, server: 3.39.194.232, port: 27786, uuid: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0, network: grpc, tls: true, udp: true, flow:, client-fingerprint: chrome, servername: addons.mozilla.org, grpc-opts: {  grpc-service-name: "grpc" }, reality-opts: { public-key: zGlrjvl3sIcO-JzaFhTXHcQKR12UOQSjbOvHrhIUvT0, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false } }
   - name: "us cc hy2"
     type: hysteria2
     server: 74.48.95.50
@@ -232,30 +232,31 @@ proxies:
   - name: "kr hy2"
     type: hysteria2
     server: 3.39.194.232
-    port: 40795
-    password: c8068e04-e3d7-4e89-a551-311ad762b87f
+    port: 27778
+    password: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0
     #obfs: freekkk
     alpn: 
       - h3
-    up: 60
-    down: 300
+    up: 200
+    down: 1000
     udp: true
-    sni: aws.yicanny.com
-    skip-cert-verify: false
+    #sni: aws.yicanny.com
+    skip-cert-verify: true
 
   # Trojan
   - name: "kr tuic"
-    server: aws.yicanny.com
-    port: 44645
+    server: 3.39.194.232
+    port: 27779
     type: tuic
-    uuid: c8068e04-e3d7-4e89-a551-311ad762b87f
-    password: c8068e04-e3d7-4e89-a551-311ad762b87f
-    disable-sni: false
+    uuid: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0
+    password: a6a427ea-8c60-44ea-ba6e-0f12598fdcf0
+    disable-sni: true
     reduce-rtt: true
     request-timeout: 8000
     udp-relay-mode: native
     alpn: [h3]
     ongestion-controller: bbr
+    skip-cert-verify: true
 
 
       
