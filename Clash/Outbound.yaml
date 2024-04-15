@@ -454,22 +454,6 @@ proxy-groups:
       - PROXY
       # - US
 
-  - name: "Spotify"
-    type: select
-    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-    include-all: true
-    proxies:
-      - Url-test
-      - Fallback
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-      - 新家坡
-      - other
-      - PROXY
-      # - US
       
   - name: "Apple"
     type: select
@@ -488,11 +472,9 @@ proxy-groups:
       - PROXY
       - DIRECT
 
-  # 中国流媒体服务（面向海外版本）
-  # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则
-  - name: "StreamingSE"
+  - name: "!cn"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
     include-all: true
     proxies:
       - Url-test
@@ -506,6 +488,25 @@ proxy-groups:
       - other
       - PROXY
       - DIRECT
+
+  - name: "gfw"
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
+    include-all: true
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - PROXY
+      - DIRECT
+
+ 
 
   - name: "microsoft"
     type: select
@@ -540,9 +541,27 @@ proxy-groups:
       - other
       - PROXY
 
-  - name: "gfw"
+  - name: "Spotify"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Qure.png
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    include-all: true
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - PROXY
+      # - US
+  # 中国流媒体服务（面向海外版本）
+  # 用于观看部分国内流媒体面向港澳台的地区的限定内容，此处应放港澳台节点，如果没有此需求可删除此处策略组及相关规则    
+  - name: "StreamingSE"
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
     include-all: true
     proxies:
       - Url-test
@@ -557,22 +576,7 @@ proxy-groups:
       - PROXY
       - DIRECT
 
-  - name: "!cn"
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-    include-all: true
-    proxies:
-      - Url-test
-      - Fallback
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-      - 新家坡
-      - other
-      - PROXY
-      - DIRECT
+
 
   - name: "Fallback"
     type: fallback 
