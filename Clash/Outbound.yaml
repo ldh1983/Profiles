@@ -134,18 +134,19 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - https://1.12.12.12/dns-query
-   # - 'https://223.6.6.6/dns-query#h3=true'
+    - 'https://223.6.6.6/dns-query#h3=true'
 # DNS over HTTPS
 
   proxy-server-nameserver:
     - 'https://1.0.0.1/dns-query#DIRECT&h3=true'
+    - tls://8.8.4.4
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.
   # The answers from fallback servers are used when the GEOIP country
   # is not `CN`.
   fallback:
-    # - https://8.8.4.4/dns-query
+    - tls://8.8.4.4
     - 'https://1.0.0.1/dns-query#DIRECT&h3=true'
     # - 94.140.14.141
 
