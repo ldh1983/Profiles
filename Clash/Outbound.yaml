@@ -420,6 +420,23 @@ proxy-groups:
       - PROXY
       - DIRECT
 
+  - name: "Twitter"
+    type: select
+    icon:  https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/X.png
+    include-all: true
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - PROXY
+      - DIRECT
+
   - name: "google"
     type: select
     icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
@@ -753,8 +770,8 @@ rules:
   #- DOMAIN,music.youtube.com,PROXY
   # Unbreak
   - PROCESS-NAME, com.gettr.gettr,UDP
-  - PROCESS-NAME, com.twitter.android,PROXY
-  - GEOSITE,twitter,PROXY
+  - PROCESS-NAME, com.twitter.android,Twitter
+  - GEOSITE,twitter,Twitter
   - GEOSITE,paypal,DIRECT
   - RULE-SET,Unbreak,PROXY
   - GEOSITE,discord,PROXY
