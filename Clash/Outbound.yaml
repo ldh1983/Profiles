@@ -307,6 +307,16 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+
+  YList0: #「冲鸭机场」订阅
+    type: http
+    url: "http://35.211.155.124:37777/4963954f-4c4f-4298-ab19-3d930d5c671f/clash2" # 放机场订阅链接
+    interval: 3600
+    path: ./Proxy/YList0.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
       
   MyList: #「冲鸭机场」订阅
     type: http
