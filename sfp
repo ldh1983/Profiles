@@ -46,7 +46,6 @@
       },
       {
         "geosite": [
-          "geolocation-cn",
           "cn",
           "private"
         ],
@@ -75,7 +74,7 @@
       "tag": "mixed-in",
       "listen": "::",
       "listen_port": 1080,
-      "sniff": false
+      "sniff": true
 //      "domain_strategy": "prefer_ipv4" // remove this line if you want to resolve the domain remotely (if the server is not sing-box, UDP may not work due to wrong behavior).
 //      "set_system_proxy": false
     },
@@ -88,7 +87,15 @@
       "stack": "system",
       "auto_route": true,
       "strict_route": true,
-      "sniff": false,
+      "inet4_route_address": [
+         "0.0.0.0/1",
+         "128.0.0.0/1"
+      ],
+      "inet6_route_address": [
+         "::/1",
+         "8000::/1"
+      ],
+      "sniff": true,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -112,6 +119,16 @@
       "download_detour": "direct"
     },
     {
+      "tag": "singbox-http0",
+      "type": "http",
+      "download_url": "http://35.211.155.124:37777/4963954f-4c4f-4298-ab19-3d930d5c671f/sing-box-pc",
+      "download_interval": "24h",
+      "path": "singbox-http1.json",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
       "tag": "clash-http",
       "type": "http",
       "download_url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
@@ -124,7 +141,7 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://api.v1.mk/sub?target=singbox&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2Fe77f9521e80697ebf732873b4d3144e4%2Fraw%2FMm&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false",
+      "download_url": "https://api.v1.mk/sub?target=singbox&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2Fe77f9521e80697ebf732873b4d3144e4%2Fraw%2FMm&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
@@ -164,7 +181,8 @@
         "singbox-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -174,7 +192,8 @@
         "clash-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -184,7 +203,8 @@
         "clash-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -194,7 +214,8 @@
         "clash-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -212,7 +233,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -230,7 +252,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -248,7 +271,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -266,25 +290,19 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
-      "tag": "🛍️ discord",
+      "tag": "🌏 gfw",
       "providers": [
         "singbox-http",
         "clash-http",
         "base64-http",
         "base64-http1"
       ],
-      "outbounds": [
-        "🎬 HK",
-        "🎬 TW",
-        "🎬 SG",
-        "🎬 JP",
-        "🎬 US",
-        "🎬 KR"
-      ]
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -302,7 +320,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -321,7 +340,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -340,7 +360,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -350,7 +371,8 @@
         "clash-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -368,17 +390,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "🌏 gfw",
-      "providers": [
-        "singbox-http",
-        "clash-http",
-        "base64-http",
-        "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -388,7 +401,8 @@
         "clash-http",
         "base64-http",
         "base64-http1"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -407,7 +421,8 @@
         "🎬 JP",
         "🎬 US",
         "🎬 KR"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -426,7 +441,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -445,7 +461,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -464,7 +481,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "selector",
@@ -483,7 +501,8 @@
         "🎬 US",
         "🎬 KR",
         "direct"
-      ]
+      ],
+      "use_all_providers": true
     },
     {
       "type": "urltest",
@@ -494,6 +513,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^HK|hk|香港|hongkong\\..+"
       ]
@@ -507,6 +527,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^TW|tw|台湾|taiwan\\..+"
       ]
@@ -520,6 +541,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^星城|新加坡|sg|SG|singapore|星\\..+"
       ]
@@ -533,6 +555,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^本|日本|jp|JP|japan|日\\..+"
       ]
@@ -546,6 +569,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^美国|美|us|US|unitedstates|united states\\..+"
       ]
@@ -559,6 +583,7 @@
         "base64-http",
         "base64-http1"
       ],
+      "use_all_providers": true,
       "includes": [
         "^韩国|韩|kr|KR|korean\\..+"
       ]
@@ -574,19 +599,10 @@
       "download_detour": "Proxy"
     },
     "rules": [
-    {
-                "port": 853,
-                "network": "tcp",
-                "outbound": "block"
-            },
-            {
-                "port": [
-                    443,
-                    853
-                ],
-                "network": "udp",
-                "outbound": "block"
-            },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
       {
         "clash_mode": "Global",
         "outbound": "Proxy"
@@ -656,15 +672,15 @@
         "package_name": [
           "com.discord"
         ],
-        "outbound": "🛍️ discord"
-      },
-      {
-        "geosite": "discord",
-        "outbound": "🛍️ discord"
+        "outbound": "🐦 Twitter"
       },
       {
         "geosite": "paypal",
         "outbound": "direct"
+      },
+      {
+        "geosite": "discord",
+        "outbound": "🌏 gfw"
       },
       {
         "geosite": "openai",
@@ -744,13 +760,9 @@
         "outbound": "🌏 !cn"
       },
       {
-        "geosite": "tld-!cn",
-        "outbound": "🌏 !cn"
-      },
-      {
         "geosite": [
           "private",
-          "cn"
+          "geolocation-cn"
         ],
         "geoip": [
           "private",
@@ -772,12 +784,9 @@
       "store_fakeip": true
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "",
-      "external_ui": "ui",
+      "external_controller": "0.0.0.0:9090",
       "secret": "",
-      "default_mode": "rule"
+      "external_ui": "ui"
     }
   }
 }
