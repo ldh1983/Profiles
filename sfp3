@@ -193,7 +193,11 @@
         "base64-http",
         "base64-http1"
       ],
-      "use_all_providers": true
+      "use_all_providers": true,
+      "outbounds": [
+        "direct"
+      ],
+      "default": "自动最优线路(hy2)-网址: dg1.top"
     },
     {
       "type": "selector",
