@@ -197,7 +197,7 @@
       "outbounds": [
         "direct"
       ],
-      "default": "自动最优线路(hy2)-网址: dg1.top"
+      "default": "cft-clone"
     },
     {
       "type": "selector",
