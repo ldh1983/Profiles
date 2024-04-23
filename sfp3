@@ -121,6 +121,16 @@
     {
       "tag": "singbox-http0",
       "type": "http",
+      "download_url": "https://sub.yicanny.com/sub?target=clash&url=https%3A%2F%2Fgetinfo.bigwatermelon.org%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Db30b26d32a4dbfc772f5c780d4db4178&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true",
+      "download_interval": "24h",
+      "path": "singbox-http0.json",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
+      "tag": "singbox-http1",
+      "type": "http",
       "download_url": "http://35.211.155.124:37777/4963954f-4c4f-4298-ab19-3d930d5c671f/sing-box-pc",
       "download_interval": "24h",
       "path": "singbox-http1.json",
@@ -141,7 +151,7 @@
     {
       "tag": "base64-http",
       "type": "http",
-      "download_url": "https://api.v1.mk/sub?target=singbox&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2Fe77f9521e80697ebf732873b4d3144e4%2Fraw%2FMm&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true",
+      "download_url": "https://apiurl.v1.mk/sub?target=singbox&url=https%3A%2F%2Fgist.githubusercontent.com%2Fldh1983%2Fe77f9521e80697ebf732873b4d3144e4%2Fraw%2FMm&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true",
       "download_interval": "24h",
       "path": "base64.txt",
       "healthcheck_interval": "1h",
