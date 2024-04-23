@@ -139,6 +139,29 @@
       "download_detour": "direct"
     },
     {
+      "tag": "singbox-http2",
+      "type": "http",
+      "download_url": "http://35.209.52.94:37777/629c09dd-50f0-48ad-8a52-c4dac390328d/sing-box-pc",
+      "download_interval": "24h",
+      "path": "singbox-http2.json",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
+      "tag": "singbox-http3",
+      "type": "http",
+      "download_url": "    {
+      "tag": "singbox-http3",
+      "type": "http",
+      "download_url": "https://api.xqc.best/api/v1/client/subscribe?token=cb6314eb618823ad77b3f39eb1a693c1",
+      "download_interval": "24h",
+      "path": "singbox-http1.json",
+      "healthcheck_interval": "1h",
+      "download_ua": "sing-box",
+      "download_detour": "direct"
+    },
+    {
       "tag": "clash-http",
       "type": "http",
       "download_url": "https://jubrghns.doggygo.xyz/api/v1/client/5295fab587267d295b5bf37fcc3bf86c",
