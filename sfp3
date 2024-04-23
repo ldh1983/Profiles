@@ -151,12 +151,9 @@
     {
       "tag": "singbox-http3",
       "type": "http",
-      "download_url": "    {
-      "tag": "singbox-http3",
-      "type": "http",
       "download_url": "https://api.xqc.best/api/v1/client/subscribe?token=cb6314eb618823ad77b3f39eb1a693c1",
       "download_interval": "24h",
-      "path": "singbox-http1.json",
+      "path": "singbox-http3.json",
       "healthcheck_interval": "1h",
       "download_ua": "sing-box",
       "download_detour": "direct"
