@@ -869,7 +869,7 @@ rules:
   - IP-CIDR,182.254.116.0/24,DIRECT
   
   # GeoIP China
-  - GEOIP,twitter,PROXY
+  - GEOIP,twitter,Twitter
   - GEOIP,private,DIRECT
   - GEOIP,CN,DIRECT
 
