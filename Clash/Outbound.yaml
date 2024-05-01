@@ -300,7 +300,7 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 
-  MList1: #「冲鸭机场」订阅
+  #MList1: #「冲鸭机场」订阅
     type: http
     url: "https://api.xqc.best/api/v1/client/subscribe?token=cb6314eb618823ad77b3f39eb1a693c1" # 放机场订阅链接
     interval: 3600
