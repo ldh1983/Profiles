@@ -619,7 +619,7 @@ proxy-groups:
 
   - name: "GLOBAL"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png
     include-all: true
     proxies:
       - Url-test
