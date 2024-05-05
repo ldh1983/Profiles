@@ -636,24 +636,6 @@ proxy-groups:
       - PROXY
       - DIRECT
 
-  - name: "GLOBAL"
-    type: select
-    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png
-    include-all: true
-    proxies:
-      - Url-test
-      - Fallback
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-      - 新家坡
-      - other
-      - PROXY
-      - DIRECT
-      - REJECT
-
 
 
   - name: "Fallback"
