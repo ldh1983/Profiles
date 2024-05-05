@@ -617,6 +617,24 @@ proxy-groups:
       - PROXY
       - DIRECT
 
+  - name: "GLOBAL"
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+    include-all: true
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - PROXY
+      - DIRECT
+      - REJECT
+
 
 
   - name: "Fallback"
