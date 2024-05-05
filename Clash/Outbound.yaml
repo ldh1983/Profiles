@@ -374,25 +374,6 @@ proxy-groups:
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
     
   # 代理节点选择
-  - name: "GLOBAL"
-    type: select
-    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png
-    include-all: true
-    proxies:
-      - Url-test
-      - Fallback
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-      - 新家坡
-      - other
-      - PROXY
-      - DIRECT
-      - REJECT
-
-      
   - name: "PROXY"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
