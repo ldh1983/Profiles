@@ -303,7 +303,7 @@ proxy-providers:
 
   MList2: #「冲鸭机场」订阅
     type: http
-    url: "http://35.209.52.94:37777/629c09dd-50f0-48ad-8a52-c4dac390328d/clash2" # 放机场订阅链接
+    url: "http://35.212.191.192:37777/3A92ABA6-722A-6C9D-C574-84705D2FFC09/clash2" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList2.yaml # 注意此处文件名不可相同
     health-check:
