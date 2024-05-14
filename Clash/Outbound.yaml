@@ -797,7 +797,7 @@ rules:
   - GEOSITE,twitter,Twitter
   - GEOSITE,paypal,DIRECT
   - RULE-SET,Unbreak,PROXY
-  #- GEOSITE,discord,PROXY
+  - GEOSITE,discord,gfw
   
   - RULE-SET,UDP,UDP
   
