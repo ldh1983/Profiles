@@ -301,31 +301,12 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 
-  MList2: #「冲鸭机场」订阅
-    type: http
-    url: "http://35.212.191.192:37777/3A92ABA6-722A-6C9D-C574-84705D2FFC09/clash2" # 放机场订阅链接
-    interval: 3600
-    path: ./Proxy/MList2.yaml # 注意此处文件名不可相同
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
 
   YList: #「冲鸭机场」订阅
     type: http
     url: "https://raw.githubusercontent.com/ldh1983/sub2/master/README.md" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-
-  YList0: #「冲鸭机场」订阅
-    type: http
-    url: "http://35.211.155.124:37777/4963954f-4c4f-4298-ab19-3d930d5c671f/clash2" # 放机场订阅链接
-    interval: 3600
-    path: ./Proxy/YList0.yaml # 注意此处文件名不可相同
     health-check:
       enable: true
       interval: 600
