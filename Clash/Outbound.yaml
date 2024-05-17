@@ -138,8 +138,10 @@ dns:
 # DNS over HTTPS
 
   proxy-server-nameserver:
-    - 'https://1.0.0.1/dns-query#DIRECT&h3=true'
-    - tls://8.8.4.4
+    #- 'https://1.0.0.1/dns-query#DIRECT&h3=true'
+    #- tls://8.8.4.4
+    - https://1.12.12.12/dns-query
+    - 'https://223.6.6.6/dns-query#h3=true'
 
   # When `fallback` is present, the DNS server will send concurrent requests
   # to the servers in this section along with servers in `nameservers`.
