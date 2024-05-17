@@ -479,22 +479,6 @@ proxy-groups:
       # - US
 
       
-  - name: "Apple"
-    type: select
-    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    include-all: true
-    proxies:
-      - Url-test
-      - Fallback
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-      - 新家坡
-      - other
-      - PROXY
-      - DIRECT
 
   - name: "!cn"
     type: select
@@ -586,6 +570,23 @@ proxy-groups:
   - name: "StreamingSE"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/StreamingSE.png
+    include-all: true
+    proxies:
+      - Url-test
+      - Fallback
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - 新家坡
+      - other
+      - PROXY
+      - DIRECT
+
+  - name: "Apple"
+    type: select
+    icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     include-all: true
     proxies:
       - Url-test
