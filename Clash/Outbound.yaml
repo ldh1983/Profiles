@@ -294,7 +294,7 @@ proxy-providers:
 
   MList0: #「冲鸭机场」订阅
     type: http
-    url: "https://dy513.mmydy.xyz/api/v1/client/subscribe?token=c6b7ca72309d446bf9ad50be8742727f" # 放机场订阅链接
+    url: "https://sub.yicanny.com/sub?target=clash&url=https%3A%2F%2Fgetinfo.bigwatermelon.org%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Db30b26d32a4dbfc772f5c780d4db4178&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/MList0.yaml # 注意此处文件名不可相同
     health-check:
