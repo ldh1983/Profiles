@@ -111,7 +111,7 @@
     {
       "tag": "singbox-http",
       "type": "http",
-      "download_url": "https://clash2sfa-xmdhs.koyeb.app/sub?sub=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2FProfiles%2Fmaster%2FClash%2FOutbound.yaml",
+      "download_url": "https://altrojan.filegear-sg.me/sub?host=tr.yicanny.com&password=371b462dd2db&proxyip=true",
       "download_interval": "24h",
       "path": "singbox-http.json",
       "healthcheck_interval": "1h",
