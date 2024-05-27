@@ -109,16 +109,6 @@
 // 这里的 proviedrs 需要使用 https://github.com/PuerNya/sing-box/tree/building
   "outbound_providers": [
     {
-      "tag": "singbox-http",
-      "type": "http",
-      "download_url": "https://clash2sfa-xmdhs.koyeb.app/sub?sub=https%3A%2F%2Fraw.githubusercontent.com%2Fldh1983%2FProfiles%2Fmaster%2FClash%2FOutbound.yaml",
-      "download_interval": "24h",
-      "path": "singbox-http.json",
-      "healthcheck_interval": "1h",
-      "download_ua": "sing-box",
-      "download_detour": "direct"
-    },
-    {
       "tag": "singbox-http0",
       "type": "http",
       "download_url": "https://sub.yicanny.com/sub?target=clash&url=https%3A%2F%2Fgetinfo.bigwatermelon.org%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Db30b26d32a4dbfc772f5c780d4db4178&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true",
