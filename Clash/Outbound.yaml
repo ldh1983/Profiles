@@ -73,6 +73,10 @@ tun:
     - 'any:53'
   auto-route: true
   auto-detect-interface: true
+  include-android-user:
+  - 0
+  - 10
+  - 999
 
 # A relative path to the configuration directory or an absolute path to a
 # directory in which you put some static web resource. Clash core will then
