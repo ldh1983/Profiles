@@ -777,6 +777,9 @@ rules:
   - DOMAIN-KEYWORD,oracle,DIRECT
   - DOMAIN-KEYWORD,gnews,MATCH
   - DOMAIN-KEYWORD,himalaya,H
+  - PROCESS-NAME, xllite.exe,DIRECT
+  - PROCESS-NAME, DownloadSDKServer.exe,DIRECT
+  - PROCESS-NAME, Thunder.exe, DIRECT
   #- DOMAIN-KEYWORD,google,PROXY
   #- DOMAIN,youtubei.googleapis.com,PROXY
   #- DOMAIN,music.youtube.com,PROXY
