@@ -786,6 +786,9 @@ rules:
   # Unbreak
   - PROCESS-NAME, com.gettr.gettr,UDP
   - PROCESS-NAME, com.twitter.android,Twitter
+  - PROCESS-NAME, com.talkatone.android, gfw
+  - PROCESS-NAME, Discord.exe, gfw
+  - PROCESS-NAME, com.discord, gfw
   - GEOSITE,twitter,Twitter
   - GEOSITE,paypal,DIRECT
   - RULE-SET,Unbreak,PROXY
@@ -798,8 +801,7 @@ rules:
   - PROCESS-NAME, Telegram.exe, telegram
   - PROCESS-NAME, YouTube Music.exe, StreamingSE
   - PROCESS-NAME, com.okinc.okex.gp, gfw
-  - PROCESS-NAME, Discord.exe, gfw
-  - PROCESS-NAME, com.discord, gfw
+
   #- RULE-SET,YouTubeMusic,ymusic
   
   - RULE-SET,Apple,Apple
