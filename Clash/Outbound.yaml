@@ -770,6 +770,7 @@ rule-providers:
 
 # 规则
 rules:
+  - PROCESS-NAME, com.talkatone.android, gfw
   - RULE-SET,秋风广告规则,REJECT
   - GEOSITE,category-ads-all,REJECT
   #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置
@@ -786,7 +787,6 @@ rules:
   # Unbreak
   - PROCESS-NAME, com.gettr.gettr,UDP
   - PROCESS-NAME, com.twitter.android,Twitter
-  - PROCESS-NAME, com.talkatone.android, gfw
   - PROCESS-NAME, Discord.exe, gfw
   - PROCESS-NAME, com.discord, gfw
   - GEOSITE,twitter,Twitter
