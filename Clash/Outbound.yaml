@@ -311,7 +311,7 @@ proxy-providers:
 
   YList: #「冲鸭机场」订阅
     type: http
-    url: "https://raw.githubusercontent.com/ldh1983/sub2/master/README.md" # 放机场订阅链接
+    url: "https://gist.githubusercontent.com/ldh1983/81d32c8b81cda5cec1dad768a2814802/raw/sub3" # 放机场订阅链接
     interval: 3600
     path: ./Proxy/YList.yaml # 注意此处文件名不可相同
     health-check:
