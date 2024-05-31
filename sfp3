@@ -111,7 +111,7 @@
     {
       "tag": "singbox-http",
       "type": "http",
-      "download_url": "https://altrojan.filegear-sg.me/sub?host=tr.yicanny.com&password=371b462dd2db&proxyip=true",
+      "download_url": "https://VMess.fxxk.dedyn.io/auto",
       "download_interval": "24h",
       "path": "singbox-http.json",
       "healthcheck_interval": "1h",
