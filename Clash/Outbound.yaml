@@ -181,7 +181,7 @@ proxies:
     type: hysteria2
     server: 74.48.95.50
     port: 31108
-    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    password: 027d13ec-b0ed-41e1-b253-21e5aeed4408
     #obfs: freekkk
     alpn: 
       - h3
@@ -195,8 +195,8 @@ proxies:
     server: yicanny.com
     port: 22785
     type: tuic
-    uuid: 64db2a61-4296-4747-8f50-017201a4c5e4
-    password: 64db2a61-4296-4747-8f50-017201a4c5e4
+    uuid: 027d13ec-b0ed-41e1-b253-21e5aeed4408
+    password: 027d13ec-b0ed-41e1-b253-21e5aeed4408
     disable-sni: false
     reduce-rtt: true
     request-timeout: 8000
